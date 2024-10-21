@@ -1,0 +1,46 @@
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\BotC Custom ScriptTool.exe.config
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\BotC Custom ScriptTool.exe
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\BotC Custom ScriptTool.pdb
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.csproj.AssemblyReference.cache
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC_Custom_ScriptTool.Forms.Main.resources
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC_Custom_ScriptTool.Properties.Resources.resources
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.csproj.GenerateResource.cache
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.csproj.CoreCompileInputs.cache
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.exe
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.pdb
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Buffers.dll
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Memory.dll
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Text.Json.dll
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\bin\Debug\System.ValueTuple.dll
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.csproj.SuggestedBindingRedirects.cache
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.exe.config
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Cus.52E06393.Up2Date
+C:\Users\jopla\source\repos\BotC Custom ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC_Custom_ScriptTool.UserControls.ucJinx.resources
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\BotC Custom ScriptTool.exe.config
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\BotC Custom ScriptTool.exe
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\BotC Custom ScriptTool.pdb
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Buffers.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Memory.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Numerics.Vectors.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Text.Encodings.Web.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Text.Json.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\System.ValueTuple.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.csproj.AssemblyReference.cache
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.csproj.SuggestedBindingRedirects.cache
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.exe.config
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC_Custom_ScriptTool.Forms.Main.resources
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC_Custom_ScriptTool.Properties.Resources.resources
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC_Custom_ScriptTool.UserControls.ucJinx.resources
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.csproj.GenerateResource.cache
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.csproj.CoreCompileInputs.cache
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Cus.52E06393.Up2Date
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.exe
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.pdb

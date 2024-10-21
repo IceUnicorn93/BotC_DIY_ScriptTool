@@ -1,0 +1,434 @@
+[
+  {
+    "RoleName": "Monk",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/7/7c/Icon_monk.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Virgin",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_virgin.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Drunk",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/4a/Icon_drunk.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Spy",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/54/Icon_spy.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Imp",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/5c/Icon_imp.png",
+    "RoleAbilityText": "",
+    "RoleType": 3
+  },
+  {
+    "RoleName": "Washerwoman",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/85/Icon_washerwoman.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Librarian",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_librarian.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Investigator",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/ad/Icon_investigator.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Chef",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_chef.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Empath",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/13/Icon_empath.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Fortune Teller",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/97/Icon_fortuneteller.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Undertaker",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/05/Icon_undertaker.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Ravenkeeper",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_ravenkeeper.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Slayer",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_slayer.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Soldier",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_soldier.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Mayor",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_mayor.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Butler",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/19/Icon_butler.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Saint",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c9/Icon_saint.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Recluse",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/60/Icon_recluse.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Poisoner",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/b1/Icon_poisoner.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Baron",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6d/Icon_baron.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Scarlet Woman",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/13/Icon_scarletwoman.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Clockmaker",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/3/3d/Icon_clockmaker.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Dreamer",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f2/Icon_dreamer.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Snake Charmer",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_snakecharmer.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Mathematician",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f1/Icon_mathematician.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Flowergirl",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/ac/Icon_flowergirl.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Town Crier",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_towncrier.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Oracle",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/bb/Icon_oracle.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Savant",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_savant.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Seamstress",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/53/Icon_seamstress.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Philosopher",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/5d/Icon_philosopher.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Artist",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_artist.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Juggler",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/42/Icon_juggler.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Sage",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a0/Icon_sage.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Mutant",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/2e/Icon_mutant.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Sweetheart",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6a/Icon_sweetheart.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Barber",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_barber.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Klutz",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/bc/Icon_klutz.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Evil Twin",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f4/Icon_eviltwin.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Witch",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/7/7b/Icon_witch.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Cerenovus",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/45/Icon_cerenovus.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Pit-Hag",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6b/Icon_pithag.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Fang Gu",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/0e/Icon_fanggu.png",
+    "RoleAbilityText": "",
+    "RoleType": 3
+  },
+  {
+    "RoleName": "Vigormortis",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_vigormortis.png",
+    "RoleAbilityText": "",
+    "RoleType": 3
+  },
+  {
+    "RoleName": "No Dashii",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/eb/Icon_nodashii.png",
+    "RoleAbilityText": "",
+    "RoleType": 3
+  },
+  {
+    "RoleName": "Vortox",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/89/Icon_vortox.png",
+    "RoleAbilityText": "",
+    "RoleType": 3
+  },
+  {
+    "RoleName": "Grandmother",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/26/Icon_grandmother.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Sailor",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_sailor.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Chambermaid",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/87/Icon_chambermaid.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Exorcist",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c2/Icon_exorcist.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Innkeeper",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/0c/Icon_innkeeper.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Gambler",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/fd/Icon_gambler.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Gossip",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c7/Icon_gossip.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Courtier",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_courtier.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Professor",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/65/Icon_professor.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Minstrel",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/24/Icon_minstrel.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Tea Lady",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_tealady.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Pacifist",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/5d/Icon_pacifist.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Fool",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d9/Icon_fool.png",
+    "RoleAbilityText": "",
+    "RoleType": 0
+  },
+  {
+    "RoleName": "Goon",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6f/Icon_goon.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Lunatic",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/64/Icon_lunatic.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Tinker",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/98/Icon_tinker.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Moonchild",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_moonchild.png",
+    "RoleAbilityText": "",
+    "RoleType": 1
+  },
+  {
+    "RoleName": "Godfather",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d0/Icon_godfather.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Devil\u0027s Advocate",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/09/Icon_devilsadvocate.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Assassin",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/49/Icon_assassin.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Mastermind",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_mastermind.png",
+    "RoleAbilityText": "",
+    "RoleType": 2
+  },
+  {
+    "RoleName": "Zombuul",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/15/Icon_zombuul.png",
+    "RoleAbilityText": "",
+    "RoleType": 3
+  },
+  {
+    "RoleName": "Pukka",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f4/Icon_pukka.png",
+    "RoleAbilityText": "",
+    "RoleType": 3
+  },
+  {
+    "RoleName": "Shabaloth",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/1f/Icon_shabaloth.png",
+    "RoleAbilityText": "",
+    "RoleType": 3
+  },
+  {
+    "RoleName": "Po",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/b2/Icon_po.png",
+    "RoleAbilityText": "",
+    "RoleType": 3
+  }
+]

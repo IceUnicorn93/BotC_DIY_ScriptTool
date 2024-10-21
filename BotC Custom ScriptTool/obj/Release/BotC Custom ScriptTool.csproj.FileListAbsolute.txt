@@ -1,0 +1,23 @@
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\BotC Custom ScriptTool.exe.config
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\BotC Custom ScriptTool.exe
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\BotC Custom ScriptTool.pdb
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\System.Buffers.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\System.Memory.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\System.Numerics.Vectors.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\System.Text.Encodings.Web.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\System.Text.Json.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\System.Threading.Tasks.Extensions.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Release\System.ValueTuple.dll
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Release\BotC Custom ScriptTool.csproj.AssemblyReference.cache
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Release\BotC Custom ScriptTool.csproj.SuggestedBindingRedirects.cache
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Release\BotC Custom ScriptTool.exe.config
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Release\BotC_Custom_ScriptTool.Forms.Main.resources
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Release\BotC_Custom_ScriptTool.Properties.Resources.resources
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Release\BotC_Custom_ScriptTool.UserControls.ucJinx.resources
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Release\BotC Custom ScriptTool.csproj.GenerateResource.cache
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Release\BotC Custom ScriptTool.csproj.CoreCompileInputs.cache
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Release\BotC Cus.52E06393.Up2Date
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Release\BotC Custom ScriptTool.exe
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Release\BotC Custom ScriptTool.pdb
