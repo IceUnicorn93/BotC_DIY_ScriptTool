@@ -113,13 +113,19 @@ namespace BotC_Custom_ScriptTool.Classes
                 var posY = padding + (i * iconHeight) + (offset * iconHeight);
                 var roleIcon = GetImageFromURL(roles[i].RoleIconURL);
                 var roleAbility = roles[i].RoleAbilityText;
+                var roleName = roles[i].RoleName;
 
                 var measuredString = graphics.MeasureString(roleAbility, new Font("Arial", 6));
+                var measuredStringName = graphics.MeasureString(roleAbility, new Font("Arial", 6, FontStyle.Bold));
 
                 graphics.DrawImage(roleIcon, posX, posY, iconHeight, iconHeight);
-                graphics.DrawString(roleAbility, new Font("Arial", 6),
+                graphics.DrawString(roleName, new Font("Arial", 6, FontStyle.Bold),
                     new SolidBrush(Color.Black),
                     posX + iconHeight,
+                    posY + iconHeight / 2 - measuredString.Height / 2);
+                graphics.DrawString(roleAbility, new Font("Arial", 6),
+                    new SolidBrush(Color.Black),
+                    posX + iconHeight + 150,
                     posY + iconHeight / 2 - measuredString.Height / 2);
             }
         }
