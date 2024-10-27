@@ -31,7 +31,7 @@ namespace BotC_Custom_ScriptTool.Forms
         //Tab 2 (Script)
         private List<CharacterRole> selectedScriptRoles = new List<CharacterRole>();
         private List<Jinx> jinxes = new List<Jinx>();
-        private List<string> nightOrder = new List<string>();
+        private NightOrder nightOrder = new NightOrder();
 
         //Tab 3 (PDF)
 
@@ -416,11 +416,29 @@ namespace BotC_Custom_ScriptTool.Forms
             }
         }
 
+        //Configures the Night Order
+        private void btnConfigureNightOrder_Click(object sender, EventArgs e)
+        {
+            frmNightOrder frmNightOrder = new frmNightOrder(nightOrder);
+            frmNightOrder.ShowDialog();
+
+            nightOrder = frmNightOrder.Order;
+        }
+
         //--------------------- Tab Page 3 (PDF)
 
         private void btnGeneratePDF_Click(object sender, EventArgs e)
         {
-            PDF_ImageCreator.CreateScriptImage(selectedScriptRoles, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
+            var script = new Script
+            {
+                Roles = selectedScriptRoles.Select(n => n.RoleName).ToList(),
+                Jinxes = jinxes,
+                NightOrder = nightOrder,
+                ScriptAuthor = tbScriptAuthor.Text,
+                ScriptName = tbScriptName.Text
+            };
+
+            PDF_ImageCreator.CreateScript(script, roles, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
         }
     }
 }

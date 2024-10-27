@@ -1,0 +1,50 @@
+{
+  "Jinxes": [
+    {
+      "RoleA": "Scharlachrote Frau",
+      "RoleB": "Vigormortis",
+      "JinxText": "Awesome Jinx!"
+    }
+  ],
+  "Roles": [
+    "Bibliothekar",
+    "Blumenm\u00E4dchen",
+    "B\u00FCrgermeister",
+    "D\u00E4monenj\u00E4ger",
+    "Detektiv",
+    "Empath",
+    "Exorzist",
+    "Gastwirt",
+    "Gl\u00FCcksspieler",
+    "Gro\u00DFmutter",
+    "H\u00F6fling",
+    "Jongleur",
+    "Jungfrau",
+    "Kammerzofe",
+    "Barbier",
+    "Bastler",
+    "Butler",
+    "Einsiedler",
+    "B\u00F6ser Zwilling",
+    "Giftmischer",
+    "Vigormortis",
+    "No Dashii",
+    "Fang Gu",
+    "Shabaloth",
+    "Scharlachrote Frau",
+    "Meuchelm\u00F6rder"
+  ],
+  "NightOrder": {
+    "FirstNight": [
+      "Wake Minions",
+      "Wake Demon",
+      "Do Other Stuff",
+      "Wake Town"
+    ],
+    "OtherNights": [
+      "Wake Town"
+    ]
+  },
+  "ScriptName": "Test to Show",
+  "ScriptAuthor": "Dustin"
+}

@@ -44,3 +44,4 @@ E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom Scr
 E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Cus.52E06393.Up2Date
 E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.exe
 E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.pdb
+E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC_Custom_ScriptTool.Forms.frmNightOrder.resources

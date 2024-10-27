@@ -17,33 +17,67 @@ namespace BotC_Custom_ScriptTool.Classes
         public static float FontSizeRoleAbility = 8;
         public static float FontSizeHeader = 12;
 
-        private static string fileName;
+        private static List<Image> PrintImages = new List<Image>();
 
-        public static void CreateScriptImage(List<CharacterRole> roles, string ScriptName, string Author, string PathToCustomImage, bool UseTwoColumns, bool printCharacterBorders)
+
+        //Image Variables!
+        static float mmpi = 25.4f; //milli meter per inch (DO NOT TOUCH)
+        static int dpi = 150; //dots per inch (Touch only if needed)
+
+        static int ImageWidth = (int)(210 / mmpi * dpi);
+        static int ImageHeight = (int)(297 / mmpi * dpi);
+
+        static int padding = 50;
+        static int imageIndex = 0;
+
+        public static void CreateScript(Script script, List<CharacterRole> allRoles, string ScriptName, string Author, string PathToCustomImage, bool UseTwoColumns, bool printCharacterBorders)
         {
-            float mmpi = 25.4f; //milli meter per inch (DO NOT TOUCH)
-            int dpi = 150; //dots per inch (Touch only if needed)
+            imageIndex = 0;
 
-            var ImageWidth = (int)(210 / mmpi * dpi);
-            var ImageHeight = (int)(297 / mmpi * dpi);
+            CreateCharacterSheet(script, allRoles, CreateA4Image(), ScriptName, Author, PathToCustomImage, UseTwoColumns, printCharacterBorders);
 
-            var padding = 50;
+
+            if (script.NightOrder.FirstNight.Count > 0) { }
+            if (script.NightOrder.OtherNights.Count > 0) { }
+            if (script.Jinxes.Count > 0) { }
+
+            //Save as PDF File and clean up!
+            SaveAsPDF(Path.Combine(Application.StartupPath, "Scripts", $"{ScriptName}.pdf"));
+
+            foreach (var img in PrintImages)
+            {
+                img.Dispose();
+            }
+            PrintImages.Clear();
+        }
+
+        private static Image CreateA4Image()
+        {
+            Bitmap A4 = new Bitmap(ImageWidth, ImageHeight);
+            A4.SetResolution(dpi, dpi);
+
+            return A4;
+        }
+
+        private static void CreateCharacterSheet(Script script, List<CharacterRole> allRoles, Image A4,
+            string ScriptName, string Author, string PathToCustomImage,
+            bool UseTwoColumns, bool printCharacterBorders)
+        {
             var IconHeight = (ImageHeight - (2 * padding)) / (UseTwoColumns ? 13 : 26);
             // 26 = 14 Town + 4 Outsider + 4 Minion + 4 Demon
             //With Two Columns, 13!
 
-            Bitmap A4 = new Bitmap(ImageWidth, ImageHeight);
-            A4.SetResolution(dpi, dpi);
-
             var graphics = Graphics.FromImage(A4);
             if (PathToCustomImage == "")
             {
-                graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, ImageWidth, ImageHeight)); 
+                graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, ImageWidth, ImageHeight));
             }
             else
             {
                 graphics.DrawImage(Image.FromFile(PathToCustomImage), new Rectangle(0, 0, ImageWidth, ImageHeight));
             }
+
+            var roles = allRoles.Where(n => script.Roles.Contains(n.RoleName)).ToList();
 
             //ScriptName and Author
             DrawScriptNameAndAuthor(graphics, ScriptName, Author, padding);
@@ -68,24 +102,7 @@ namespace BotC_Custom_ScriptTool.Classes
             DrawRolesOnImage(demons, graphics, padding, IconHeight, 22, ImageWidth, UseTwoColumns, printCharacterBorders);
             DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? 11 : 22, ERoleType.Demon);
 
-            //Image-File, that will be Put on the Page
-            fileName = Path.Combine(Application.StartupPath, $"{ScriptName}.png");
-
-            //Save & clean up!
-            var img = (Image)A4;
-            img.Save(fileName);
-
-            graphics.Dispose();
-            img.Dispose();
-            A4.Dispose();
-            graphics = null;
-            img = null;
-            A4 = null;
-
-            //Save as PDF File and clean up!
-            SaveAsPDF(Path.Combine(Application.StartupPath, "Scripts", $"{ScriptName}.pdf"));
-            GC.Collect();
-            File.Delete(fileName);
+            PrintImages.Add(A4);
         }
 
         private static void DrawScriptNameAndAuthor(Graphics graphics, string ScriptName, string Author, int padding)
@@ -219,12 +236,28 @@ namespace BotC_Custom_ScriptTool.Classes
             }
         }
 
+
+
         private static void pd_PrintPage(object sender, PrintPageEventArgs ev)
         {
-            var img = Image.FromFile(fileName);
-            ev.Graphics.DrawImage(img, new Rectangle(0, 0, (int)ev.Graphics.VisibleClipBounds.Width, (int)ev.Graphics.VisibleClipBounds.Height));
-            img.Dispose();
-            img = null;
+            if (imageIndex < PrintImages.Count)
+            {
+                var img = PrintImages[imageIndex];
+                ev.Graphics.DrawImage(img, new Rectangle(0, 0, (int)ev.Graphics.VisibleClipBounds.Width, (int)ev.Graphics.VisibleClipBounds.Height));
+                img.Dispose();
+                img = null;
+
+                imageIndex++;
+
+                if (imageIndex == PrintImages.Count)
+                    ev.HasMorePages = false;
+                else
+                    ev.HasMorePages = true;
+            }
+            else
+            {
+                ev.HasMorePages = false;
+            }
         }
     }
 }

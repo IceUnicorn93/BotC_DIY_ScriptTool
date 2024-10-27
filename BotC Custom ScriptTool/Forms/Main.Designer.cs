@@ -68,13 +68,14 @@
             this.clbScriptRoles = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tpPDF = new System.Windows.Forms.TabPage();
-            this.btnGeneratePDF = new System.Windows.Forms.Button();
-            this.tbCustomBackgroundPath = new System.Windows.Forms.TextBox();
-            this.rbUse1Column = new System.Windows.Forms.RadioButton();
-            this.rbUse2Columns = new System.Windows.Forms.RadioButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbxPrintCharacterBorder = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.cbxPrintCharacterBorder = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.rbUse2Columns = new System.Windows.Forms.RadioButton();
+            this.rbUse1Column = new System.Windows.Forms.RadioButton();
+            this.tbCustomBackgroundPath = new System.Windows.Forms.TextBox();
+            this.btnGeneratePDF = new System.Windows.Forms.Button();
+            this.btnConfigureNightOrder = new System.Windows.Forms.Button();
             this.tcMainControl.SuspendLayout();
             this.tpCharacters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoleIcon)).BeginInit();
@@ -295,6 +296,7 @@
             // 
             // tpScript
             // 
+            this.tpScript.Controls.Add(this.btnConfigureNightOrder);
             this.tpScript.Controls.Add(this.lbJinxes);
             this.tpScript.Controls.Add(this.btnJinxes);
             this.tpScript.Controls.Add(this.btnLoadScript);
@@ -535,36 +537,32 @@
             this.tpPDF.Text = "PDF";
             this.tpPDF.UseVisualStyleBackColor = true;
             // 
-            // btnGeneratePDF
+            // label9
             // 
-            this.btnGeneratePDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGeneratePDF.Location = new System.Drawing.Point(598, 326);
-            this.btnGeneratePDF.Name = "btnGeneratePDF";
-            this.btnGeneratePDF.Size = new System.Drawing.Size(75, 39);
-            this.btnGeneratePDF.TabIndex = 0;
-            this.btnGeneratePDF.Text = "Generate PDF";
-            this.btnGeneratePDF.UseVisualStyleBackColor = true;
-            this.btnGeneratePDF.Click += new System.EventHandler(this.btnGeneratePDF_Click);
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 59);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(111, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Print Character Border";
             // 
-            // tbCustomBackgroundPath
+            // cbxPrintCharacterBorder
             // 
-            this.tbCustomBackgroundPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbCustomBackgroundPath.Location = new System.Drawing.Point(141, 9);
-            this.tbCustomBackgroundPath.Name = "tbCustomBackgroundPath";
-            this.tbCustomBackgroundPath.Size = new System.Drawing.Size(532, 20);
-            this.tbCustomBackgroundPath.TabIndex = 1;
+            this.cbxPrintCharacterBorder.AutoSize = true;
+            this.cbxPrintCharacterBorder.Location = new System.Drawing.Point(141, 58);
+            this.cbxPrintCharacterBorder.Name = "cbxPrintCharacterBorder";
+            this.cbxPrintCharacterBorder.Size = new System.Drawing.Size(15, 14);
+            this.cbxPrintCharacterBorder.TabIndex = 5;
+            this.cbxPrintCharacterBorder.UseVisualStyleBackColor = true;
             // 
-            // rbUse1Column
+            // label8
             // 
-            this.rbUse1Column.AutoSize = true;
-            this.rbUse1Column.Location = new System.Drawing.Point(141, 35);
-            this.rbUse1Column.Name = "rbUse1Column";
-            this.rbUse1Column.Size = new System.Drawing.Size(91, 17);
-            this.rbUse1Column.TabIndex = 2;
-            this.rbUse1Column.TabStop = true;
-            this.rbUse1Column.Text = "Use 1 Column";
-            this.rbUse1Column.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 26);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Custom Background\r\nImage Path";
             // 
             // rbUse2Columns
             // 
@@ -577,32 +575,46 @@
             this.rbUse2Columns.Text = "Use 2 Columns";
             this.rbUse2Columns.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // rbUse1Column
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 26);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Custom Background\r\nImage Path";
+            this.rbUse1Column.AutoSize = true;
+            this.rbUse1Column.Location = new System.Drawing.Point(141, 35);
+            this.rbUse1Column.Name = "rbUse1Column";
+            this.rbUse1Column.Size = new System.Drawing.Size(91, 17);
+            this.rbUse1Column.TabIndex = 2;
+            this.rbUse1Column.TabStop = true;
+            this.rbUse1Column.Text = "Use 1 Column";
+            this.rbUse1Column.UseVisualStyleBackColor = true;
             // 
-            // cbxPrintCharacterBorder
+            // tbCustomBackgroundPath
             // 
-            this.cbxPrintCharacterBorder.AutoSize = true;
-            this.cbxPrintCharacterBorder.Location = new System.Drawing.Point(141, 58);
-            this.cbxPrintCharacterBorder.Name = "cbxPrintCharacterBorder";
-            this.cbxPrintCharacterBorder.Size = new System.Drawing.Size(15, 14);
-            this.cbxPrintCharacterBorder.TabIndex = 5;
-            this.cbxPrintCharacterBorder.UseVisualStyleBackColor = true;
+            this.tbCustomBackgroundPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCustomBackgroundPath.Location = new System.Drawing.Point(141, 9);
+            this.tbCustomBackgroundPath.Name = "tbCustomBackgroundPath";
+            this.tbCustomBackgroundPath.Size = new System.Drawing.Size(532, 20);
+            this.tbCustomBackgroundPath.TabIndex = 1;
             // 
-            // label9
+            // btnGeneratePDF
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 59);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(111, 13);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Print Character Border";
+            this.btnGeneratePDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGeneratePDF.Location = new System.Drawing.Point(598, 326);
+            this.btnGeneratePDF.Name = "btnGeneratePDF";
+            this.btnGeneratePDF.Size = new System.Drawing.Size(75, 39);
+            this.btnGeneratePDF.TabIndex = 0;
+            this.btnGeneratePDF.Text = "Generate PDF";
+            this.btnGeneratePDF.UseVisualStyleBackColor = true;
+            this.btnGeneratePDF.Click += new System.EventHandler(this.btnGeneratePDF_Click);
+            // 
+            // btnConfigureNightOrder
+            // 
+            this.btnConfigureNightOrder.Location = new System.Drawing.Point(385, 175);
+            this.btnConfigureNightOrder.Name = "btnConfigureNightOrder";
+            this.btnConfigureNightOrder.Size = new System.Drawing.Size(123, 23);
+            this.btnConfigureNightOrder.TabIndex = 20;
+            this.btnConfigureNightOrder.Text = "Configure Night Order";
+            this.btnConfigureNightOrder.UseVisualStyleBackColor = true;
+            this.btnConfigureNightOrder.Click += new System.EventHandler(this.btnConfigureNightOrder_Click);
             // 
             // Main
             // 
@@ -673,6 +685,7 @@
         private System.Windows.Forms.Button btnGeneratePDF;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox cbxPrintCharacterBorder;
+        private System.Windows.Forms.Button btnConfigureNightOrder;
     }
 }
 

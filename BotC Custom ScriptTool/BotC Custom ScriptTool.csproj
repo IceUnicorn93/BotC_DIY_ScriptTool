@@ -48,10 +48,17 @@
   <ItemGroup>
     <Compile Include="Classes\CharacterRole.cs" />
     <Compile Include="Classes\Jinx.cs" />
+    <Compile Include="Classes\NightOrder.cs" />
     <Compile Include="Classes\PDF_ImageCreator.cs" />
     <Compile Include="Classes\Script.cs" />
     <Compile Include="Enums\ERoleType.cs" />
     <Compile Include="FileAccess\FileAccessor.cs" />
+    <Compile Include="Forms\frmNightOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNightOrder.Designer.cs">
+      <DependentUpon>frmNightOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +73,9 @@
     <Compile Include="UserControls\ucJinx.Designer.cs">
       <DependentUpon>ucJinx.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\frmNightOrder.resx">
+      <DependentUpon>frmNightOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
