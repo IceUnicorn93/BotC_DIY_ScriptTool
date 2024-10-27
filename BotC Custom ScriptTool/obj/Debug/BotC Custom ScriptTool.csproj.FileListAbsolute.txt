@@ -44,23 +44,3 @@ E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom Scr
 E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Cus.52E06393.Up2Date
 E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.exe
 E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\obj\Debug\BotC Custom ScriptTool.pdb
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.barcodes.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.bouncy-castle-connector.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.forms.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.io.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.kernel.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.layout.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.pdfa.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.pdfua.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.sign.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.styledxmlparser.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.svg.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\itext.commons.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\Microsoft.Extensions.Logging.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\Microsoft.Extensions.Options.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\Microsoft.Extensions.Primitives.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\Newtonsoft.Json.dll
-E:\C# Repos\BotC_DIY_ScriptTool\BotC Custom ScriptTool\bin\Debug\System.Diagnostics.DiagnosticSource.dll

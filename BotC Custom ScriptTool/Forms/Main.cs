@@ -20,12 +20,6 @@ namespace BotC_Custom_ScriptTool.Forms
             SetEnableState(false);
         }
 
-        //Test Button
-        private void button1_Click(object sender, EventArgs e)
-        {
-            PDF_ImageCreator.CreateScriptImage(selectedScriptRoles, tbScriptName.Text, tbScriptAuthor.Text);
-        }
-
         //--------------------- Private Fields
 
 
@@ -420,6 +414,13 @@ namespace BotC_Custom_ScriptTool.Forms
                 lbJinxes.Items.Remove(selectedJinx);
                 jinxes.Remove(selectedJinx);
             }
+        }
+
+        //--------------------- Tab Page 3 (PDF)
+
+        private void btnGeneratePDF_Click(object sender, EventArgs e)
+        {
+            PDF_ImageCreator.CreateScriptImage(selectedScriptRoles, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
         }
     }
 }

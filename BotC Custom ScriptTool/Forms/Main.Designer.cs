@@ -56,7 +56,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbScriptName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblScriptCountDemons = new System.Windows.Forms.Label();
             this.lblScriptCountMinions = new System.Windows.Forms.Label();
             this.lblScriptCountOutsiders = new System.Windows.Forms.Label();
@@ -69,10 +68,18 @@
             this.clbScriptRoles = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tpPDF = new System.Windows.Forms.TabPage();
+            this.btnGeneratePDF = new System.Windows.Forms.Button();
+            this.tbCustomBackgroundPath = new System.Windows.Forms.TextBox();
+            this.rbUse1Column = new System.Windows.Forms.RadioButton();
+            this.rbUse2Columns = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbxPrintCharacterBorder = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.tcMainControl.SuspendLayout();
             this.tpCharacters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoleIcon)).BeginInit();
             this.tpScript.SuspendLayout();
+            this.tpPDF.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNewRole
@@ -296,7 +303,6 @@
             this.tpScript.Controls.Add(this.label7);
             this.tpScript.Controls.Add(this.tbScriptName);
             this.tpScript.Controls.Add(this.label6);
-            this.tpScript.Controls.Add(this.button1);
             this.tpScript.Controls.Add(this.lblScriptCountDemons);
             this.tpScript.Controls.Add(this.lblScriptCountMinions);
             this.tpScript.Controls.Add(this.lblScriptCountOutsiders);
@@ -394,16 +400,6 @@
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 12;
             this.label6.Text = "Script";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(598, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblScriptCountDemons
             // 
@@ -524,6 +520,13 @@
             // 
             // tpPDF
             // 
+            this.tpPDF.Controls.Add(this.label9);
+            this.tpPDF.Controls.Add(this.cbxPrintCharacterBorder);
+            this.tpPDF.Controls.Add(this.label8);
+            this.tpPDF.Controls.Add(this.rbUse2Columns);
+            this.tpPDF.Controls.Add(this.rbUse1Column);
+            this.tpPDF.Controls.Add(this.tbCustomBackgroundPath);
+            this.tpPDF.Controls.Add(this.btnGeneratePDF);
             this.tpPDF.Location = new System.Drawing.Point(4, 22);
             this.tpPDF.Name = "tpPDF";
             this.tpPDF.Padding = new System.Windows.Forms.Padding(3);
@@ -531,6 +534,75 @@
             this.tpPDF.TabIndex = 2;
             this.tpPDF.Text = "PDF";
             this.tpPDF.UseVisualStyleBackColor = true;
+            // 
+            // btnGeneratePDF
+            // 
+            this.btnGeneratePDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGeneratePDF.Location = new System.Drawing.Point(598, 326);
+            this.btnGeneratePDF.Name = "btnGeneratePDF";
+            this.btnGeneratePDF.Size = new System.Drawing.Size(75, 39);
+            this.btnGeneratePDF.TabIndex = 0;
+            this.btnGeneratePDF.Text = "Generate PDF";
+            this.btnGeneratePDF.UseVisualStyleBackColor = true;
+            this.btnGeneratePDF.Click += new System.EventHandler(this.btnGeneratePDF_Click);
+            // 
+            // tbCustomBackgroundPath
+            // 
+            this.tbCustomBackgroundPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCustomBackgroundPath.Location = new System.Drawing.Point(141, 9);
+            this.tbCustomBackgroundPath.Name = "tbCustomBackgroundPath";
+            this.tbCustomBackgroundPath.Size = new System.Drawing.Size(532, 20);
+            this.tbCustomBackgroundPath.TabIndex = 1;
+            // 
+            // rbUse1Column
+            // 
+            this.rbUse1Column.AutoSize = true;
+            this.rbUse1Column.Location = new System.Drawing.Point(141, 35);
+            this.rbUse1Column.Name = "rbUse1Column";
+            this.rbUse1Column.Size = new System.Drawing.Size(91, 17);
+            this.rbUse1Column.TabIndex = 2;
+            this.rbUse1Column.TabStop = true;
+            this.rbUse1Column.Text = "Use 1 Column";
+            this.rbUse1Column.UseVisualStyleBackColor = true;
+            // 
+            // rbUse2Columns
+            // 
+            this.rbUse2Columns.AutoSize = true;
+            this.rbUse2Columns.Location = new System.Drawing.Point(238, 35);
+            this.rbUse2Columns.Name = "rbUse2Columns";
+            this.rbUse2Columns.Size = new System.Drawing.Size(96, 17);
+            this.rbUse2Columns.TabIndex = 3;
+            this.rbUse2Columns.TabStop = true;
+            this.rbUse2Columns.Text = "Use 2 Columns";
+            this.rbUse2Columns.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 26);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Custom Background\r\nImage Path";
+            // 
+            // cbxPrintCharacterBorder
+            // 
+            this.cbxPrintCharacterBorder.AutoSize = true;
+            this.cbxPrintCharacterBorder.Location = new System.Drawing.Point(141, 58);
+            this.cbxPrintCharacterBorder.Name = "cbxPrintCharacterBorder";
+            this.cbxPrintCharacterBorder.Size = new System.Drawing.Size(15, 14);
+            this.cbxPrintCharacterBorder.TabIndex = 5;
+            this.cbxPrintCharacterBorder.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 59);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(111, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Print Character Border";
             // 
             // Main
             // 
@@ -546,6 +618,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbRoleIcon)).EndInit();
             this.tpScript.ResumeLayout(false);
             this.tpScript.PerformLayout();
+            this.tpPDF.ResumeLayout(false);
+            this.tpPDF.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -584,7 +658,6 @@
         private System.Windows.Forms.Label lblScriptCountDemons;
         private System.Windows.Forms.Label lblScriptCountMinions;
         private System.Windows.Forms.Label lblScriptCountOutsiders;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbScriptAuthor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbScriptName;
@@ -593,6 +666,13 @@
         private System.Windows.Forms.Button btnLoadScript;
         private System.Windows.Forms.Button btnJinxes;
         private System.Windows.Forms.ListBox lbJinxes;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RadioButton rbUse2Columns;
+        private System.Windows.Forms.RadioButton rbUse1Column;
+        private System.Windows.Forms.TextBox tbCustomBackgroundPath;
+        private System.Windows.Forms.Button btnGeneratePDF;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox cbxPrintCharacterBorder;
     }
 }
 
