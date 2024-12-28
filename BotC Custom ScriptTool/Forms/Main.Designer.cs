@@ -31,6 +31,7 @@
             this.btnNewRole = new System.Windows.Forms.Button();
             this.tcMainControl = new System.Windows.Forms.TabControl();
             this.tpCharacters = new System.Windows.Forms.TabPage();
+            this.btnClipboardImport = new System.Windows.Forms.Button();
             this.pbRoleIcon = new System.Windows.Forms.PictureBox();
             this.rbDemon = new System.Windows.Forms.RadioButton();
             this.rbOutsider = new System.Windows.Forms.RadioButton();
@@ -48,6 +49,7 @@
             this.btnSafe = new System.Windows.Forms.Button();
             this.lbRoles = new System.Windows.Forms.ListBox();
             this.tpScript = new System.Windows.Forms.TabPage();
+            this.btnConfigureNightOrder = new System.Windows.Forms.Button();
             this.lbJinxes = new System.Windows.Forms.ListBox();
             this.btnJinxes = new System.Windows.Forms.Button();
             this.btnLoadScript = new System.Windows.Forms.Button();
@@ -75,12 +77,19 @@
             this.rbUse1Column = new System.Windows.Forms.RadioButton();
             this.tbCustomBackgroundPath = new System.Windows.Forms.TextBox();
             this.btnGeneratePDF = new System.Windows.Forms.Button();
-            this.btnConfigureNightOrder = new System.Windows.Forms.Button();
+            this.btnDownloadImages = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.nudPdfCharacterAbilitySize = new System.Windows.Forms.NumericUpDown();
+            this.nudPdfCharacterNameSize = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.tcMainControl.SuspendLayout();
             this.tpCharacters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoleIcon)).BeginInit();
             this.tpScript.SuspendLayout();
             this.tpPDF.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterAbilitySize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterNameSize)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNewRole
@@ -108,6 +117,8 @@
             // 
             // tpCharacters
             // 
+            this.tpCharacters.Controls.Add(this.btnDownloadImages);
+            this.tpCharacters.Controls.Add(this.btnClipboardImport);
             this.tpCharacters.Controls.Add(this.pbRoleIcon);
             this.tpCharacters.Controls.Add(this.rbDemon);
             this.tpCharacters.Controls.Add(this.rbOutsider);
@@ -132,6 +143,17 @@
             this.tpCharacters.TabIndex = 0;
             this.tpCharacters.Text = "Characters";
             this.tpCharacters.UseVisualStyleBackColor = true;
+            // 
+            // btnClipboardImport
+            // 
+            this.btnClipboardImport.Location = new System.Drawing.Point(570, 6);
+            this.btnClipboardImport.Name = "btnClipboardImport";
+            this.btnClipboardImport.Size = new System.Drawing.Size(103, 23);
+            this.btnClipboardImport.TabIndex = 17;
+            this.btnClipboardImport.Text = "Clipboard Import";
+            this.btnClipboardImport.UseVisualStyleBackColor = true;
+            this.btnClipboardImport.Visible = false;
+            this.btnClipboardImport.Click += new System.EventHandler(this.ClipboardImport_Click);
             // 
             // pbRoleIcon
             // 
@@ -323,6 +345,16 @@
             this.tpScript.TabIndex = 1;
             this.tpScript.Text = "Script";
             this.tpScript.UseVisualStyleBackColor = true;
+            // 
+            // btnConfigureNightOrder
+            // 
+            this.btnConfigureNightOrder.Location = new System.Drawing.Point(385, 175);
+            this.btnConfigureNightOrder.Name = "btnConfigureNightOrder";
+            this.btnConfigureNightOrder.Size = new System.Drawing.Size(123, 23);
+            this.btnConfigureNightOrder.TabIndex = 20;
+            this.btnConfigureNightOrder.Text = "Configure Night Order";
+            this.btnConfigureNightOrder.UseVisualStyleBackColor = true;
+            this.btnConfigureNightOrder.Click += new System.EventHandler(this.btnConfigureNightOrder_Click);
             // 
             // lbJinxes
             // 
@@ -522,6 +554,11 @@
             // 
             // tpPDF
             // 
+            this.tpPDF.Controls.Add(this.btnPrint);
+            this.tpPDF.Controls.Add(this.label11);
+            this.tpPDF.Controls.Add(this.nudPdfCharacterNameSize);
+            this.tpPDF.Controls.Add(this.nudPdfCharacterAbilitySize);
+            this.tpPDF.Controls.Add(this.label10);
             this.tpPDF.Controls.Add(this.label9);
             this.tpPDF.Controls.Add(this.cbxPrintCharacterBorder);
             this.tpPDF.Controls.Add(this.label8);
@@ -606,15 +643,78 @@
             this.btnGeneratePDF.UseVisualStyleBackColor = true;
             this.btnGeneratePDF.Click += new System.EventHandler(this.btnGeneratePDF_Click);
             // 
-            // btnConfigureNightOrder
+            // btnDownloadImages
             // 
-            this.btnConfigureNightOrder.Location = new System.Drawing.Point(385, 175);
-            this.btnConfigureNightOrder.Name = "btnConfigureNightOrder";
-            this.btnConfigureNightOrder.Size = new System.Drawing.Size(123, 23);
-            this.btnConfigureNightOrder.TabIndex = 20;
-            this.btnConfigureNightOrder.Text = "Configure Night Order";
-            this.btnConfigureNightOrder.UseVisualStyleBackColor = true;
-            this.btnConfigureNightOrder.Click += new System.EventHandler(this.btnConfigureNightOrder_Click);
+            this.btnDownloadImages.Location = new System.Drawing.Point(269, 6);
+            this.btnDownloadImages.Name = "btnDownloadImages";
+            this.btnDownloadImages.Size = new System.Drawing.Size(102, 23);
+            this.btnDownloadImages.TabIndex = 18;
+            this.btnDownloadImages.Text = "Download Images";
+            this.btnDownloadImages.UseVisualStyleBackColor = true;
+            this.btnDownloadImages.Click += new System.EventHandler(this.btnDownloadImages_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 80);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(105, 13);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Ability Text Font Size";
+            // 
+            // nudPdfCharacterAbilitySize
+            // 
+            this.nudPdfCharacterAbilitySize.Location = new System.Drawing.Point(141, 78);
+            this.nudPdfCharacterAbilitySize.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.nudPdfCharacterAbilitySize.Name = "nudPdfCharacterAbilitySize";
+            this.nudPdfCharacterAbilitySize.Size = new System.Drawing.Size(59, 20);
+            this.nudPdfCharacterAbilitySize.TabIndex = 8;
+            this.nudPdfCharacterAbilitySize.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            // 
+            // nudPdfCharacterNameSize
+            // 
+            this.nudPdfCharacterNameSize.Location = new System.Drawing.Point(141, 104);
+            this.nudPdfCharacterNameSize.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.nudPdfCharacterNameSize.Name = "nudPdfCharacterNameSize";
+            this.nudPdfCharacterNameSize.Size = new System.Drawing.Size(59, 20);
+            this.nudPdfCharacterNameSize.TabIndex = 9;
+            this.nudPdfCharacterNameSize.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 106);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(126, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Charactername Font Size";
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.Location = new System.Drawing.Point(517, 326);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 39);
+            this.btnPrint.TabIndex = 11;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // Main
             // 
@@ -632,6 +732,8 @@
             this.tpScript.PerformLayout();
             this.tpPDF.ResumeLayout(false);
             this.tpPDF.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterAbilitySize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterNameSize)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -686,6 +788,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox cbxPrintCharacterBorder;
         private System.Windows.Forms.Button btnConfigureNightOrder;
+        private System.Windows.Forms.Button btnClipboardImport;
+        private System.Windows.Forms.Button btnDownloadImages;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown nudPdfCharacterNameSize;
+        private System.Windows.Forms.NumericUpDown nudPdfCharacterAbilitySize;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnPrint;
     }
 }
 

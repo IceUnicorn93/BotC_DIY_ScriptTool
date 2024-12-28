@@ -1,12 +1,14 @@
 ﻿using BotC_Custom_ScriptTool.Enums;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace BotC_Custom_ScriptTool.Classes
 {
@@ -16,6 +18,8 @@ namespace BotC_Custom_ScriptTool.Classes
         public static float FontSizeRoles = 10;
         public static float FontSizeRoleAbility = 8;
         public static float FontSizeHeader = 12;
+
+        public static bool PrintToPDF = false;
 
         private static List<Image> PrintImages = new List<Image>();
 
@@ -63,46 +67,63 @@ namespace BotC_Custom_ScriptTool.Classes
             string ScriptName, string Author, string PathToCustomImage,
             bool UseTwoColumns, bool printCharacterBorders)
         {
-            var IconHeight = (ImageHeight - (2 * padding)) / (UseTwoColumns ? 13 : 26);
+            var roles = allRoles.Where(n => script.Roles.Contains(n.RoleName)).ToList();
+
+            var roleCount = UseTwoColumns == false ? roles.Count :
+                RoundToNextEvenNumber(roles.Count(n => n.RoleType == ERoleType.Townsfolk)) +
+                RoundToNextEvenNumber(roles.Count(n => n.RoleType == ERoleType.Outsider)) +
+                RoundToNextEvenNumber(roles.Count(n => n.RoleType == ERoleType.Minion)) +
+                RoundToNextEvenNumber(roles.Count(n => n.RoleType == ERoleType.Demon));
+
+            var IconHeight = (ImageHeight - (2 * padding)) / (UseTwoColumns ? roleCount / 2 : roleCount);
             // 26 = 14 Town + 4 Outsider + 4 Minion + 4 Demon
             //With Two Columns, 13!
 
             var graphics = Graphics.FromImage(A4);
             if (PathToCustomImage == "")
-            {
                 graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, ImageWidth, ImageHeight));
-            }
             else
-            {
                 graphics.DrawImage(Image.FromFile(PathToCustomImage), new Rectangle(0, 0, ImageWidth, ImageHeight));
-            }
-
-            var roles = allRoles.Where(n => script.Roles.Contains(n.RoleName)).ToList();
 
             //ScriptName and Author
             DrawScriptNameAndAuthor(graphics, ScriptName, Author, padding);
 
+            int count = 0;
             //Max. 14 Townsfolk
             var townsfolk = roles.Where(n => n.RoleType == ERoleType.Townsfolk).ToList();
-            DrawRolesOnImage(townsfolk, graphics, padding, IconHeight, 0, ImageWidth, UseTwoColumns, printCharacterBorders);
-            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, 0, ERoleType.Townsfolk);
+            DrawRolesOnImage(townsfolk, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
+            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count , ERoleType.Townsfolk);
 
             //Max 4 Outsiders
+            count = UseTwoColumns ? RoundToNextEvenNumber(townsfolk.Count) : townsfolk.Count;
             var outsider = roles.Where(n => n.RoleType == ERoleType.Outsider).ToList();
-            DrawRolesOnImage(outsider, graphics, padding, IconHeight, 14, ImageWidth, UseTwoColumns, printCharacterBorders);
-            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? 7 : 14, ERoleType.Outsider);
+            DrawRolesOnImage(outsider, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
+            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Outsider);
 
             //Max 4 Minions
+            count = UseTwoColumns ? RoundToNextEvenNumber(townsfolk.Count) + RoundToNextEvenNumber(outsider.Count) :
+                townsfolk.Count + outsider.Count;
             var minions = roles.Where(n => n.RoleType == ERoleType.Minion).ToList();
-            DrawRolesOnImage(minions, graphics, padding, IconHeight, 18, ImageWidth, UseTwoColumns, printCharacterBorders);
-            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? 9 : 18, ERoleType.Minion);
+            DrawRolesOnImage(minions, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
+            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Minion);
 
             //Max 4 Demons
+            count = UseTwoColumns ? RoundToNextEvenNumber(townsfolk.Count) + RoundToNextEvenNumber(outsider.Count) + RoundToNextEvenNumber(minions.Count) :
+                townsfolk.Count + outsider.Count + minions.Count;
             var demons = roles.Where(n => n.RoleType == ERoleType.Demon).ToList();
-            DrawRolesOnImage(demons, graphics, padding, IconHeight, 22, ImageWidth, UseTwoColumns, printCharacterBorders);
-            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? 11 : 22, ERoleType.Demon);
+            DrawRolesOnImage(demons, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
+            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Demon);
+
+            //Draw Not First Night Information
+            DrawNotFirstNightOnImage(graphics);
 
             PrintImages.Add(A4);
+        }
+
+        private static int RoundToNextEvenNumber(int number)
+        {
+            if (number % 2 == 0) return number;
+            else return number + 1;
         }
 
         private static void DrawScriptNameAndAuthor(Graphics graphics, string ScriptName, string Author, int padding)
@@ -155,13 +176,14 @@ namespace BotC_Custom_ScriptTool.Classes
                 //Calculate drawing Positions and Sizes
                 var posX = DrawLeft ? padding : imageWidth / 2;
                 var posY = padding +
-                    (useTwoColumns ? ((offset / 2) * iconHeight) : (offset * iconHeight)) +
+                    (useTwoColumns ? ((int)Math.Round((decimal)offset / 2) * iconHeight) : (offset * iconHeight)) +
                     (useTwoColumns ? ((i / 2) * iconHeight) : (i * iconHeight));
                 var drawWidth = (useTwoColumns ? (imageWidth - 2 * padding) / 2 - iconHeight : (imageWidth - 2 * padding) - iconHeight);
                 var drawWidthRectangle = (useTwoColumns ? (imageWidth - 2 * padding) / 2 : (imageWidth - 2 * padding));
 
                 //Get Role Informations
-                var roleIcon = GetImageFromURL(roles[i].RoleIconURL);
+                var roleIcon = File.Exists($@"{Application.StartupPath}\Images\{roles[i].RoleName}.png") ?
+                                Image.FromFile($@"{Application.StartupPath}\Images\{roles[i].RoleName}.png") : GetImageFromURL(roles[i].RoleIconURL);
                 var roleAbility = roles[i].RoleAbilityText;
                 var roleName = roles[i].RoleName;
 
@@ -198,6 +220,17 @@ namespace BotC_Custom_ScriptTool.Classes
             }
         }
 
+        private static void DrawNotFirstNightOnImage(Graphics graphics)
+        {
+            var information = graphics.MeasureString("* nicht in der ersten Nacht",
+                new Font("Arial", FontSizeRoleType, FontStyle.Italic));
+            graphics.DrawString("* nicht in der ersten Nacht",
+                new Font("Arial", FontSizeRoleType, FontStyle.Italic),
+                new SolidBrush(Color.Gray),
+                new Point(ImageWidth / 2 - (int)information.Width / 2, ImageHeight - padding));
+        }
+
+
         private static Image GetImageFromURL(string URL)
         {
             using (WebClient webClient = new WebClient())
@@ -217,10 +250,20 @@ namespace BotC_Custom_ScriptTool.Classes
                 {
                     PrintDocument pd = new PrintDocument();
 
+                    if (PrintToPDF == false)
+                    {
+                        PrintDialog pdi = new PrintDialog();
+                        pdi.ShowDialog();
+                        pd.PrinterSettings = pdi.PrinterSettings;
+                    }
+                    else
+                    {
+                        pd.PrinterSettings.PrintToFile = true;
+                    }
+
                     //Print to File
-                    var pds = pd.PrinterSettings;
-                    pds.PrintFileName = FileToSave;
-                    pds.PrintToFile = true;
+                    if(pd.PrinterSettings.PrintToFile)
+                        pd.PrinterSettings.PrintFileName = FileToSave;
 
                     pd.PrintPage += new PrintPageEventHandler(pd_PrintPage);
                     // Print the document.
@@ -235,8 +278,6 @@ namespace BotC_Custom_ScriptTool.Classes
                 MessageBox.Show(ex.Message);
             }
         }
-
-
 
         private static void pd_PrintPage(object sender, PrintPageEventArgs ev)
         {

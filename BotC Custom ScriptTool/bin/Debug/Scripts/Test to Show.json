@@ -1,48 +1,55 @@
 {
   "Jinxes": [
     {
-      "RoleA": "Scharlachrote Frau",
-      "RoleB": "Vigormortis",
-      "JinxText": "Awesome Jinx!"
+      "RoleA": "Yaggababble",
+      "RoleB": "Plague Doctor",
+      "JinxText": "blah blah"
     }
   ],
   "Roles": [
+    "Jungfrau",
     "Bibliothekar",
-    "Blumenm\u00E4dchen",
-    "B\u00FCrgermeister",
-    "D\u00E4monenj\u00E4ger",
     "Detektiv",
     "Empath",
+    "D\u00E4monenj\u00E4ger",
+    "B\u00FCrgermeister",
+    "Butler",
+    "Einsiedler",
+    "Giftmischer",
+    "Scharlachrote Frau",
+    "Blumenm\u00E4dchen",
+    "Jongleur",
+    "Barbier",
+    "B\u00F6ser Zwilling",
+    "Fang Gu",
+    "Vigormortis",
+    "No Dashii",
+    "Gro\u00DFmutter",
+    "Kammerzofe",
     "Exorzist",
     "Gastwirt",
     "Gl\u00FCcksspieler",
-    "Gro\u00DFmutter",
     "H\u00F6fling",
-    "Jongleur",
-    "Jungfrau",
-    "Kammerzofe",
-    "Barbier",
     "Bastler",
-    "Butler",
-    "Einsiedler",
-    "B\u00F6ser Zwilling",
-    "Giftmischer",
-    "Vigormortis",
-    "No Dashii",
-    "Fang Gu",
+    "Meuchelm\u00F6rder",
     "Shabaloth",
-    "Scharlachrote Frau",
-    "Meuchelm\u00F6rder"
+    "Atheist",
+    "Boomdandy",
+    "Plague Doctor",
+    "Yaggababble"
   ],
   "NightOrder": {
     "FirstNight": [
-      "Wake Minions",
-      "Wake Demon",
-      "Do Other Stuff",
-      "Wake Town"
+      "Reisende Agieren",
+      "Giftmischer",
+      "D\u00E4mon",
+      "Sonnenaufgang"
     ],
     "OtherNights": [
-      "Wake Town"
+      "Reisende Agieren",
+      "Giftmischer",
+      "D\u00E4mon",
+      "Sonnenaufgang"
     ]
   },
   "ScriptName": "Test to Show",

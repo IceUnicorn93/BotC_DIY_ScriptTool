@@ -134,7 +134,10 @@ namespace BotC_Custom_ScriptTool.Forms
             //Incase of a bad URL, put it in a Try-Catch
             try 
             {
-                pbRoleIcon.Load(tbRoleIconURL.Text);
+                if(File.Exists($@"{Application.StartupPath}\Images\{tbRoleName.Text}.png"))
+                    pbRoleIcon.Load($@"{Application.StartupPath}\Images\{tbRoleName.Text}.png");
+                else
+                    pbRoleIcon.Load(tbRoleIconURL.Text);
             }
             catch{}
         }
@@ -220,6 +223,27 @@ namespace BotC_Custom_ScriptTool.Forms
             lbRoles.Items.AddRange(roles.OrderBy(n => n.ToString()).ToArray());
         }
 
+        /// <summary>
+        /// Downloads all Images for the Characters
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDownloadImages_Click(object sender, EventArgs e)
+        {
+            if(Directory.Exists($@"{Application.StartupPath}\Images") == false)
+                Directory.CreateDirectory($@"{Application.StartupPath}\Images");
+
+            roles.ForEach(role =>
+            {
+                try
+                {
+                    pbRoleIcon.Load(role.RoleIconURL);
+                    pbRoleIcon.Image.Save($@"{Application.StartupPath}\Images\{role.RoleName}.png");
+                }
+                catch { }
+            });
+        }
+
         //--------------------- Tab Page 2 (Script)
 
         /// <summary>
@@ -297,26 +321,26 @@ namespace BotC_Custom_ScriptTool.Forms
 
 
             //Remove this Block if limit is unwanted!
-            if (selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Townsfolk) > 14)
-            {
-                selectedScriptRoles.Remove(role);
-                e.NewValue = CheckState.Unchecked;
-            }
-            else if (selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Outsider) > 4)
-            {
-                selectedScriptRoles.Remove(role);
-                e.NewValue = CheckState.Unchecked;
-            }
-            else if (selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Minion) > 4)
-            {
-                selectedScriptRoles.Remove(role);
-                e.NewValue = CheckState.Unchecked;
-            }
-            else if (selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Demon) > 4)
-            {
-                selectedScriptRoles.Remove(role);
-                e.NewValue = CheckState.Unchecked;
-            }
+            //if (selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Townsfolk) > 14)
+            //{
+            //    selectedScriptRoles.Remove(role);
+            //    e.NewValue = CheckState.Unchecked;
+            //}
+            //else if (selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Outsider) > 4)
+            //{
+            //    selectedScriptRoles.Remove(role);
+            //    e.NewValue = CheckState.Unchecked;
+            //}
+            //else if (selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Minion) > 4)
+            //{
+            //    selectedScriptRoles.Remove(role);
+            //    e.NewValue = CheckState.Unchecked;
+            //}
+            //else if (selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Demon) > 4)
+            //{
+            //    selectedScriptRoles.Remove(role);
+            //    e.NewValue = CheckState.Unchecked;
+            //}
 
             UpdateScriptCountLabel();
         }
@@ -357,14 +381,19 @@ namespace BotC_Custom_ScriptTool.Forms
                     
                     tbScriptName.Text = script.ScriptName;
                     tbScriptAuthor.Text = script.ScriptAuthor;
+                    jinxes = script.Jinxes;
                     lbJinxes.Items.Clear();
                     lbJinxes.Items.AddRange(script.Jinxes.ToArray());
+
+                    nightOrder = script.NightOrder;
 
                     selectedScriptRoles.Clear();
                     selectedScriptRoles = roles.Where(n =>
                     {
                         return script.Roles.Contains(n.RoleName);
                     }).ToList();
+
+
 
                     UpdateScriptCountLabel();
                 }
@@ -416,7 +445,11 @@ namespace BotC_Custom_ScriptTool.Forms
             }
         }
 
-        //Configures the Night Order
+        /// <summary>
+        /// Opens the Window to configure the Night Order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConfigureNightOrder_Click(object sender, EventArgs e)
         {
             frmNightOrder frmNightOrder = new frmNightOrder(nightOrder);
@@ -438,7 +471,87 @@ namespace BotC_Custom_ScriptTool.Forms
                 ScriptName = tbScriptName.Text
             };
 
+            PDF_ImageCreator.PrintToPDF = true;
+            PDF_ImageCreator.FontSizeRoles = (int)nudPdfCharacterNameSize.Value;
+            PDF_ImageCreator.FontSizeRoleAbility = (int)nudPdfCharacterAbilitySize.Value;
             PDF_ImageCreator.CreateScript(script, roles, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            var script = new Script
+            {
+                Roles = selectedScriptRoles.Select(n => n.RoleName).ToList(),
+                Jinxes = jinxes,
+                NightOrder = nightOrder,
+                ScriptAuthor = tbScriptAuthor.Text,
+                ScriptName = tbScriptName.Text
+            };
+
+            PDF_ImageCreator.FontSizeRoles = (int)nudPdfCharacterNameSize.Value;
+            PDF_ImageCreator.FontSizeRoleAbility = (int)nudPdfCharacterAbilitySize.Value;
+            PDF_ImageCreator.CreateScript(script, roles, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
+        }
+
+        //--------------------- Temporary Stuff
+
+        private void ClipboardImport_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Clipboard must follow this format: Type\\tName\\tAbility\\r\\n", "Format needs to be correct", MessageBoxButtons.OKCancel) == DialogResult.Cancel) return;   
+
+            var clipboardText = Clipboard.GetText();
+            var rows = clipboardText.Split(new[] {'\r', '\n'}).ToList().Where(n => n != "").ToList();
+
+            foreach (var row in rows)
+            {
+                var cloums = row.Split('\t').ToList();
+                var characterType = cloums[0];
+                var characterName = cloums[1];
+                var characterAbility = cloums[2];
+
+                var role = new CharacterRole
+                {
+                    RoleName = characterName,
+                    RoleAbilityText = characterAbility,
+                    RoleIconURL = "",
+                    RoleType = characterType == "Townsfolk" ? Enums.ERoleType.Townsfolk :
+                        characterType == "Outsider" ? Enums.ERoleType.Outsider :
+                        characterType == "Minion" ? Enums.ERoleType.Minion :
+                        characterType == "Demon" ? Enums.ERoleType.Demon : Enums.ERoleType.Townsfolk
+                };
+
+                role.RoleIconURL = Prompt.ShowDialog(characterName, "Icon URL");
+
+                roles.Add(role);
+            }
+
+            lbRoles.Items.Clear();
+            lbRoles.Items.AddRange(roles.OrderBy(n => n.ToString()).ToArray());
+        }
+    }
+
+    public static class Prompt
+    {
+        public static string ShowDialog(string text, string caption)
+        {
+            Form prompt = new Form()
+            {
+                Width = 500,
+                Height = 150,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Text = caption,
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            Label textLabel = new Label() { Left = 50, Top = 20, Text = text };
+            TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 400 };
+            Button confirmation = new Button() { Text = "Ok", Left = 350, Width = 100, Top = 70, DialogResult = DialogResult.OK };
+            confirmation.Click += (sender, e) => { prompt.Close(); };
+            prompt.Controls.Add(textBox);
+            prompt.Controls.Add(confirmation);
+            prompt.Controls.Add(textLabel);
+            prompt.AcceptButton = confirmation;
+
+            return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : "";
         }
     }
 }
