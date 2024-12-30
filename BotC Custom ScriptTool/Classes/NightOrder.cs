@@ -4,7 +4,13 @@ namespace BotC_Custom_ScriptTool.Classes
 {
     public class NightOrder
     {
-        public List<string> FirstNight { get; set; } = new List<string>();
-        public List<string> OtherNights { get; set; } = new List<string>();
+        public List<NightInfo> FirstNight { get; set; } = new List<NightInfo>();
+        public List<NightInfo> OtherNights { get; set; } = new List<NightInfo>();
+    }
+
+    public class NightInfo
+    {
+        public string Rolename { get; set; }
+        public string NightInformation { get; set; }
     }
 }

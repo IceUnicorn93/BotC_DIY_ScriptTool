@@ -39,10 +39,9 @@ namespace BotC_Custom_ScriptTool.Classes
             imageIndex = 0;
 
             CreateCharacterSheet(script, allRoles, CreateA4Image(), ScriptName, Author, PathToCustomImage, UseTwoColumns, printCharacterBorders);
+            CreateNightOrder(script, CreateA4Image(), allRoles, true);
+            CreateNightOrder(script, CreateA4Image(), allRoles, false);
 
-
-            if (script.NightOrder.FirstNight.Count > 0) { }
-            if (script.NightOrder.OtherNights.Count > 0) { }
             if (script.Jinxes.Count > 0) { }
 
             //Save as PDF File and clean up!
@@ -76,8 +75,6 @@ namespace BotC_Custom_ScriptTool.Classes
                 RoundToNextEvenNumber(roles.Count(n => n.RoleType == ERoleType.Demon));
 
             var IconHeight = (ImageHeight - (2 * padding)) / (UseTwoColumns ? roleCount / 2 : roleCount);
-            // 26 = 14 Town + 4 Outsider + 4 Minion + 4 Demon
-            //With Two Columns, 13!
 
             var graphics = Graphics.FromImage(A4);
             if (PathToCustomImage == "")
@@ -86,7 +83,7 @@ namespace BotC_Custom_ScriptTool.Classes
                 graphics.DrawImage(Image.FromFile(PathToCustomImage), new Rectangle(0, 0, ImageWidth, ImageHeight));
 
             //ScriptName and Author
-            DrawScriptNameAndAuthor(graphics, ScriptName, Author, padding);
+            DrawScriptNameAndAuthor(graphics, ScriptName, "",  Author, padding);
 
             int count = 0;
             //Max. 14 Townsfolk
@@ -120,13 +117,47 @@ namespace BotC_Custom_ScriptTool.Classes
             PrintImages.Add(A4);
         }
 
+        private static void CreateNightOrder(Script script, Image A4, List<CharacterRole> allRoles, bool firstNight)
+        {
+            var graphics = Graphics.FromImage(A4);
+            graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, ImageWidth, ImageHeight));
+
+            DrawScriptNameAndAuthor(graphics, script.ScriptName, firstNight ? "First Night" : "Other Nights", script.ScriptAuthor, padding);
+
+            List<NightInfo> info = firstNight ? script.NightOrder.FirstNight : script.NightOrder.OtherNights;
+
+            var MaxGraphicLength = (int)info.Max(n => graphics.MeasureString(n.Rolename, new Font("Arial", FontSizeHeader)).Width) + padding;
+
+            var MaxIconHeight = (ImageHeight - (2 * padding)) / 18;
+
+            for (int i = 0; i < info.Count; i++)
+            {
+                NightInfo fi = info[i];
+                var roleWithInfo = allRoles.FirstOrDefault(n => n.RoleName == fi.Rolename);
+                Image roleIcon;
+                if (fi.Rolename != "General Info")
+                {
+                    roleIcon = File.Exists($@"{Application.StartupPath}\Images\{roleWithInfo.RoleName}.png") ?
+                        Image.FromFile($@"{Application.StartupPath}\Images\{roleWithInfo.RoleName}.png") : GetImageFromURL(roleWithInfo.RoleIconURL);
+                }
+                else
+                {
+                    roleIcon = Image.FromFile($@"{Application.StartupPath}\Images\{fi.Rolename}.png");
+                }
+
+                DrawRoleAndRoleInfoForNightOrder(graphics, fi, roleIcon, padding, new Point(0, i * MaxIconHeight), MaxIconHeight, MaxGraphicLength);
+            }
+
+            PrintImages.Add(A4);
+        }
+
         private static int RoundToNextEvenNumber(int number)
         {
             if (number % 2 == 0) return number;
             else return number + 1;
         }
 
-        private static void DrawScriptNameAndAuthor(Graphics graphics, string ScriptName, string Author, int padding)
+        private static void DrawScriptNameAndAuthor(Graphics graphics, string ScriptName, string AdditionalTopText, string Author, int padding)
         {
             var scriptNameSize = graphics.MeasureString(ScriptName,
                 new Font("Arial", FontSizeHeader, FontStyle.Italic));
@@ -143,6 +174,16 @@ namespace BotC_Custom_ScriptTool.Classes
                 new Point(
                     padding + (int)scriptNameSize.Width + 10,
                     20 + ((int)scriptNameSize.Height / 2) - ((int)authorSize.Height / 2))
+                );
+
+            var additionalTopTextSize = graphics.MeasureString(AdditionalTopText,
+                new Font("Arial", FontSizeHeader - 3, FontStyle.Italic));
+            graphics.DrawString(AdditionalTopText,
+                new Font("Arial", FontSizeHeader - 3, FontStyle.Italic),
+                new SolidBrush(Color.FromArgb(255, 92, 31, 35)),
+                new Point(
+                    ImageWidth - padding - (int)additionalTopTextSize.Width,
+                    20)
                 );
         }
 
@@ -168,7 +209,7 @@ namespace BotC_Custom_ScriptTool.Classes
             for (int i = 0; i < roles.Count; i++)
             {
                 //Decide if Drawing Left or Right
-                if(useTwoColumns && i % 2 == 1)
+                if (useTwoColumns && i % 2 == 1)
                     DrawLeft = false;
                 else
                     DrawLeft = true;
@@ -215,7 +256,7 @@ namespace BotC_Custom_ScriptTool.Classes
                         posX,
                         posY,
                         drawWidthRectangle,
-                        iconHeight)); 
+                        iconHeight));
                 }
             }
         }
@@ -230,6 +271,24 @@ namespace BotC_Custom_ScriptTool.Classes
                 new Point(ImageWidth / 2 - (int)information.Width / 2, ImageHeight - padding));
         }
 
+        private static void DrawRoleAndRoleInfoForNightOrder(Graphics graphics, NightInfo roleAndInformation, Image roleIcon, int padding, Point position, int IconHeight, int MaxLength)
+        {
+            var calculatedX = position.X + padding;
+            var calculatedY = position.Y + padding;
+
+            graphics.DrawImage(roleIcon, calculatedX, calculatedY, IconHeight, IconHeight);
+
+            calculatedX += IconHeight;
+
+            graphics.DrawString(roleAndInformation.Rolename, new Font("Arial", FontSizeHeader), new SolidBrush(Color.Black), new RectangleF(calculatedX, calculatedY, MaxLength, IconHeight));
+
+            calculatedX += MaxLength;
+
+            graphics.DrawString(roleAndInformation.NightInformation, new Font("Arial", FontSizeRoleAbility), new SolidBrush(Color.Black), new RectangleF(calculatedX, calculatedY,
+                ImageWidth - (2 * padding) - IconHeight - MaxLength,
+                IconHeight));
+
+        }
 
         private static Image GetImageFromURL(string URL)
         {

@@ -452,7 +452,7 @@ namespace BotC_Custom_ScriptTool.Forms
         /// <param name="e"></param>
         private void btnConfigureNightOrder_Click(object sender, EventArgs e)
         {
-            frmNightOrder frmNightOrder = new frmNightOrder(nightOrder);
+            frmNightOrder frmNightOrder = new frmNightOrder(nightOrder, selectedScriptRoles.Select(n => n.RoleName).ToList());
             frmNightOrder.ShowDialog();
 
             nightOrder = frmNightOrder.Order;

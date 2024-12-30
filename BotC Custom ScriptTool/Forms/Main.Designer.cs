@@ -31,6 +31,7 @@
             this.btnNewRole = new System.Windows.Forms.Button();
             this.tcMainControl = new System.Windows.Forms.TabControl();
             this.tpCharacters = new System.Windows.Forms.TabPage();
+            this.btnDownloadImages = new System.Windows.Forms.Button();
             this.btnClipboardImport = new System.Windows.Forms.Button();
             this.pbRoleIcon = new System.Windows.Forms.PictureBox();
             this.rbDemon = new System.Windows.Forms.RadioButton();
@@ -70,6 +71,11 @@
             this.clbScriptRoles = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tpPDF = new System.Windows.Forms.TabPage();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.nudPdfCharacterNameSize = new System.Windows.Forms.NumericUpDown();
+            this.nudPdfCharacterAbilitySize = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cbxPrintCharacterBorder = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -77,19 +83,13 @@
             this.rbUse1Column = new System.Windows.Forms.RadioButton();
             this.tbCustomBackgroundPath = new System.Windows.Forms.TextBox();
             this.btnGeneratePDF = new System.Windows.Forms.Button();
-            this.btnDownloadImages = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.nudPdfCharacterAbilitySize = new System.Windows.Forms.NumericUpDown();
-            this.nudPdfCharacterNameSize = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.tcMainControl.SuspendLayout();
             this.tpCharacters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoleIcon)).BeginInit();
             this.tpScript.SuspendLayout();
             this.tpPDF.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterAbilitySize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterNameSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterAbilitySize)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNewRole
@@ -143,6 +143,16 @@
             this.tpCharacters.TabIndex = 0;
             this.tpCharacters.Text = "Characters";
             this.tpCharacters.UseVisualStyleBackColor = true;
+            // 
+            // btnDownloadImages
+            // 
+            this.btnDownloadImages.Location = new System.Drawing.Point(269, 6);
+            this.btnDownloadImages.Name = "btnDownloadImages";
+            this.btnDownloadImages.Size = new System.Drawing.Size(102, 23);
+            this.btnDownloadImages.TabIndex = 18;
+            this.btnDownloadImages.Text = "Download Images";
+            this.btnDownloadImages.UseVisualStyleBackColor = true;
+            this.btnDownloadImages.Click += new System.EventHandler(this.btnDownloadImages_Click);
             // 
             // btnClipboardImport
             // 
@@ -574,6 +584,69 @@
             this.tpPDF.Text = "PDF";
             this.tpPDF.UseVisualStyleBackColor = true;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.Location = new System.Drawing.Point(517, 326);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 39);
+            this.btnPrint.TabIndex = 11;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 106);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(126, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Charactername Font Size";
+            // 
+            // nudPdfCharacterNameSize
+            // 
+            this.nudPdfCharacterNameSize.Location = new System.Drawing.Point(141, 104);
+            this.nudPdfCharacterNameSize.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.nudPdfCharacterNameSize.Name = "nudPdfCharacterNameSize";
+            this.nudPdfCharacterNameSize.Size = new System.Drawing.Size(59, 20);
+            this.nudPdfCharacterNameSize.TabIndex = 9;
+            this.nudPdfCharacterNameSize.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // nudPdfCharacterAbilitySize
+            // 
+            this.nudPdfCharacterAbilitySize.Location = new System.Drawing.Point(141, 78);
+            this.nudPdfCharacterAbilitySize.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.nudPdfCharacterAbilitySize.Name = "nudPdfCharacterAbilitySize";
+            this.nudPdfCharacterAbilitySize.Size = new System.Drawing.Size(59, 20);
+            this.nudPdfCharacterAbilitySize.TabIndex = 8;
+            this.nudPdfCharacterAbilitySize.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 80);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(105, 13);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Ability Text Font Size";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -608,13 +681,13 @@
             this.rbUse2Columns.Name = "rbUse2Columns";
             this.rbUse2Columns.Size = new System.Drawing.Size(96, 17);
             this.rbUse2Columns.TabIndex = 3;
-            this.rbUse2Columns.TabStop = true;
             this.rbUse2Columns.Text = "Use 2 Columns";
             this.rbUse2Columns.UseVisualStyleBackColor = true;
             // 
             // rbUse1Column
             // 
             this.rbUse1Column.AutoSize = true;
+            this.rbUse1Column.Checked = true;
             this.rbUse1Column.Location = new System.Drawing.Point(141, 35);
             this.rbUse1Column.Name = "rbUse1Column";
             this.rbUse1Column.Size = new System.Drawing.Size(91, 17);
@@ -643,79 +716,6 @@
             this.btnGeneratePDF.UseVisualStyleBackColor = true;
             this.btnGeneratePDF.Click += new System.EventHandler(this.btnGeneratePDF_Click);
             // 
-            // btnDownloadImages
-            // 
-            this.btnDownloadImages.Location = new System.Drawing.Point(269, 6);
-            this.btnDownloadImages.Name = "btnDownloadImages";
-            this.btnDownloadImages.Size = new System.Drawing.Size(102, 23);
-            this.btnDownloadImages.TabIndex = 18;
-            this.btnDownloadImages.Text = "Download Images";
-            this.btnDownloadImages.UseVisualStyleBackColor = true;
-            this.btnDownloadImages.Click += new System.EventHandler(this.btnDownloadImages_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 80);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(105, 13);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Ability Text Font Size";
-            // 
-            // nudPdfCharacterAbilitySize
-            // 
-            this.nudPdfCharacterAbilitySize.Location = new System.Drawing.Point(141, 78);
-            this.nudPdfCharacterAbilitySize.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.nudPdfCharacterAbilitySize.Name = "nudPdfCharacterAbilitySize";
-            this.nudPdfCharacterAbilitySize.Size = new System.Drawing.Size(59, 20);
-            this.nudPdfCharacterAbilitySize.TabIndex = 8;
-            this.nudPdfCharacterAbilitySize.Value = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            // 
-            // nudPdfCharacterNameSize
-            // 
-            this.nudPdfCharacterNameSize.Location = new System.Drawing.Point(141, 104);
-            this.nudPdfCharacterNameSize.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.nudPdfCharacterNameSize.Name = "nudPdfCharacterNameSize";
-            this.nudPdfCharacterNameSize.Size = new System.Drawing.Size(59, 20);
-            this.nudPdfCharacterNameSize.TabIndex = 9;
-            this.nudPdfCharacterNameSize.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 106);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 13);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Charactername Font Size";
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.Location = new System.Drawing.Point(517, 326);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(75, 39);
-            this.btnPrint.TabIndex = 11;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -732,8 +732,8 @@
             this.tpScript.PerformLayout();
             this.tpPDF.ResumeLayout(false);
             this.tpPDF.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterAbilitySize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterNameSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterAbilitySize)).EndInit();
             this.ResumeLayout(false);
 
         }

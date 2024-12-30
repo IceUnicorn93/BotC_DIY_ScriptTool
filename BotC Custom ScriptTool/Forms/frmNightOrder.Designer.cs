@@ -36,15 +36,16 @@
             this.tbAction = new System.Windows.Forms.TextBox();
             this.btnAddToFirstNight = new System.Windows.Forms.Button();
             this.btnAddOtherNight = new System.Windows.Forms.Button();
+            this.cbRoles = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 54);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 112);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(385, 384);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(385, 326);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -52,16 +53,16 @@
             // 
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(403, 54);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(403, 112);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(385, 384);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(385, 326);
             this.flowLayoutPanel2.TabIndex = 1;
             this.flowLayoutPanel2.WrapContents = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 38);
+            this.label1.Location = new System.Drawing.Point(12, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 2;
@@ -70,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(400, 38);
+            this.label2.Location = new System.Drawing.Point(400, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 3;
@@ -79,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 15);
+            this.label3.Location = new System.Drawing.Point(140, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 4;
@@ -87,14 +88,16 @@
             // 
             // tbAction
             // 
-            this.tbAction.Location = new System.Drawing.Point(83, 12);
+            this.tbAction.AcceptsTab = true;
+            this.tbAction.Location = new System.Drawing.Point(211, 12);
+            this.tbAction.Multiline = true;
             this.tbAction.Name = "tbAction";
-            this.tbAction.Size = new System.Drawing.Size(383, 20);
+            this.tbAction.Size = new System.Drawing.Size(447, 81);
             this.tbAction.TabIndex = 5;
             // 
             // btnAddToFirstNight
             // 
-            this.btnAddToFirstNight.Location = new System.Drawing.Point(472, 10);
+            this.btnAddToFirstNight.Location = new System.Drawing.Point(664, 54);
             this.btnAddToFirstNight.Name = "btnAddToFirstNight";
             this.btnAddToFirstNight.Size = new System.Drawing.Size(124, 23);
             this.btnAddToFirstNight.TabIndex = 6;
@@ -104,7 +107,7 @@
             // 
             // btnAddOtherNight
             // 
-            this.btnAddOtherNight.Location = new System.Drawing.Point(602, 10);
+            this.btnAddOtherNight.Location = new System.Drawing.Point(664, 83);
             this.btnAddOtherNight.Name = "btnAddOtherNight";
             this.btnAddOtherNight.Size = new System.Drawing.Size(124, 23);
             this.btnAddOtherNight.TabIndex = 7;
@@ -112,11 +115,20 @@
             this.btnAddOtherNight.UseVisualStyleBackColor = true;
             this.btnAddOtherNight.Click += new System.EventHandler(this.btnAddOtherNight_Click);
             // 
+            // cbRoles
+            // 
+            this.cbRoles.FormattingEnabled = true;
+            this.cbRoles.Location = new System.Drawing.Point(12, 12);
+            this.cbRoles.Name = "cbRoles";
+            this.cbRoles.Size = new System.Drawing.Size(122, 21);
+            this.cbRoles.TabIndex = 8;
+            // 
             // frmNightOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbRoles);
             this.Controls.Add(this.btnAddOtherNight);
             this.Controls.Add(this.btnAddToFirstNight);
             this.Controls.Add(this.tbAction);
@@ -142,5 +154,6 @@
         private System.Windows.Forms.TextBox tbAction;
         private System.Windows.Forms.Button btnAddToFirstNight;
         private System.Windows.Forms.Button btnAddOtherNight;
+        private System.Windows.Forms.ComboBox cbRoles;
     }
 }
