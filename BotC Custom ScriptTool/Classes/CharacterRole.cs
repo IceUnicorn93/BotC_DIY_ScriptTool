@@ -4,6 +4,7 @@ namespace BotC_Custom_ScriptTool.Classes
 {
     public class CharacterRole
     {
+        public string EnglishOriginalRoleName { get; set; }
         public string RoleName { get; set; }
         public string RoleIconURL { get; set; }
         public string RoleAbilityText { get; set; }

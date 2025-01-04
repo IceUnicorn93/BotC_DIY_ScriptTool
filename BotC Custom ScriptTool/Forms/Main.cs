@@ -49,10 +49,13 @@ namespace BotC_Custom_ScriptTool.Forms
             tbRoleIconURL.Enabled = state;
             tbRoleAbility.Enabled = state;
             btnAdd.Enabled = state;
+
             rbTownsfolk.Enabled = state;
             rbOutsider.Enabled = state;
             rbMinion.Enabled = state;
             rbDemon.Enabled = state;
+            rbTraveler.Enabled = state;
+            rbFabled.Enabled = state;
         }
         
         /// <summary>
@@ -68,6 +71,8 @@ namespace BotC_Custom_ScriptTool.Forms
             rbOutsider.Checked = false;
             rbMinion.Checked = false;
             rbDemon.Checked = false;
+            rbTraveler.Checked = false;
+            rbFabled.Checked = false;
         }
 
         /// <summary>
@@ -169,9 +174,11 @@ namespace BotC_Custom_ScriptTool.Forms
                 rbTownsfolk.Checked ? Enums.ERoleType.Townsfolk :
                 rbOutsider.Checked ? Enums.ERoleType.Outsider :
                 rbMinion.Checked ? Enums.ERoleType.Minion :
-                rbDemon.Checked ? Enums.ERoleType.Demon : Enums.ERoleType.Townsfolk;
+                rbDemon.Checked ? Enums.ERoleType.Demon :
+                rbTraveler.Checked ? Enums.ERoleType.Traveler :
+                rbFabled.Checked ? Enums.ERoleType.Fabled : Enums.ERoleType.Townsfolk;
 
-            if(isNewRole)
+            if (isNewRole)
                 roles.Add(currentSelectedRole);
             lbRoles.Items.Clear();
             lbRoles.Items.AddRange(roles.OrderBy(n => n.ToString()).ToArray());
@@ -221,6 +228,15 @@ namespace BotC_Custom_ScriptTool.Forms
 
             lbRoles.Items.Clear();
             lbRoles.Items.AddRange(roles.OrderBy(n => n.ToString()).ToArray());
+
+            roles.ForEach(role =>
+            {
+                try
+                {
+                    role.EnglishOriginalRoleName = role.RoleIconURL.Split('/').Last().Split('.').First().Replace("Icon_", "");
+                }
+                catch { }
+            });
         }
 
         /// <summary>
@@ -237,8 +253,11 @@ namespace BotC_Custom_ScriptTool.Forms
             {
                 try
                 {
-                    pbRoleIcon.Load(role.RoleIconURL);
-                    pbRoleIcon.Image.Save($@"{Application.StartupPath}\Images\{role.RoleName}.png");
+                    if (File.Exists($@"{Application.StartupPath}\Images\{role.RoleName}.png") == false)
+                    {
+                        pbRoleIcon.Load(role.RoleIconURL);
+                        pbRoleIcon.Image.Save($@"{Application.StartupPath}\Images\{role.RoleName}.png"); 
+                    }
                 }
                 catch { }
             });
@@ -509,20 +528,33 @@ namespace BotC_Custom_ScriptTool.Forms
                 var characterName = cloums[1];
                 var characterAbility = cloums[2];
 
-                var role = new CharacterRole
+                CharacterRole role;
+                bool isNewRole = false;
+                if (roles.Any(n => n.RoleName == characterName))
                 {
-                    RoleName = characterName,
-                    RoleAbilityText = characterAbility,
-                    RoleIconURL = "",
-                    RoleType = characterType == "Townsfolk" ? Enums.ERoleType.Townsfolk :
-                        characterType == "Outsider" ? Enums.ERoleType.Outsider :
-                        characterType == "Minion" ? Enums.ERoleType.Minion :
-                        characterType == "Demon" ? Enums.ERoleType.Demon : Enums.ERoleType.Townsfolk
-                };
+                    role = roles.First(n => n.RoleName == characterName);
+                }
+                else
+                {
+                    isNewRole = true;
+                    role = new CharacterRole();
+                }
 
-                role.RoleIconURL = Prompt.ShowDialog(characterName, "Icon URL");
+                role.RoleName = characterName;
+                role.RoleAbilityText = characterAbility;
+                role.RoleIconURL = "";
+                role.RoleType = characterType == "Townsfolk" ? Enums.ERoleType.Townsfolk :
+                    characterType == "Outsider" ? Enums.ERoleType.Outsider :
+                    characterType == "Minion" ? Enums.ERoleType.Minion :
+                    characterType == "Demon" ? Enums.ERoleType.Demon :
+                    characterType == "Traveler" ? Enums.ERoleType.Traveler :
+                    characterType == "Fabled" ? Enums.ERoleType.Fabled : Enums.ERoleType.Townsfolk;
 
-                roles.Add(role);
+                if (isNewRole)
+                {
+                        role.RoleIconURL = Prompt.ShowDialog(characterName, "Icon URL");
+                        roles.Add(role); 
+                }
             }
 
             lbRoles.Items.Clear();

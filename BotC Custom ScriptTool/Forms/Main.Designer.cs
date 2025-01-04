@@ -83,6 +83,8 @@
             this.rbUse1Column = new System.Windows.Forms.RadioButton();
             this.tbCustomBackgroundPath = new System.Windows.Forms.TextBox();
             this.btnGeneratePDF = new System.Windows.Forms.Button();
+            this.rbTraveler = new System.Windows.Forms.RadioButton();
+            this.rbFabled = new System.Windows.Forms.RadioButton();
             this.tcMainControl.SuspendLayout();
             this.tpCharacters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoleIcon)).BeginInit();
@@ -117,6 +119,8 @@
             // 
             // tpCharacters
             // 
+            this.tpCharacters.Controls.Add(this.rbFabled);
+            this.tpCharacters.Controls.Add(this.rbTraveler);
             this.tpCharacters.Controls.Add(this.btnDownloadImages);
             this.tpCharacters.Controls.Add(this.btnClipboardImport);
             this.tpCharacters.Controls.Add(this.pbRoleIcon);
@@ -162,7 +166,6 @@
             this.btnClipboardImport.TabIndex = 17;
             this.btnClipboardImport.Text = "Clipboard Import";
             this.btnClipboardImport.UseVisualStyleBackColor = true;
-            this.btnClipboardImport.Visible = false;
             this.btnClipboardImport.Click += new System.EventHandler(this.ClipboardImport_Click);
             // 
             // pbRoleIcon
@@ -222,10 +225,10 @@
             // 
             this.tbRoleAbility.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbRoleAbility.Location = new System.Drawing.Point(339, 113);
+            this.tbRoleAbility.Location = new System.Drawing.Point(339, 134);
             this.tbRoleAbility.Multiline = true;
             this.tbRoleAbility.Name = "tbRoleAbility";
-            this.tbRoleAbility.Size = new System.Drawing.Size(334, 97);
+            this.tbRoleAbility.Size = new System.Drawing.Size(334, 76);
             this.tbRoleAbility.TabIndex = 11;
             // 
             // tbRoleIconURL
@@ -259,7 +262,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(280, 116);
+            this.label3.Location = new System.Drawing.Point(280, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 7;
@@ -716,6 +719,28 @@
             this.btnGeneratePDF.UseVisualStyleBackColor = true;
             this.btnGeneratePDF.Click += new System.EventHandler(this.btnGeneratePDF_Click);
             // 
+            // rbTraveler
+            // 
+            this.rbTraveler.AutoSize = true;
+            this.rbTraveler.Location = new System.Drawing.Point(339, 111);
+            this.rbTraveler.Name = "rbTraveler";
+            this.rbTraveler.Size = new System.Drawing.Size(64, 17);
+            this.rbTraveler.TabIndex = 19;
+            this.rbTraveler.TabStop = true;
+            this.rbTraveler.Text = "Traveler";
+            this.rbTraveler.UseVisualStyleBackColor = true;
+            // 
+            // rbFabled
+            // 
+            this.rbFabled.AutoSize = true;
+            this.rbFabled.Location = new System.Drawing.Point(419, 111);
+            this.rbFabled.Name = "rbFabled";
+            this.rbFabled.Size = new System.Drawing.Size(57, 17);
+            this.rbFabled.TabIndex = 20;
+            this.rbFabled.TabStop = true;
+            this.rbFabled.Text = "Fabled";
+            this.rbFabled.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -795,6 +820,8 @@
         private System.Windows.Forms.NumericUpDown nudPdfCharacterAbilitySize;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.RadioButton rbFabled;
+        private System.Windows.Forms.RadioButton rbTraveler;
     }
 }
 

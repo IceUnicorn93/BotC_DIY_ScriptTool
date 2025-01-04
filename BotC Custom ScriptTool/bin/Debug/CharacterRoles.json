@@ -1,806 +1,989 @@
 [
   {
+    "EnglishOriginalRoleName": "monk",
     "RoleName": "M\u00F6nch",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/7/7c/Icon_monk.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht * 1 Spieler (nicht du selbst): Er ist heute Nacht sicher vor dem D\u00E4mon.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "virgin",
     "RoleName": "Jungfrau",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_virgin.png",
     "RoleAbilityText": "Wenn du zum 1. Mal nominiert wirst: Falls der Nominierende ein B\u00FCrger ist, wird er sofort hingerichtet.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "drunk",
     "RoleName": "Trunkenbold",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/4a/Icon_drunk.png",
     "RoleAbilityText": "Du wei\u00DFt nicht, dass du der Trunkenbold bist. Du denkst, dass du ein B\u00FCrger-Charakter bist, aber das stimmt nicht.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "spy",
     "RoleName": "Spion",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/54/Icon_spy.png",
     "RoleAbilityText": "Jede Nacht siehst du das Grimoire. Du erscheinst m\u00F6glicherweise als gut \u0026 als ein B\u00FCrger oder Au\u00DFenseiter, sogar wenn du tot bist.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "imp",
     "RoleName": "Imp",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/5c/Icon_imp.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Er stirbt. Falls du dich damit selbst t\u00F6test, wird ein Scherge zum Imp.",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "washerwoman",
     "RoleName": "Waschweib",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/85/Icon_washerwoman.png",
     "RoleAbilityText": "Du wei\u00DFt zu Beginn, dass 1 von 2 Spielern ein bestimmter B\u00FCrger ist.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "librarian",
     "RoleName": "Bibliothekar",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_librarian.png",
     "RoleAbilityText": "Du wei\u00DFt zu Beginn, dass 1 von 2 Spielern ein bestimmter Au\u00DFenseiter ist. (Oder dass keine mitspielen.)",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "investigator",
     "RoleName": "Detektiv",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/ad/Icon_investigator.png",
     "RoleAbilityText": "Du wei\u00DFt zu Beginn, dass 1 von 2 Spielern ein bestimmter Scherge ist.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "chef",
     "RoleName": "Koch",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_chef.png",
     "RoleAbilityText": "Du wei\u00DFt zu Beginn, wie viele direkte banachbarte Paare b\u00F6ser Spieler es gibt.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "empath",
     "RoleName": "Empath",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/13/Icon_empath.png",
     "RoleAbilityText": "Jede Nacht erf\u00E4hrst du, wie viele deiner 2 lebendigen Nachbarn b\u00F6se sind.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "fortuneteller",
     "RoleName": "Wahrsagerin",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/97/Icon_fortuneteller.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 2 Spieler: Du erf\u00E4hrst, ob 1 davon der D\u00E4mon ist. Es gibt 1 guten Spieler, der dir als D\u00E4mon erscheint.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "undertaker",
     "RoleName": "Totengr\u00E4ber",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/05/Icon_undertaker.png",
     "RoleAbilityText": "Jede Nacht* erf\u00E4hrst du, welcher Character heute durch Hinrichtung gestorben ist.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "ravenkeeper",
     "RoleName": "Rabenh\u00FCter",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_ravenkeeper.png",
     "RoleAbilityText": "Falls du in der Nacht stirbst, wirst du aufgeweckt \u0026 w\u00E4hlst 1 Spieler: Du erf\u00E4hrst seinen Charakter.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "slayer",
     "RoleName": "D\u00E4monenj\u00E4ger",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_slayer.png",
     "RoleAbilityText": "Einmal im Spiel, w\u00E4hrend des Tages, w\u00E4hle \u00F6ffentlich 1 Spieler: Falls er der D\u00E4mon ist, stirbt er.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "soldier",
     "RoleName": "Soldat",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_soldier.png",
     "RoleAbilityText": "Du bist sicher vor dem D\u00E4mon.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "mayor",
     "RoleName": "B\u00FCrgermeister",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_mayor.png",
     "RoleAbilityText": "Falls nur noch 3 Spieler leben \u0026 es keine Hinrichtung gibt, gewinnt dein Team. Falls du in der Nacht stirbst, k\u00F6nnte stattdessen ein anderer Spieler sterben.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "butler",
     "RoleName": "Butler",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/19/Icon_butler.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler (nicht dich selbst): Morgen darfst du nur dann abstimmen, wenn er auch abstimmt.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "saint",
     "RoleName": "Heilige",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c9/Icon_saint.png",
     "RoleAbilityText": "Falls du durch Hinrichtung stirbst, verliert dein Team.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "recluse",
     "RoleName": "Einsiedler",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/60/Icon_recluse.png",
     "RoleAbilityText": "Du erscheinst m\u00F6glicherweise als b\u00F6se \u0026 als Scherge oder D\u00E4mon, sogar wenn du tot bist.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "poisoner",
     "RoleName": "Giftmischer",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/b1/Icon_poisoner.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler, er ist in dieser Nacht und am folgenden Tag vergiftet.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "baron",
     "RoleName": "Baron",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6d/Icon_baron.png",
     "RoleAbilityText": "Es sind zus\u00E4tzliche Au\u00DFenseiter im Spiel. [\u002B2 Au\u00DFenseiter]",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "scarletwoman",
     "RoleName": "Scharlachrote Frau",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/13/Icon_scarletwoman.png",
     "RoleAbilityText": "Falls 5 oder mehr Spieler lebendig sind \u0026 der D\u00E4mon stirbt, wirst du zum D\u00E4mon. (Reisende z\u00E4hlen nicht.)",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "clockmaker",
     "RoleName": "Uhrmacher",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/3/3d/Icon_clockmaker.png",
     "RoleAbilityText": "Du wei\u00DFt zu Beginn, wie viele Schritte es vom D\u00E4mon zum n\u00E4chsten Schergen sind.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "dreamer",
     "RoleName": "Tr\u00E4umer",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f2/Icon_dreamer.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler (nicht dich selbst oder Reisende): Du erf\u00E4hrst 1 guten \u0026 1 b\u00F6sen Charakter, 1 davon ist korrekt.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "snakecharmer",
     "RoleName": "Schlangenbeschw\u00F6rer",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_snakecharmer.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 lebendigen Spieler: Ein gew\u00E4hlter D\u00E4mon tauscht seinen Charakter \u0026 dir Fraktion mit dir \u0026 ist dann vergiftet.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "mathematician",
     "RoleName": "Mathematiker",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f1/Icon_mathematician.png",
     "RoleAbilityText": "Jede Nacht erf\u00E4hrst du, bei wie vielen Spielern die F\u00E4higkeit (seit dem Morgen) wegen der F\u00E4higkeit eines anderenCharakter fehlerhaft gearbeitet hat.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "flowergirl",
     "RoleName": "Blumenm\u00E4dchen",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/ac/Icon_flowergirl.png",
     "RoleAbilityText": "Jede Nacht* erf\u00E4hrst du, ob heute ein D\u00E4mon f\u00FCr eine Hinrichtung gestimmt hat.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "towncrier",
     "RoleName": "Marktschreier",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_towncrier.png",
     "RoleAbilityText": "Jede Nacht* erf\u00E4hrst du, ob heute ein Scherge jemanden nominiert hat.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "oracle",
     "RoleName": "Orakel",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/bb/Icon_oracle.png",
     "RoleAbilityText": "Jede Nacht* erf\u00E4hrst du, wie viele tote Spieler b\u00F6se sind.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "savant",
     "RoleName": "Savant",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_savant.png",
     "RoleAbilityText": "Jeden Tag darfst du den Erz\u00E4hler besuchen, um geheim 2 Aussagen zu erfahren: 1 ist wahr \u0026 1 ist falsch.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "seamstress",
     "RoleName": "Schneiderin",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/53/Icon_seamstress.png",
     "RoleAbilityText": "Einmal im Spiel, in der Nacht, w\u00E4hle 2 Spieler (nicht dich selbst): Du erf\u00E4hrstm ob sie die gleiche Fraktion haben.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "philosopher",
     "RoleName": "Philosoph",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/5d/Icon_philosopher.png",
     "RoleAbilityText": "Einmal im Spiel, in der Nacht, w\u00E4hle 1 guten Charakter: Erhalte seine F\u00E4higkeit. Falls der Charakter im Spiel ist, ist er betrunken.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "artist",
     "RoleName": "K\u00FCnstler",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_artist.png",
     "RoleAbilityText": "Einmal im Spiel, w\u00E4hrend des Tages, stelle dem Erz\u00E4hler geheim 1 beliebige Ja/Nein-Frage.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "juggler",
     "RoleName": "Jongleur",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/42/Icon_juggler.png",
     "RoleAbilityText": "An deinem 1. Tag rate \u00F6ffentlich den Charakter von bis zu 5 Spieler. In dieser Nacht erf\u00E4hrst du, wie viele davon korrekt waren.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "sage",
     "RoleName": "Weise",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a0/Icon_sage.png",
     "RoleAbilityText": "Falls der D\u00E4mon dich t\u00F6tet, erf\u00E4hrst du, dass er 1 von 2 bestimmten Spielern ist.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "mutant",
     "RoleName": "Mutant",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/2e/Icon_mutant.png",
     "RoleAbilityText": "Falls du \u0022besessen\u0022 davon bist, ein Au\u00DFenseiter zu seinm k\u00F6nntest du hingerichtet werden.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "sweetheart",
     "RoleName": "Liebchen",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6a/Icon_sweetheart.png",
     "RoleAbilityText": "Wenn du stirbst, ist 1 Spieler ab jetzt betrunken.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "barber",
     "RoleName": "Barbier",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_barber.png",
     "RoleAbilityText": "Wenn du stirbst, darf der D\u00E4mon in dieser Nacht 2 Spieler (keinen anderen D\u00E4mon) ausw\u00E4hlen, die ihre Charaktere tauschen.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "klutz",
     "RoleName": "Tollpatsch",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/bc/Icon_klutz.png",
     "RoleAbilityText": "Wenn du erf\u00E4hrst, dass du gestorben bist, w\u00E4hle \u00F6ffentlich 1 lebendigen Spieler: Falls er b\u00F6se ist, verliert dein Team.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "eviltwin",
     "RoleName": "B\u00F6ser Zwilling",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f4/Icon_eviltwin.png",
     "RoleAbilityText": "Du \u0026 ein gegnerischer Spieler kennen einander. Wird der gute Spieler hingerichtet, gewinnt B\u00F6se. Gut kann nicht gewinnen, solange ihr beide lebt.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "witch",
     "RoleName": "Hexe",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/7/7b/Icon_witch.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler: Falls er morgen nominiert, stirbt er. Falls nur noch 3 Spieler leben, verlierst du diese F\u00E4higkeit.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "cerenovus",
     "RoleName": "Cerenovus",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/45/Icon_cerenovus.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler \u0026 1 guten Charakter: Der Spieler ist morgen \u0022besessen\u0022 davon, dass er der Charakter ist, oder k\u00F6nnte hingerichtet werden.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "pithag",
     "RoleName": "Grubenweib",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6b/Icon_pithag.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler \u0026 1 Charakter, der er wird (falls nicht im Spiel). Falls ein D\u00E4mon erzeugt wird, wird willk\u00FCrlich get\u00F6tet.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "fanggu",
     "RoleName": "Fang Gu",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/0e/Icon_fanggu.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Er stirbt. Der 1. Au\u00DFenseiter, der so stirbt, wird b\u00F6ser Fang Gu \u0026 du stirbst stattdessen. [\u002B1 Au\u00DFenseiter]",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "vigormortis",
     "RoleName": "Vigormortis",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_vigormortis.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Er stirbt. Von dir get\u00F6tete Schergen behalten ihre F\u00E4higkeit \u0026 vergiften 1 benachbarten B\u00FCrger. [-1 Au\u00DFenseiter]",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "nodashii",
     "RoleName": "No Dashii",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/eb/Icon_nodashii.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Er stirbt. Deine 2 benachbarten B\u00FCrger sind vergiftet.",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "vortox",
     "RoleName": "Vortox",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/89/Icon_vortox.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Er stirbt. F\u00E4higkeiten von B\u00FCrgern liefern falsche Informationen. Falls an irgendeinem Tag keiner hingerichtet wird, gewinnt B\u00F6se.",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "grandmother",
     "RoleName": "Gro\u00DFmutter",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/26/Icon_grandmother.png",
     "RoleAbilityText": "Du wei\u00DFt zu Beginn, dass 1 Spieler gut ist \u0026 kennst seinen Charackter. Falls der D\u00E4mon ihn t\u00F6tet, stirbst du ebenfalls.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "sailor",
     "RoleName": "Segler",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_sailor.png",
     "RoleAbilityText": "Du kannst nicht sterben. W\u00E4hle jede Nacht 1 lebendigen Spieler: Einer von euch beiden ist bis zur Abendd\u00E4mmerung betrunken.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "chambermaid",
     "RoleName": "Kammerzofe",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/87/Icon_chambermaid.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 2 lebendige Spieler (nicht dich selbst): Du erf\u00E4hrst, wie viele davon heute Nacht wegen ihrer F\u00E4higkeit aufgewacht sind.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "exorcist",
     "RoleName": "Exorzist",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c2/Icon_exorcist.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler (1 anderen als in der vorherigen Nacht): Falls du den D\u00E4mon w\u00E4hlst, erf\u00E4hrt erm wer du bist \u0026 wacht dann heute Nacht nicht auf.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "innkeeper",
     "RoleName": "Gastwirt",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/0c/Icon_innkeeper.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 2 Spieler: Sie k\u00F6nnen heute Nacht nicht sterben, aber einer von ihnen bis zur Abendd\u00E4mmerung betrunken.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "gambler",
     "RoleName": "Gl\u00FCcksspieler",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/fd/Icon_gambler.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler \u0026 rate seinen Charakter: Falsl du falsch r\u00E4tst, stirbst du.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "gossip",
     "RoleName": "Schw\u00E4tzer",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c7/Icon_gossip.png",
     "RoleAbilityText": "Jeden Tag darfst du 1 \u00F6ffentliche AUssage treffen. Falls sie wahr war, stirbt heute Nacht 1 Spieler.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "courtier",
     "RoleName": "H\u00F6fling",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_courtier.png",
     "RoleAbilityText": "Einmal im Spiel, in der Nacht, w\u00E4hle 1 Charakter. Er ist 3 N\u00E4chte \u0026 3 Tage lang betrunken.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "professor",
     "RoleName": "Professor",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/65/Icon_professor.png",
     "RoleAbilityText": "Einmal im Spiel, in der Nacht*, w\u00E4hle 1 toten Spieler: Falls er ein B\u00FCrger ist, wird er wiederbelebt.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "minstrel",
     "RoleName": "Minnes\u00E4nger",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/24/Icon_minstrel.png",
     "RoleAbilityText": "Falls ein Scherge durch Hinrichtung stirbt, sind alle anderen Spieler (au\u00DFer Reisende) bis zur Abendd\u00E4mmerung des n\u00E4chsten Tages betrunken.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "tealady",
     "RoleName": "Teedame",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_tealady.png",
     "RoleAbilityText": "Falls deine beiden lebendigen Nachbarn gut sind, k\u00F6nnen sie nicht sterben.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "pacifist",
     "RoleName": "Pazifist",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/5d/Icon_pacifist.png",
     "RoleAbilityText": "Hingerichtete gute Spieler sterben m\u00F6glicherweise nicht.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "fool",
     "RoleName": "Narr",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d9/Icon_fool.png",
     "RoleAbilityText": "Wenn du zum 1. Mal sterben w\u00FCrdest, stirbst du stattdessen nicht.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "goon",
     "RoleName": "Schl\u00E4ger",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6f/Icon_goon.png",
     "RoleAbilityText": "Jede Nacht ist der 1. Spieler, der dich mit seiner F\u00E4higkeit w\u00E4hlt, bis zur Abendd\u00E4mmerung betrunken. Du wechselst zu seiner Fraktion.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "lunatic",
     "RoleName": "Verr\u00FCckte",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/64/Icon_lunatic.png",
     "RoleAbilityText": "Du denkst f\u00E4lschlicherweise, dass du der D\u00E4mon bist. Der D\u00E4mon wei\u00DF, wer du bist \u0026 wen du in der Nacht gew\u00E4hlt hast.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "tinker",
     "RoleName": "Bastler",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/98/Icon_tinker.png",
     "RoleAbilityText": "Du k\u00F6nntest jederzeit sterben.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "moonchild",
     "RoleName": "Mondkind",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_moonchild.png",
     "RoleAbilityText": "Wenn du erf\u00E4hrst, dass du gestorben bist, w\u00E4hle \u00F6ffentlich 1 lebendigen Spieler. Falls es ein guter Spieler war, stirbt er heute Nacht.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "godfather",
     "RoleName": "Pate",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d0/Icon_godfather.png",
     "RoleAbilityText": "Du wei\u00DFt zu Beginn, welche AU\u00DFenseiter im Spiel sind. Falls 1 Au\u00DFenseiter heute starb, w\u00E4hle heute Nacht 1 Spieler: Er stirbt. [-1 oder \u002B1 Au\u00DFenseiter]",
     "RoleType": 2
   },
   {
-    "RoleName": "Teilsadvokat",
+    "EnglishOriginalRoleName": "devilsadvocate",
+    "RoleName": "Teufelsadvokat",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/09/Icon_devilsadvocate.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 lebendigen Spieler (1 anderen als in der vorherigen Nacht): Falls er am n\u00E4chsten Tag hingerichtet wird, stirbt er nicht.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "assassin",
     "RoleName": "Meuchelm\u00F6rder",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/49/Icon_assassin.png",
     "RoleAbilityText": "Einmal im Spiel, in der Nacht*, w\u00E4hle 1 Spieler: Er stirbt, selbst wenn er es aus irgendeinem Grund nicht k\u00F6nnte.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "mastermind",
     "RoleName": "Strippenzieher",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_mastermind.png",
     "RoleAbilityText": "Falls der D\u00E4mon durch eine Hinrichtung stirbt (\u0026 das Spiel enden w\u00FCrde), spiele 1 weiteren Tag. Falls dann ein Spieler hingerichtet wird, verliert sein Team.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "zombuul",
     "RoleName": "Zombuul",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/15/Icon_zombuul.png",
     "RoleAbilityText": "Jede Nacht*, falls heute kein SPieler starb, w\u00E4hle 1 Spieler: er stirbt. Wenn du zum 1. Mal stirbst, \u00FCberlebst du, aber erscheinst tot.",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "pukka",
     "RoleName": "Pukka",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f4/Icon_pukka.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler: Er wird vergiftet. Der zuvor vergiftete Spieler stirbt \u0026 ist dann nicht mehr vergiftet.",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "shabaloth",
     "RoleName": "Shabaloth",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/1f/Icon_shabaloth.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 2 Spieler: Sie sterben. Ein toter Spieler, den du in der vorherigen Nacht gew\u00E4hlt hast, k\u00F6nnte hochgew\u00FCrgt werden.",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "po",
     "RoleName": "Poe",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/b2/Icon_po.png",
     "RoleAbilityText": "Jede Nacht* darfst du 1 Spieler w\u00E4hlen: Er stirbt. Falls du zuvor gew\u00E4hlt hast, niemanden zu t\u00F6ten, w\u00E4hle heute Nacht 3 Spieler.",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "alhadikhia",
     "RoleName": "Al-Hadikhia",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/18/Icon_alhadikhia.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 3 Spieler (alle erfahren, wer): Jeder von ihnen w\u00E4hlt stumm \u00ABLeben\u00BB oder \u00ABTod\u00BB, aber falls alle leben, sterben alle.",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "kazali",
     "RoleName": "Kazali",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/3/3c/Icon_kazali.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Er stirbt. [Du bestimmst, welche Spieler welche Schergen sind. -? bis \u002B? Au\u00DFenseiter] ",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "legion",
     "RoleName": "Legion",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/cb/Icon_legion.png",
     "RoleAbilityText": "Jede Nacht* k\u00F6nnte 1 Spieler sterben. Hinrichtungen scheitern, wenn nur b\u00F6se Spieler abgestimmt haben. Du erscheinst auch als Scherge. [Die meisten Spieler sind Legion] ",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "leviathan",
     "RoleName": "Leviathan",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a7/Icon_leviathan.png",
     "RoleAbilityText": "Falls mehr als 1 guter Spieler hingerichtet wird, gewinnt B\u00F6se. Alle wissen, dass ein Leviathan im Spiel ist. Nach Tag 5 gewinnt B\u00F6se.",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "lilmonsta",
     "RoleName": "Lil\u0027 Monsta",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_lilmonsta.png",
     "RoleAbilityText": "Jede Nacht w\u00E4hlen die Schergen, wer Lil\u0027 Monsta h\u00FCtet \u0026 \u00ABder D\u00E4mon\u00BB ist. Jede Nacht* k\u00F6nnte 1 Spieler sterben. [\u002B1 Scherge] ",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "lleech",
     "RoleName": "Lleech",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/7/70/Icon_lleech.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Er stirbt. W\u00E4hle zu Beginn 1 lebendigen Spieler: Er ist vergiftet. Du stirbst, wenn (\u0026 nur wenn) er tot ist. ",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "lordoftyphon",
     "RoleName": "Lord of Typhon",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/cf/Icon_lordoftyphon.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Er stirbt. [B\u00F6se Spieler sitzen in einer Reihe. Du bist in der Mitte. \u002B1 Scherge. -? bis \u002B? Au\u00DFenseiter] ",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "ojo",
     "RoleName": "Ojo",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6f/Icon_ojo.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Charakter: Er stirbt. Falls der Charakter nicht im Spiel ist, w\u00E4hlt der Erz\u00E4hler, wer stirbt.",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "riot",
     "RoleName": "Riot",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/2d/Icon_riot.png",
     "RoleAbilityText": "An Tag 3 werden alle Schergen zu Riot \u0026 Nominierte sterben, aber nominieren sofort selbst 1 lebendigen Spieler. Dies ist zwingend.",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "yaggababble",
     "RoleName": "Yaggababble",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_yaggababble.png",
     "RoleAbilityText": "Du kennst zu Beginn 1 geheime Phrase. F\u00FCr jedes Mal, dass du diese Phrase heute \u00F6ffentlich gesagt hast, k\u00F6nnte 1 Spieler sterben. ",
     "RoleType": 3
   },
   {
+    "EnglishOriginalRoleName": "boomdandy",
     "RoleName": "Boomdandy",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/20/Icon_boomdandy.png",
     "RoleAbilityText": "Falls du hingerichtet wirst, sterben alle bis auf 3 Spieler. Nach einem Countdown von 10 abw\u00E4rts stirbt derjenige, auf den die meisten Spieler zeigen.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "boffin",
     "RoleName": "Boffin",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_boffin.png",
     "RoleAbilityText": "Der D\u00E4mon (selbst wenn er betrunken oder vergiftet ist) hat die F\u00E4higkeit eines nicht im Spiel befindlichen gute Charakters. Ihr wisst beide, welche.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "fearmonger",
     "RoleName": "Fearmonger",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/11/Icon_fearmonger.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler: Falls du ihn nominierst \u0026 er hingerichtet wird, verliert sein Team. Alle erfahren, wenn du 1 neuen Spieler w\u00E4hlst.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "goblin",
     "RoleName": "Goblin",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/e2/Icon_goblin.png",
     "RoleAbilityText": "Falls du \u00F6ffentlich verk\u00FCndest, der Goblin zu sein, w\u00E4hrend du nominiert bist, und am selben Tag hingerichtet wirst, gewinnt dein Team.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "harpy",
     "RoleName": "Harpy",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_harpy.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 2 Spieler: Morgen ist der 1. Spieler \u0022besessen\u0022 davon, dass der 2. b\u00F6se ist, oder einer/beide von ihnen k\u00F6nnten sterben.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "marionette",
     "RoleName": "Marionette",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/cf/Icon_marionette.png",
     "RoleAbilityText": "Du denkst, dass du ein guter Charakter bist, aber das stimmt nicht. Der D\u00E4mon wei\u00DF, dass du die Marionette bist. [Der D\u00E4mon ist benachbart] ",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "mezepheles",
     "RoleName": "Mezepheles",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f2/Icon_mezepheles.png",
     "RoleAbilityText": "Du kennst zu Beginn ein geheimes Wort. Der 1. gute Spieler, der dieses Wort sagt, wird in dieser Nacht b\u00F6se.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "organgrinder",
     "RoleName": "Organ Grinder",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/61/Icon_organgrinder.png",
     "RoleAbilityText": "Alle Spieler stimmen mit geschlossenen Augen ab \u0026 die Ausz\u00E4hlung ist geheim. W\u00E4hle jede Nacht neu, ob du betrunken bist oder nicht.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "psychopath",
     "RoleName": "Psychopath",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a3/Icon_psychopath.png",
     "RoleAbilityText": "Jeden Tag, vor dem Nominieren, darfst du \u00F6ffentlich 1 Spieler w\u00E4hlen: Er stirbt. Falls du hingerichtet wirst, stirbst du nur, wenn du \u00ABStein-  Schere-Papier\u00BB verlierst. ",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "summoner",
     "RoleName": "Summoner",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_summoner.png",
     "RoleAbilityText": "Du erh\u00E4ltst 3 Bluffs. W\u00E4hle in der 3. Nacht 1 Spieler: Er wird zu einem b\u00F6sen D\u00E4mon deiner Wahl. [Kein D\u00E4mon] ",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "vizier",
     "RoleName": "Vizier",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a4/Icon_vizier.png",
     "RoleAbilityText": "Alle wissen, dass du der Wesir bist. Du kannst w\u00E4hrend des Tages nicht sterben. Wenn Gute abgestimmt haben, darfst du sofort die Hinrichtung vollziehen.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "widow",
     "RoleName": "Widow",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/99/Icon_widow.png",
     "RoleAbilityText": "In deiner 1. Nacht siehst du das Grimoire. W\u00E4hle 1 Spieler: Er ist vergiftet. 1 guter Spieler wei\u00DF, dass die Schwarze Witwe im Spiel ist.",
     "RoleType": 2
   },
   {
+    "EnglishOriginalRoleName": "damsel",
     "RoleName": "Damsel",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_damsel.png",
     "RoleAbilityText": "Alle Schergen wissen, dass eine Unschuld im Spiel ist. Falls ein Scherge \u00F6ffentlich err\u00E4t (einmalig), wer du bist, verliert dein Team.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "golem",
     "RoleName": "Golem",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/2b/Icon_golem.png",
     "RoleAbilityText": "Du darfst nur einmal im Spiel nominieren. Falls du das tust, stirbt der Nominierte, wenn er nicht der D\u00E4mon ist.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "hatter",
     "RoleName": "Hatter",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/44/Icon_hatter.png",
     "RoleAbilityText": "Falls du heute am Tag oder in der Nacht gestorben bist, d\u00FCrfen die Schergen- \u0026 D\u00E4mon-Spieler neue Schergen- \u0026 D\u00E4mon-Charaktere w\u00E4hlen.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "heretic",
     "RoleName": "Heretic",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/4a/Icon_heretic.png",
     "RoleAbilityText": "Wer gewinnt, verliert \u0026 wer verliert, gewinnt, sogar wenn du tot bist.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "ogre",
     "RoleName": "Ogre",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/25/Icon_ogre.png",
     "RoleAbilityText": "W\u00E4hle in deiner 1. Nacht 1 Spieler (nicht dich selbst): Du wechselst zu seiner Fraktion (du erf\u00E4hrst sie nicht), sogar wenn du betrunken oder vergiftet bist. ",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "plaguedoctor",
     "RoleName": "Plague Doctor",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/e2/Icon_plaguedoctor.png",
     "RoleAbilityText": "Wenn du stirbst, erh\u00E4lt der Erz\u00E4hler eine Schergenf\u00E4higkeit.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "politician",
     "RoleName": "Politician",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a3/Icon_politician.png",
     "RoleAbilityText": "Falls du hauptverantwortlich f\u00FCr die Niederlage deines Teams warst, wechselst du die Fraktion \u0026 gewinnst, sogar wenn du tot bist.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "puzzlemaster",
     "RoleName": "Puzzlemaster",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/7/7a/Icon_puzzlemaster.png",
     "RoleAbilityText": "1 Spieler ist betrunken, sogar wenn du stirbst. Falls du err\u00E4tst (1x), wer es ist, dann erf\u00E4hrst du, wer der D\u00E4mon ist. R\u00E4tst du falsch, erh\u00E4ltst du falsche Infos.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "snitch",
     "RoleName": "Snitch",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c1/Icon_snitch.png",
     "RoleAbilityText": "Jeder Scherge erh\u00E4lt 3 Bluffs.",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "zealot",
     "RoleName": "Zealot",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_zealot.png",
     "RoleAbilityText": "Falls 5 oder mehr Spieler lebendig sind, musst du f\u00FCr jede Nominierung abstimmen. ",
     "RoleType": 1
   },
   {
+    "EnglishOriginalRoleName": "acrobat",
     "RoleName": "Acrobat",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/b5/Icon_acrobat.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Falls er heute Nacht betrunken oder vergiftet ist oder wird, stirbst du.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "alchemist",
     "RoleName": "Alchemist",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/54/Icon_alchemist.png",
     "RoleAbilityText": "Du hast die F\u00E4higkeit eines Schergen. Wenn du sie nutzt, k\u00F6nnte der Erz\u00E4hler dich auffordern, anders zu w\u00E4hlen.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "alsaahir",
     "RoleName": "Alsaahir",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/8e/Icon_alsaahir.png",
     "RoleAbilityText": "Jeden Tag, falls du \u00F6ffentlich err\u00E4tst, welche Spieler Scherge(n) und welche D\u00E4mon(en) sind, gewinnt Gut.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "amnesiac",
     "RoleName": "Amnesiac",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/26/Icon_amnesiac.png",
     "RoleAbilityText": "Du kennst deine F\u00E4higkeit nicht. Rate jeden Tag geheim beim Erz\u00E4hler, was es ist: Du erf\u00E4hrst, wie richtig du liegst.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "atheist",
     "RoleName": "Atheist",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/43/Icon_atheist.png",
     "RoleAbilityText": "Der Erz\u00E4hler kann die Spielregeln brechen. Falls der Erz\u00E4hler hingerichtet wird, gewinnt Gut, sogar wenn du tot bist. [Keine b\u00F6sen Charaktere] ",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "balloonist",
     "RoleName": "Balloonist",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/cb/Icon_balloonist.png",
     "RoleAbilityText": "Jede Nacht erf\u00E4hrst du 1 Spieler eines anderen Charaktertyps als in der Nacht zuvor. [\u002B0 oder \u002B1 Au\u00DFenseiter] ",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "banshee",
     "RoleName": "Banshee",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/63/Icon_banshee.png",
     "RoleAbilityText": "Falls du vom D\u00E4mon get\u00F6tet wirst, erfahren das alle Spieler. Von nun an darfst du 2x pro Tag nominieren und 2x pro Nominierung abstimmen.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "bountyhunter",
     "RoleName": "Bounty Hunter",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/5b/Icon_bountyhunter.png",
     "RoleAbilityText": "Du kennst zu Beginn 1 b\u00F6sen Spieler. Falls dieser Spieler stirbt, lernst du in dieser Nacht einen anderen b\u00F6sen Spieler kennen. [1 B\u00FCrger ist b\u00F6se] ",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "cannibal",
     "RoleName": "Cannibal",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/8e/Icon_cannibal.png",
     "RoleAbilityText": "Du hast die F\u00E4higkeit des zuletzt hingerichteten Toten. Falls er b\u00F6se ist, bist du vergiftet, bis ein guter Spieler durch Hinrichtung stirbt.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "choirboy",
     "RoleName": "Choir Boy",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d9/Icon_choirboy.png",
     "RoleAbilityText": "Falls der D\u00E4mon den K\u00F6nig t\u00F6tet, erf\u00E4hrst du, welcher Spieler der D\u00E4mon ist. [\u002B K\u00F6nig] ",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "cultleader",
     "RoleName": "Cult Leader",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6c/Icon_cultleader.png",
     "RoleAbilityText": "Du wechselst jede Nacht zur Fraktion eines lebendigen Nachbarn. Falls sich alle guten Spieler deinem Kult anschlie\u00DFen, gewinnt dein Team.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "engineer",
     "RoleName": "Engineer",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/b9/Icon_engineer.png",
     "RoleAbilityText": "Einmal im Spiel, in der Nacht, w\u00E4hle, welche Schergen oder welcher D\u00E4mon im Spiel sind.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "farmer",
     "RoleName": "Farmer",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/fe/Icon_farmer.png",
     "RoleAbilityText": "Falls du in der Nacht stirbst, wird 1 lebendiger guter Spieler ein Bauer.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "fisherman",
     "RoleName": "Fisherman",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/19/Icon_fisherman.png",
     "RoleAbilityText": "Einmal im Spiel, w\u00E4hrend des Tages, hole dir vom Erz\u00E4hler einen Ratschlag ab, der dein Team dem Sieg n\u00E4her bringt.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "general",
     "RoleName": "General",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/99/Icon_general.png",
     "RoleAbilityText": "Jede Nacht erf\u00E4hrst du, welche Fraktion der Einsch\u00E4tzung des Erz\u00E4hlers nach eher gewinnt: Gut, B\u00F6se oder keine von beiden.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "highpriestess",
     "RoleName": "High Priestess",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/63/Icon_highpriestess.png",
     "RoleAbilityText": "Jede Nacht erf\u00E4hrst du, mit welchem Spieler du der Einsch\u00E4tzung des Erz\u00E4hlers nach am ehesten reden solltest.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "huntsman",
     "RoleName": "Huntsman",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_huntsman.png",
     "RoleAbilityText": "Einmal im Spiel, in der Nacht, w\u00E4hle 1 lebendigen Spieler: Falls er die Unschuld ist, wird er zu einem nicht im Spiel befindlichen B\u00FCrger. [\u002BUnschuld] ",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "king",
     "RoleName": "King",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_king.png",
     "RoleAbilityText": "Jede Nacht, falls es nicht mehr lebendige als tote Spieler gibt, erf\u00E4hrst du 1 lebendigen Charakter. Der D\u00E4mon wei\u00DF, dass du der K\u00F6nig bist.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "knight",
     "RoleName": "Knight",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/8e/Icon_knight.png",
     "RoleAbilityText": "Du kennst zu Beginn 2 Spieler, die nicht der D\u00E4mon sind.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "lycanthrope",
     "RoleName": "Lycanthrope",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/92/Icon_lycanthrope.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 lebendigen Spieler: Falls er gut ist, stirbt er \u0026 der D\u00E4mon t\u00F6tet heute Nacht nicht. 1 guter Spieler erscheint als b\u00F6se.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "magician",
     "RoleName": "Magician",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/93/Icon_magician.png",
     "RoleAbilityText": "Der D\u00E4mon glaubt, dass du ein Scherge bist. Die Schergen glauben, dass du ein D\u00E4mon bist.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "nightwatchman",
     "RoleName": "Nightwatchman",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f0/Icon_nightwatchman.png",
     "RoleAbilityText": "Einmal im Spiel, in der Nacht, w\u00E4hle 1 Spieler: Er erf\u00E4hrt, dass du der Nachtw\u00E4chter bist.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "noble",
     "RoleName": "Noble",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/cc/Icon_noble.png",
     "RoleAbilityText": "Du wei\u00DFt zu Beginn von 3 Spielern, dass genau 1 von ihnen b\u00F6se ist.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "pixie",
     "RoleName": "Pixie",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_pixie.png",
     "RoleAbilityText": "Du kennst zu Beginn 1 im Spiel befindlichen B\u00FCrger. Falls du \u0022besessen\u0022 davon warst, dieser B\u00FCrger zu sein, erh\u00E4ltst du seine F\u00E4higkeit, wenn er stirbt. ",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "poppygrower",
     "RoleName": "Poppy Grower",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/91/Icon_poppygrower.png",
     "RoleAbilityText": "Schergen \u0026 D\u00E4monen kennen einander nicht. Falls du stirbst, erfahren sie in dieser Nacht, wer die anderen sind.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "preacher",
     "RoleName": "Preacher",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/82/Icon_preacher.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler: Falls er ein Scherge ist, erf\u00E4hrt er das. Alle gew\u00E4hlten Schergen haben keine F\u00E4higkeit.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "shugenja",
     "RoleName": "Shugenja",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/11/Icon_shugenja.png",
     "RoleAbilityText": "Du wei\u00DFt zu Beginn, ob der dir n\u00E4chste b\u00F6se Spieler im oder gegen den Uhrzeigersinn sitzt. Bei gleicher Entfernung ist diese Info willk\u00FCrlich.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "steward",
     "RoleName": "Steward",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/fe/Icon_steward.png",
     "RoleAbilityText": "Du kennst zu Beginn 1 guten Spieler.",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "villageidiot",
     "RoleName": "Village Idiot",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/da/Icon_villageidiot.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler: Du erf\u00E4hrst seine Fraktion. [\u002B0 bis \u002B2 Dorftrottel. 1 der zus\u00E4tzlichen ist betrunken] ",
     "RoleType": 0
   },
   {
+    "EnglishOriginalRoleName": "xaan",
     "RoleName": "Xaan",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/0c/Icon_xaan.png",
     "RoleAbilityText": "In Nacht X, sind alle B\u00FCrger betrunken bis zur Morgend\u00E4mmerung. [X Au\u00DFenseiter]",
     "RoleType": 2
+  },
+  {
+    "EnglishOriginalRoleName": "wizard",
+    "RoleName": "Wizard",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/b5/Icon_wizard.png",
+    "RoleAbilityText": "Einmal im Spiel kannst du einen Wunsch \u00E4u\u00DFern. Falls er erf\u00FCllt wird, k\u00F6nnte er einen Preis kosten \u0026 einen Hinweis auf seine Art geben.",
+    "RoleType": 2
+  },
+  {
+    "EnglishOriginalRoleName": null,
+    "RoleName": "Bootlegger",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_bootlegger.png",
+    "RoleAbilityText": "Dieses Szenario enth\u00E4lt selbst erstellte Charaktere oder Regeln.",
+    "RoleType": 5
+  },
+  {
+    "EnglishOriginalRoleName": null,
+    "RoleName": "Ferryman",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/8f/Icon_ferryman.png",
+    "RoleAbilityText": "Am finalen Tag erhalten alle toten Spieler ihr Abstimmungspl\u00E4ttchen zur\u00FCck.",
+    "RoleType": 5
+  },
+  {
+    "EnglishOriginalRoleName": null,
+    "RoleName": "Gardener",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/5c/Icon_gardener.png",
+    "RoleAbilityText": "Der Erz\u00E4hler weist 1 oder mehreren Spielern ihren Charakter zu.",
+    "RoleType": 5
+  },
+  {
+    "EnglishOriginalRoleName": null,
+    "RoleName": "Storm Catcher",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_stormcatcher.png",
+    "RoleAbilityText": "Nenne 1 guten Charakter. Falls er im Spiel ist, kann er nur durch Hinrichtung sterben, aber b\u00F6se Spieler erfahren, welcher Spieler er ist.",
+    "RoleType": 5
+  },
+  {
+    "EnglishOriginalRoleName": null,
+    "RoleName": "Gangster",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a5/Icon_gangster.png",
+    "RoleAbilityText": "Einmal pro Tag darfst du 1 deiner lebendigen Nachbarn t\u00F6ten, wenn dein anderer lebendiger Nachbar zustimmt.",
+    "RoleType": 0
+  },
+  {
+    "EnglishOriginalRoleName": null,
+    "RoleName": "Gnome",
+    "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_gnome.png",
+    "RoleAbilityText": "Alle Spieler kennen zu Beginn einen Spieler von deiner Fraktion. Du darfst jeden Spieler t\u00F6ten, der diesen nominiert.",
+    "RoleType": 0
   }
 ]

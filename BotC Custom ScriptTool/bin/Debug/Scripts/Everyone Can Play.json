@@ -1,0 +1,133 @@
+{
+  "Jinxes": [],
+  "Roles": [
+    "M\u00F6nch",
+    "Trunkenbold",
+    "Spion",
+    "Imp",
+    "Bibliothekar",
+    "Empath",
+    "Wahrsagerin",
+    "Totengr\u00E4ber",
+    "Rabenh\u00FCter",
+    "D\u00E4monenj\u00E4ger",
+    "B\u00FCrgermeister",
+    "Heilige",
+    "Einsiedler",
+    "Giftmischer",
+    "Baron",
+    "Scharlachrote Frau",
+    "Uhrmacher",
+    "K\u00FCnstler",
+    "Gro\u00DFmutter",
+    "Gl\u00FCcksspieler",
+    "Narr",
+    "Mondkind",
+    "Teufelsadvokat",
+    "Meuchelm\u00F6rder"
+  ],
+  "NightOrder": {
+    "FirstNight": [
+      {
+        "Rolename": "General Info",
+        "NightInformation": "Schergen Info: Wecke jeden Schergen und zeige Ihn das \u0022Dies ist der D\u00E4mon\u0022 Pl\u00E4ttchen"
+      },
+      {
+        "Rolename": "General Info",
+        "NightInformation": "D\u00E4mon Info: Wecke den D\u00E4mon, zeige Ihn das \u0022Dies sind deine Schergen\u0022-Pl\u00E4ttchen sowie die 3 Bluffs"
+      },
+      {
+        "Rolename": "Giftmischer",
+        "NightInformation": "Wecke den Spieler und lass Ihn ein Spieler vergiften"
+      },
+      {
+        "Rolename": "Teufelsadvokat",
+        "NightInformation": "Wecke den Spieler und lass Ihn ein Spieler w\u00E4hlen, dieser ist morgen vor der Hinrichtung sicher"
+      },
+      {
+        "Rolename": "Bibliothekar",
+        "NightInformation": "Wecke den Spieler, und Zeige Ihn 2 Spieler, einer davon ist ein Au\u00DFenseiter"
+      },
+      {
+        "Rolename": "Empath",
+        "NightInformation": "Wecke den Spieler, und Zeige Ihn eine Zahl"
+      },
+      {
+        "Rolename": "Wahrsagerin",
+        "NightInformation": "Wecke den Spieler, und lasse Ihn 2 Spieler w\u00E4hlen, wenn einer davon der D\u00E4mon oder die falsche F\u00E4hrte ist, zeige Ihm ein Ja"
+      },
+      {
+        "Rolename": "Gro\u00DFmutter",
+        "NightInformation": "Wecke den Spieler, zeige Ihm das Enkelkind und den Charakter"
+      },
+      {
+        "Rolename": "Uhrmacher",
+        "NightInformation": "Wecke den Spieler, zeige Ihm eine Zahl"
+      },
+      {
+        "Rolename": "Spion",
+        "NightInformation": "Wecke den Spieler, zeige Ihm das Grimoire"
+      }
+    ],
+    "OtherNights": [
+      {
+        "Rolename": "Giftmischer",
+        "NightInformation": "Wecke den Spieler und lass Ihn ein Spieler vergiften"
+      },
+      {
+        "Rolename": "Gl\u00FCcksspieler",
+        "NightInformation": "Wecke den Spieler, lass Ihn ein Spieler und eine Rolle w\u00E4hlen"
+      },
+      {
+        "Rolename": "M\u00F6nch",
+        "NightInformation": "Wecke den Spieler, lass Ihn ein Spieler w\u00E4hlen"
+      },
+      {
+        "Rolename": "Teufelsadvokat",
+        "NightInformation": "Wecke den Spieler und lass Ihn ein Spieler w\u00E4hlen, dieser ist morgen vor der Hinrichtung sicher"
+      },
+      {
+        "Rolename": "Scharlachrote Frau",
+        "NightInformation": "Wenn der D\u00E4mon heute hingerichtet wurde und es zum Zeitpunkt der Hinrichtung noch 5 lebende Spieler gab, ist dieser Spieler nun der D\u00E4mon"
+      },
+      {
+        "Rolename": "Imp",
+        "NightInformation": "Wecke den Spieler, lass Ihn ein Spieler w\u00E4hlen, dieser Stirbt\r\n\tFalls sich selbst, wird eine Scherge der neue D\u00E4mon"
+      },
+      {
+        "Rolename": "Meuchelm\u00F6rder",
+        "NightInformation": "Wecke den Spieler, lass Ihn ein Spieler w\u00E4hlen (wenn er will), dieser Stirbt\r\n\tNur einmal im Spiel"
+      },
+      {
+        "Rolename": "Mondkind",
+        "NightInformation": "Wenn das Mondkind gestorben ist, w\u00E4hlt es am Tag ein Spieler\r\n\tIst es ein guter Spieler, stirbt dieser heute Nacht"
+      },
+      {
+        "Rolename": "Gro\u00DFmutter",
+        "NightInformation": "Wenn das Enkelkind durch den D\u00E4mon gestorben ist, stirbt die Gro\u00DFmutter ebenfalls"
+      },
+      {
+        "Rolename": "Rabenh\u00FCter",
+        "NightInformation": "Wenn der Rabenh\u00FC\u00FCter durch den D\u00E4mon gestorben ist, wecke Ihn und lass Ihn ein Spieler w\u00E4hlen, zeige Ihm den Charakter vom gew\u00E4hlten Spieler"
+      },
+      {
+        "Rolename": "Empath",
+        "NightInformation": "Wecke den Spieler, und Zeige Ihn eine Zahl"
+      },
+      {
+        "Rolename": "Wahrsagerin",
+        "NightInformation": "Wecke den Spieler, und lasse Ihn 2 Spieler w\u00E4hlen, wenn einer davon der D\u00E4mon oder die falsche F\u00E4hrte ist, zeige Ihm ein Ja"
+      },
+      {
+        "Rolename": "Totengr\u00E4ber",
+        "NightInformation": "Wenn heute jemand hingerichtet wurde, wecke den Spieler und zeige Ihm den Charakter vom hingerichteten Spieler"
+      },
+      {
+        "Rolename": "Spion",
+        "NightInformation": "Wecke den Spieler, zeige Ihm das Grimoire"
+      }
+    ]
+  },
+  "ScriptName": "Everyone Can Play",
+  "ScriptAuthor": "Ben Burns"
+}

@@ -21,37 +21,42 @@ namespace BotC_Custom_ScriptTool.Classes
 
         public static bool PrintToPDF = false;
 
-        private static List<Image> PrintImages = new List<Image>();
+        private static List<Image> PagesToPrint = new List<Image>();
 
 
         //Image Variables!
-        static float mmpi = 25.4f; //milli meter per inch (DO NOT TOUCH)
-        static int dpi = 150; //dots per inch (Touch only if needed)
+        static private float mmpi = 25.4f; //milli meter per inch (DO NOT TOUCH)
+        static private int dpi = 150; //dots per inch (Touch only if needed)
 
-        static int ImageWidth = (int)(210 / mmpi * dpi);
-        static int ImageHeight = (int)(297 / mmpi * dpi);
+        static private int ImageWidth = (int)(210 / mmpi * dpi);
+        static private int ImageHeight = (int)(297 / mmpi * dpi);
 
-        static int padding = 50;
-        static int imageIndex = 0;
+        static private int padding = 50;
+        static private int pageIndex = 0;
 
         public static void CreateScript(Script script, List<CharacterRole> allRoles, string ScriptName, string Author, string PathToCustomImage, bool UseTwoColumns, bool printCharacterBorders)
         {
-            imageIndex = 0;
+            pageIndex = 0;
 
-            CreateCharacterSheet(script, allRoles, CreateA4Image(), ScriptName, Author, PathToCustomImage, UseTwoColumns, printCharacterBorders);
-            CreateNightOrder(script, CreateA4Image(), allRoles, true);
-            CreateNightOrder(script, CreateA4Image(), allRoles, false);
-
-            if (script.Jinxes.Count > 0) { }
+            if(script.Roles.Count > 0)
+                CreateCharacterSheet(script, allRoles, CreateA4Image(), ScriptName, Author, PathToCustomImage, UseTwoColumns, printCharacterBorders);
+            if(script.NightOrder.FirstNight.Count > 0)
+                CreateNightOrder(script, CreateA4Image(), allRoles, true);
+            if(script.NightOrder.OtherNights.Count > 0)
+                CreateNightOrder(script, CreateA4Image(), allRoles, false);
+            if(script.Jinxes.Count > 0)
+            {
+                //Do Something Crazy
+            }
 
             //Save as PDF File and clean up!
             SaveAsPDF(Path.Combine(Application.StartupPath, "Scripts", $"{ScriptName}.pdf"));
 
-            foreach (var img in PrintImages)
+            foreach (var img in PagesToPrint)
             {
                 img.Dispose();
             }
-            PrintImages.Clear();
+            PagesToPrint.Clear();
         }
 
         private static Image CreateA4Image()
@@ -114,7 +119,7 @@ namespace BotC_Custom_ScriptTool.Classes
             //Draw Not First Night Information
             DrawNotFirstNightOnImage(graphics);
 
-            PrintImages.Add(A4);
+            PagesToPrint.Add(A4);
         }
 
         private static void CreateNightOrder(Script script, Image A4, List<CharacterRole> allRoles, bool firstNight)
@@ -148,7 +153,7 @@ namespace BotC_Custom_ScriptTool.Classes
                 DrawRoleAndRoleInfoForNightOrder(graphics, fi, roleIcon, padding, new Point(0, i * MaxIconHeight), MaxIconHeight, MaxGraphicLength);
             }
 
-            PrintImages.Add(A4);
+            PagesToPrint.Add(A4);
         }
 
         private static int RoundToNextEvenNumber(int number)
@@ -340,16 +345,16 @@ namespace BotC_Custom_ScriptTool.Classes
 
         private static void pd_PrintPage(object sender, PrintPageEventArgs ev)
         {
-            if (imageIndex < PrintImages.Count)
+            if (pageIndex < PagesToPrint.Count)
             {
-                var img = PrintImages[imageIndex];
+                var img = PagesToPrint[pageIndex];
                 ev.Graphics.DrawImage(img, new Rectangle(0, 0, (int)ev.Graphics.VisibleClipBounds.Width, (int)ev.Graphics.VisibleClipBounds.Height));
                 img.Dispose();
                 img = null;
 
-                imageIndex++;
+                pageIndex++;
 
-                if (imageIndex == PrintImages.Count)
+                if (pageIndex == PagesToPrint.Count)
                     ev.HasMorePages = false;
                 else
                     ev.HasMorePages = true;

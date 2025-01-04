@@ -6,9 +6,14 @@
         Outsider = 1,
         Minion = 2,
         Demon = 3,
+        Traveler = 4,
+        Fabled = 5,
+
         //Townsfolk = 0,
         //Outsider = 1,
         //Minion = 2,
         //Demon = 3,
+        //Traveler = 4,
+        //Fabled = 5,
     }
 }
