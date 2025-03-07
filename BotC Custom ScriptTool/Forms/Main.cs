@@ -22,7 +22,6 @@ namespace BotC_Custom_ScriptTool.Forms
 
         //--------------------- Private Fields
 
-
         //Tab 1 (Characters)
         private CharacterRole currentSelectedRole;
         private bool isNewRole = false;

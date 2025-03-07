@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "E:\\C# Repos\\BotC_DIY_ScriptTool\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|E:\\C# Repos\\BotC_DIY_ScriptTool\\botc custom scripttool\\forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|e:\\c# repos\\botc_diy_scripttool\\botc custom scripttool\\forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|solutionrelative:botc custom scripttool\\forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|solutionrelative:botc custom scripttool\\classes\\pdf_imagecreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|e:\\c# repos\\botc_diy_scripttool\\botc custom scripttool\\enums\\eroletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|E:\\C# Repos\\BotC_DIY_ScriptTool\\botc custom scripttool\\enums\\eroletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|solutionrelative:botc custom scripttool\\enums\\eroletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 178,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,6 +39,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
@@ -50,8 +54,7 @@
               "RelativeToolTip": "BotC Custom ScriptTool\\Enums\\ERoleType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T11:06:01.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T11:06:01.117Z"
             },
             {
               "$type": "Document",
@@ -73,7 +76,7 @@
               "RelativeDocumentMoniker": "BotC Custom ScriptTool\\Forms\\Main.cs",
               "ToolTip": "E:\\C# Repos\\BotC_DIY_ScriptTool\\BotC Custom ScriptTool\\Forms\\Main.cs",
               "RelativeToolTip": "BotC Custom ScriptTool\\Forms\\Main.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T15:01:58.819Z",
               "EditorCaption": ""
@@ -87,8 +90,7 @@
               "ToolTip": "E:\\C# Repos\\BotC_DIY_ScriptTool\\BotC Custom ScriptTool\\Forms\\Main.cs [Entwurf]",
               "RelativeToolTip": "BotC Custom ScriptTool\\Forms\\Main.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T12:43:14.279Z",
-              "EditorCaption": " [Entwurf]"
+              "WhenOpened": "2024-10-27T12:43:14.279Z"
             },
             {
               "$type": "Document",
@@ -100,8 +102,7 @@
               "RelativeToolTip": "BotC Custom ScriptTool\\Classes\\PDF_ImageCreator.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T15:48:07.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T15:48:07.31Z"
             }
           ]
         }
