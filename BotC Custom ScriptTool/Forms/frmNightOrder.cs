@@ -10,7 +10,7 @@ namespace BotC_Custom_ScriptTool.Forms
     {
         public NightOrder Order = new NightOrder();
 
-        public frmNightOrder(NightOrder no, List<string> roles)
+        public frmNightOrder(NightOrder no, List<CharacterRole> rolesFirstNight, List<CharacterRole> rolesOtherNights)
         {
             InitializeComponent();
 
@@ -19,14 +19,19 @@ namespace BotC_Custom_ScriptTool.Forms
             foreach (var FirstNight in Order.FirstNight)
             {
                 var btn = new Button();
-                btn.Text = $"{FirstNight.Rolename} - {FirstNight.NightInformation}";
+                var role = (CharacterRole)cbFirstNight.SelectedItem;
+
+                btn.Text = $"{cbFirstNight.Text}";
                 btn.Size = new Size(flowLayoutPanel1.Width - 20, btn.Size.Height);
-                btn.Tag = FirstNight;
                 btn.Click += (s, ea) =>
                 {
-                    flowLayoutPanel1.Controls.Remove(btn);
-                    Order.FirstNight.Remove(FirstNight);
+                    var senderButton = (Button)s;
+                    var senderRole = (CharacterRole)senderButton.Tag;
+                    flowLayoutPanel1.Controls.Remove(senderButton);
+                    NightInfo info = new NightInfo { NightInformation = senderRole.FirstNight, Rolename = senderRole.RoleName };
+                    Order.FirstNight.Remove(info);
                 };
+                btn.Tag = role;
                 flowLayoutPanel1.Controls.Add(btn);
             }
 
@@ -43,46 +48,56 @@ namespace BotC_Custom_ScriptTool.Forms
                 flowLayoutPanel2.Controls.Add(btn);
             }
 
-            cbRoles.Items.Clear();
-            cbRoles.Items.Add("General Info");
-            foreach (var role in roles)
-            {
-                cbRoles.Items.Add(role);
-            }
+            cbFirstNight.Items.Clear();
+            cbOtherNights.Items.Clear();
+            foreach (var role in rolesFirstNight)
+                cbFirstNight.Items.Add(role);
+            foreach (var role in rolesOtherNights)
+                cbOtherNights.Items.Add(role);
         }
 
         private void btnAddToFirstNight_Click(object sender, EventArgs e)
         {
-            if (tbAction.Text == "") return;
+            if (cbFirstNight.Text == "") return;
 
             var btn = new Button();
-            btn.Text = $"{cbRoles.Text} - {tbAction.Text}";
+            var role = (CharacterRole)cbFirstNight.SelectedItem;
+
+            btn.Text = role.RoleName;
             btn.Size = new Size(flowLayoutPanel1.Width - 20, btn.Size.Height);
             btn.Click += (s, ea) =>
             {
-                flowLayoutPanel1.Controls.Remove(btn);
-                NightInfo info = new NightInfo { NightInformation = tbAction.Text, Rolename = cbRoles.Text };
+                var senderButton = (Button)s;
+                var senderRole = (CharacterRole)senderButton.Tag;
+                flowLayoutPanel1.Controls.Remove(senderButton);
+                NightInfo info = new NightInfo { NightInformation = senderRole.FirstNight, Rolename = senderRole.RoleName };
                 Order.FirstNight.Remove(info);
             };
+            btn.Tag = role;
             flowLayoutPanel1.Controls.Add(btn);
-            Order.FirstNight.Add(new NightInfo { NightInformation = tbAction.Text, Rolename = cbRoles.Text});
+            Order.FirstNight.Add(new NightInfo { NightInformation = role.FirstNight, Rolename = role.RoleName});
         }
 
         private void btnAddOtherNight_Click(object sender, EventArgs e)
         {
-            if (tbAction.Text == "") return;
+            if (cbOtherNights.Text == "") return;
 
             var btn = new Button();
-            btn.Text = $"{cbRoles.Text} - {tbAction.Text}";
+            var role = (CharacterRole)cbOtherNights.SelectedItem;
+
+            btn.Text = role.RoleName;
             btn.Size = new Size(flowLayoutPanel2.Width - 20, btn.Size.Height);
             btn.Click += (s, ea) =>
             {
-                flowLayoutPanel2.Controls.Remove(btn);
-                NightInfo info = new NightInfo { NightInformation = tbAction.Text, Rolename = cbRoles.Text };
+                var senderButton = (Button)s;
+                var senderRole = (CharacterRole)senderButton.Tag;
+                flowLayoutPanel2.Controls.Remove(senderButton);
+                NightInfo info = new NightInfo { NightInformation = senderRole.FirstNight, Rolename = senderRole.RoleName };
                 Order.OtherNights.Remove(info);
             };
+            btn.Tag = role;
             flowLayoutPanel2.Controls.Add(btn);
-            Order.OtherNights.Add(new NightInfo { NightInformation = tbAction.Text, Rolename = cbRoles.Text });
+            Order.OtherNights.Add(new NightInfo { NightInformation = role.FirstNight, Rolename = role.RoleName });
         }
     }
 }

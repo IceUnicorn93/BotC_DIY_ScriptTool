@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace BotC_Custom_ScriptTool.Forms
@@ -48,6 +49,8 @@ namespace BotC_Custom_ScriptTool.Forms
             tbRoleIconURL.Enabled = state;
             tbRoleAbility.Enabled = state;
             btnAdd.Enabled = state;
+            tbFirstNight.Enabled = state;
+            tbOtherNights.Enabled = state;
 
             rbTownsfolk.Enabled = state;
             rbOutsider.Enabled = state;
@@ -65,6 +68,8 @@ namespace BotC_Custom_ScriptTool.Forms
             tbRoleName.Text = "";
             tbRoleIconURL.Text = "";
             tbRoleAbility.Text = "";
+            tbFirstNight.Text = "";
+            tbOtherNights.Text = "";
 
             rbTownsfolk.Checked = false;
             rbOutsider.Checked = false;
@@ -89,6 +94,8 @@ namespace BotC_Custom_ScriptTool.Forms
             tbRoleName.Text = role.RoleName;
             tbRoleIconURL.Text = role.RoleIconURL;
             tbRoleAbility.Text = role.RoleAbilityText;
+            tbFirstNight.Text = role.FirstNight;
+            tbOtherNights.Text = role.OtherNights;
 
             rbTownsfolk.Checked = role.RoleType == Enums.ERoleType.Townsfolk;
             rbOutsider.Checked = role.RoleType == Enums.ERoleType.Outsider;
@@ -154,6 +161,7 @@ namespace BotC_Custom_ScriptTool.Forms
         private void btnNewRole_Click(object sender, EventArgs e)
         {
             currentSelectedRole = new CharacterRole();
+            ClearInputFileds();
             rbTownsfolk.Checked = true;
             isNewRole = true;
             SetEnableState(true);
@@ -169,6 +177,8 @@ namespace BotC_Custom_ScriptTool.Forms
             currentSelectedRole.RoleName = tbRoleName.Text;
             currentSelectedRole.RoleIconURL = tbRoleIconURL.Text;
             currentSelectedRole.RoleAbilityText = tbRoleAbility.Text;
+            currentSelectedRole.FirstNight = tbFirstNight.Text;
+            currentSelectedRole.OtherNights = tbOtherNights.Text;
             currentSelectedRole.RoleType =
                 rbTownsfolk.Checked ? Enums.ERoleType.Townsfolk :
                 rbOutsider.Checked ? Enums.ERoleType.Outsider :
@@ -470,7 +480,12 @@ namespace BotC_Custom_ScriptTool.Forms
         /// <param name="e"></param>
         private void btnConfigureNightOrder_Click(object sender, EventArgs e)
         {
-            frmNightOrder frmNightOrder = new frmNightOrder(nightOrder, selectedScriptRoles.Select(n => n.RoleName).ToList());
+            var firstNightRoles = selectedScriptRoles.Where(n => !string.IsNullOrEmpty(n.FirstNight)).ToList();
+            firstNightRoles.AddRange(roles.Where(n => n.RoleType == Enums.ERoleType.System && !string.IsNullOrEmpty(n.FirstNight)));
+            var otherNightsRoles = selectedScriptRoles.Where(n => !string.IsNullOrEmpty(n.OtherNights)).ToList();
+            otherNightsRoles.AddRange(roles.Where(n => n.RoleType == Enums.ERoleType.System && !string.IsNullOrEmpty(n.OtherNights)));
+
+            frmNightOrder frmNightOrder = new frmNightOrder(nightOrder, firstNightRoles, otherNightsRoles);
             frmNightOrder.ShowDialog();
 
             nightOrder = frmNightOrder.Order;
@@ -506,6 +521,7 @@ namespace BotC_Custom_ScriptTool.Forms
                 ScriptName = tbScriptName.Text
             };
 
+            PDF_ImageCreator.PrintToPDF = false;
             PDF_ImageCreator.FontSizeRoles = (int)nudPdfCharacterNameSize.Value;
             PDF_ImageCreator.FontSizeRoleAbility = (int)nudPdfCharacterAbilitySize.Value;
             PDF_ImageCreator.CreateScript(script, roles, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);

@@ -31,6 +31,12 @@
             this.btnNewRole = new System.Windows.Forms.Button();
             this.tcMainControl = new System.Windows.Forms.TabControl();
             this.tpCharacters = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbOtherNights = new System.Windows.Forms.TextBox();
+            this.tbFirstNight = new System.Windows.Forms.TextBox();
+            this.rbFabled = new System.Windows.Forms.RadioButton();
+            this.rbTraveler = new System.Windows.Forms.RadioButton();
             this.btnDownloadImages = new System.Windows.Forms.Button();
             this.btnClipboardImport = new System.Windows.Forms.Button();
             this.pbRoleIcon = new System.Windows.Forms.PictureBox();
@@ -83,8 +89,6 @@
             this.rbUse1Column = new System.Windows.Forms.RadioButton();
             this.tbCustomBackgroundPath = new System.Windows.Forms.TextBox();
             this.btnGeneratePDF = new System.Windows.Forms.Button();
-            this.rbTraveler = new System.Windows.Forms.RadioButton();
-            this.rbFabled = new System.Windows.Forms.RadioButton();
             this.tcMainControl.SuspendLayout();
             this.tpCharacters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoleIcon)).BeginInit();
@@ -119,6 +123,10 @@
             // 
             // tpCharacters
             // 
+            this.tpCharacters.Controls.Add(this.label13);
+            this.tpCharacters.Controls.Add(this.label12);
+            this.tpCharacters.Controls.Add(this.tbOtherNights);
+            this.tpCharacters.Controls.Add(this.tbFirstNight);
             this.tpCharacters.Controls.Add(this.rbFabled);
             this.tpCharacters.Controls.Add(this.rbTraveler);
             this.tpCharacters.Controls.Add(this.btnDownloadImages);
@@ -147,6 +155,60 @@
             this.tpCharacters.TabIndex = 0;
             this.tpCharacters.Text = "Characters";
             this.tpCharacters.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(280, 189);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 13);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "Other Nights";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(280, 163);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 13);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "First Night";
+            // 
+            // tbOtherNights
+            // 
+            this.tbOtherNights.Location = new System.Drawing.Point(352, 186);
+            this.tbOtherNights.Name = "tbOtherNights";
+            this.tbOtherNights.Size = new System.Drawing.Size(321, 20);
+            this.tbOtherNights.TabIndex = 22;
+            // 
+            // tbFirstNight
+            // 
+            this.tbFirstNight.Location = new System.Drawing.Point(352, 160);
+            this.tbFirstNight.Name = "tbFirstNight";
+            this.tbFirstNight.Size = new System.Drawing.Size(321, 20);
+            this.tbFirstNight.TabIndex = 21;
+            // 
+            // rbFabled
+            // 
+            this.rbFabled.AutoSize = true;
+            this.rbFabled.Location = new System.Drawing.Point(419, 111);
+            this.rbFabled.Name = "rbFabled";
+            this.rbFabled.Size = new System.Drawing.Size(57, 17);
+            this.rbFabled.TabIndex = 20;
+            this.rbFabled.TabStop = true;
+            this.rbFabled.Text = "Fabled";
+            this.rbFabled.UseVisualStyleBackColor = true;
+            // 
+            // rbTraveler
+            // 
+            this.rbTraveler.AutoSize = true;
+            this.rbTraveler.Location = new System.Drawing.Point(339, 111);
+            this.rbTraveler.Name = "rbTraveler";
+            this.rbTraveler.Size = new System.Drawing.Size(64, 17);
+            this.rbTraveler.TabIndex = 19;
+            this.rbTraveler.TabStop = true;
+            this.rbTraveler.Text = "Traveler";
+            this.rbTraveler.UseVisualStyleBackColor = true;
             // 
             // btnDownloadImages
             // 
@@ -228,7 +290,7 @@
             this.tbRoleAbility.Location = new System.Drawing.Point(339, 134);
             this.tbRoleAbility.Multiline = true;
             this.tbRoleAbility.Name = "tbRoleAbility";
-            this.tbRoleAbility.Size = new System.Drawing.Size(334, 76);
+            this.tbRoleAbility.Size = new System.Drawing.Size(334, 20);
             this.tbRoleAbility.TabIndex = 11;
             // 
             // tbRoleIconURL
@@ -719,28 +781,6 @@
             this.btnGeneratePDF.UseVisualStyleBackColor = true;
             this.btnGeneratePDF.Click += new System.EventHandler(this.btnGeneratePDF_Click);
             // 
-            // rbTraveler
-            // 
-            this.rbTraveler.AutoSize = true;
-            this.rbTraveler.Location = new System.Drawing.Point(339, 111);
-            this.rbTraveler.Name = "rbTraveler";
-            this.rbTraveler.Size = new System.Drawing.Size(64, 17);
-            this.rbTraveler.TabIndex = 19;
-            this.rbTraveler.TabStop = true;
-            this.rbTraveler.Text = "Traveler";
-            this.rbTraveler.UseVisualStyleBackColor = true;
-            // 
-            // rbFabled
-            // 
-            this.rbFabled.AutoSize = true;
-            this.rbFabled.Location = new System.Drawing.Point(419, 111);
-            this.rbFabled.Name = "rbFabled";
-            this.rbFabled.Size = new System.Drawing.Size(57, 17);
-            this.rbFabled.TabIndex = 20;
-            this.rbFabled.TabStop = true;
-            this.rbFabled.Text = "Fabled";
-            this.rbFabled.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -822,6 +862,10 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.RadioButton rbFabled;
         private System.Windows.Forms.RadioButton rbTraveler;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tbOtherNights;
+        private System.Windows.Forms.TextBox tbFirstNight;
     }
 }
 

@@ -2,6 +2,7 @@
 {
     public enum ERoleType
     {
+        System = -1,
         Townsfolk = 0,
         Outsider = 1,
         Minion = 2,

@@ -32,11 +32,10 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbAction = new System.Windows.Forms.TextBox();
             this.btnAddToFirstNight = new System.Windows.Forms.Button();
             this.btnAddOtherNight = new System.Windows.Forms.Button();
-            this.cbRoles = new System.Windows.Forms.ComboBox();
+            this.cbFirstNight = new System.Windows.Forms.ComboBox();
+            this.cbOtherNights = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -77,27 +76,9 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Other Nights";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(140, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Night Action";
-            // 
-            // tbAction
-            // 
-            this.tbAction.AcceptsTab = true;
-            this.tbAction.Location = new System.Drawing.Point(211, 12);
-            this.tbAction.Multiline = true;
-            this.tbAction.Name = "tbAction";
-            this.tbAction.Size = new System.Drawing.Size(447, 81);
-            this.tbAction.TabIndex = 5;
-            // 
             // btnAddToFirstNight
             // 
-            this.btnAddToFirstNight.Location = new System.Drawing.Point(664, 54);
+            this.btnAddToFirstNight.Location = new System.Drawing.Point(273, 12);
             this.btnAddToFirstNight.Name = "btnAddToFirstNight";
             this.btnAddToFirstNight.Size = new System.Drawing.Size(124, 23);
             this.btnAddToFirstNight.TabIndex = 6;
@@ -107,7 +88,7 @@
             // 
             // btnAddOtherNight
             // 
-            this.btnAddOtherNight.Location = new System.Drawing.Point(664, 83);
+            this.btnAddOtherNight.Location = new System.Drawing.Point(664, 12);
             this.btnAddOtherNight.Name = "btnAddOtherNight";
             this.btnAddOtherNight.Size = new System.Drawing.Size(124, 23);
             this.btnAddOtherNight.TabIndex = 7;
@@ -115,24 +96,31 @@
             this.btnAddOtherNight.UseVisualStyleBackColor = true;
             this.btnAddOtherNight.Click += new System.EventHandler(this.btnAddOtherNight_Click);
             // 
-            // cbRoles
+            // cbFirstNight
             // 
-            this.cbRoles.FormattingEnabled = true;
-            this.cbRoles.Location = new System.Drawing.Point(12, 12);
-            this.cbRoles.Name = "cbRoles";
-            this.cbRoles.Size = new System.Drawing.Size(122, 21);
-            this.cbRoles.TabIndex = 8;
+            this.cbFirstNight.FormattingEnabled = true;
+            this.cbFirstNight.Location = new System.Drawing.Point(12, 14);
+            this.cbFirstNight.Name = "cbFirstNight";
+            this.cbFirstNight.Size = new System.Drawing.Size(151, 21);
+            this.cbFirstNight.TabIndex = 8;
+            // 
+            // cbOtherNights
+            // 
+            this.cbOtherNights.FormattingEnabled = true;
+            this.cbOtherNights.Location = new System.Drawing.Point(403, 14);
+            this.cbOtherNights.Name = "cbOtherNights";
+            this.cbOtherNights.Size = new System.Drawing.Size(151, 21);
+            this.cbOtherNights.TabIndex = 9;
             // 
             // frmNightOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbRoles);
+            this.Controls.Add(this.cbOtherNights);
+            this.Controls.Add(this.cbFirstNight);
             this.Controls.Add(this.btnAddOtherNight);
             this.Controls.Add(this.btnAddToFirstNight);
-            this.Controls.Add(this.tbAction);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -150,10 +138,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbAction;
         private System.Windows.Forms.Button btnAddToFirstNight;
         private System.Windows.Forms.Button btnAddOtherNight;
-        private System.Windows.Forms.ComboBox cbRoles;
+        private System.Windows.Forms.ComboBox cbFirstNight;
+        private System.Windows.Forms.ComboBox cbOtherNights;
     }
 }
