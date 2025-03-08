@@ -31,10 +31,8 @@ namespace BotC_Custom_ScriptTool.Forms
                 btn.Click += (s, ea) =>
                 {
                     var senderButton = (Button)s;
-                    var senderRole = (CharacterRole)senderButton.Tag;
+                    var pos = flowLayoutPanel1.Controls.IndexOf(senderButton);
                     flowLayoutPanel1.Controls.Remove(senderButton);
-                    NightInfo info = new NightInfo { NightInformation = senderRole.FirstNight, Rolename = senderRole.RoleName };
-                    var pos = Convert.ToInt32(senderButton.Name.Split('_')[1]);
                     Order.FirstNight.RemoveAt(pos);
                 };
                 btn.Tag = role;
@@ -55,10 +53,8 @@ namespace BotC_Custom_ScriptTool.Forms
                 btn.Click += (s, ea) =>
                 {
                     var senderButton = (Button)s;
-                    var senderRole = (CharacterRole)senderButton.Tag;
+                    var pos = flowLayoutPanel2.Controls.IndexOf(senderButton);
                     flowLayoutPanel2.Controls.Remove(senderButton);
-                    NightInfo info = new NightInfo { NightInformation = senderRole.OtherNights, Rolename = senderRole.RoleName };
-                    var pos = Convert.ToInt32(senderButton.Name.Split('_')[1]);
                     Order.OtherNights.RemoveAt(pos);
                 };
                 btn.Tag = role;
