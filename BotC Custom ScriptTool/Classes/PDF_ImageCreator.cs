@@ -34,20 +34,26 @@ namespace BotC_Custom_ScriptTool.Classes
         static private int padding = 50;
         static private int pageIndex = 0;
 
-        public static void CreateScript(Script script, List<CharacterRole> allRoles, string ScriptName, string Author, string PathToCustomImage, bool UseTwoColumns, bool printCharacterBorders)
+        public static void CreateScript(Script script, List<CharacterRole> allRoles, List<Jinx> allJinxes, string ScriptName, string Author, string PathToCustomImage, bool UseTwoColumns, bool printCharacterBorders)
         {
+            foreach (var img in PagesToPrint)
+            {
+                img.Dispose();
+            }
+            PagesToPrint.Clear();
             pageIndex = 0;
 
-            if(script.Roles.Count > 0)
-                CreateCharacterSheet(script, allRoles, CreateA4Image(), ScriptName, Author, PathToCustomImage, UseTwoColumns, printCharacterBorders);
+            var jinxesWhereRole_A_IsMet = allJinxes.Where(jinx => script.Roles.Contains(jinx.RoleA)).ToList();
+            var jinxesWhereRole_B_IsAlsoMet = jinxesWhereRole_A_IsMet.Where(jinx => script.Roles.Contains(jinx.RoleB)).ToList();
+
+            if (script.Roles.Count > 0)
+                CreateCharacterSheet(script, allRoles, ScriptName, Author, PathToCustomImage, UseTwoColumns, printCharacterBorders);
             if(script.NightOrder.FirstNight.Count > 0)
-                CreateNightOrder(script, CreateA4Image(), allRoles, true);
+                CreateNightOrder(script, allRoles, true);
             if(script.NightOrder.OtherNights.Count > 0)
-                CreateNightOrder(script, CreateA4Image(), allRoles, false);
-            if(script.Jinxes.Count > 0)
-            {
-                //Do Something Crazy
-            }
+                CreateNightOrder(script, allRoles, false);
+            if (jinxesWhereRole_B_IsAlsoMet.Count > 0)
+                CreateJinxes(script, jinxesWhereRole_B_IsAlsoMet, allRoles);
 
             //Save as PDF File and clean up!
             SaveAsPDF(Path.Combine(Application.StartupPath, "Scripts", $"{ScriptName}.pdf"));
@@ -67,11 +73,13 @@ namespace BotC_Custom_ScriptTool.Classes
             return A4;
         }
 
-        private static void CreateCharacterSheet(Script script, List<CharacterRole> allRoles, Image A4,
+        private static void CreateCharacterSheet(Script script, List<CharacterRole> allRoles,
             string ScriptName, string Author, string PathToCustomImage,
             bool UseTwoColumns, bool printCharacterBorders)
         {
-            var roles = allRoles.Where(n => script.Roles.Contains(n.RoleName)).ToList();
+            var maxPerPage = 26;
+            var maxRolesOnOneSheet = UseTwoColumns ? maxPerPage / 2 : maxPerPage;
+            var roles = allRoles.Where(n => script.Roles.Contains(n.RoleName) && n.RoleType != ERoleType.System).OrderBy(n => n.RoleType).ToList();
 
             var roleCount = UseTwoColumns == false ? roles.Count :
                 RoundToNextEvenNumber(roles.Count(n => n.RoleType == ERoleType.Townsfolk)) +
@@ -79,81 +87,139 @@ namespace BotC_Custom_ScriptTool.Classes
                 RoundToNextEvenNumber(roles.Count(n => n.RoleType == ERoleType.Minion)) +
                 RoundToNextEvenNumber(roles.Count(n => n.RoleType == ERoleType.Demon));
 
-            var IconHeight = (ImageHeight - (2 * padding)) / (UseTwoColumns ? roleCount / 2 : roleCount);
+            var IconHeight = (ImageHeight - (2 * padding)) / maxRolesOnOneSheet;//(UseTwoColumns ? roleCount / 2 : roleCount)
 
-            var graphics = Graphics.FromImage(A4);
-            if (PathToCustomImage == "")
-                graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, ImageWidth, ImageHeight));
-            else
-                graphics.DrawImage(Image.FromFile(PathToCustomImage), new Rectangle(0, 0, ImageWidth, ImageHeight));
+            for (int charactersDrawn = 0; charactersDrawn < roles.Count; charactersDrawn += maxPerPage)
+            {
+                var charactersToDraw = roles.Skip(charactersDrawn).Take(maxPerPage).ToList();
+                var A4 = CreateA4Image();
+                var graphics = Graphics.FromImage(A4);
+                if (PathToCustomImage == "")
+                    graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, ImageWidth, ImageHeight));
+                else
+                    graphics.DrawImage(Image.FromFile(PathToCustomImage), new Rectangle(0, 0, ImageWidth, ImageHeight));
 
-            //ScriptName and Author
-            DrawScriptNameAndAuthor(graphics, ScriptName, "",  Author, padding);
+                //ScriptName and Author
+                DrawScriptNameAndAuthor(graphics, ScriptName, "", Author, padding);
 
-            int count = 0;
-            //Max. 14 Townsfolk
-            var townsfolk = roles.Where(n => n.RoleType == ERoleType.Townsfolk).ToList();
-            DrawRolesOnImage(townsfolk, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
-            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count , ERoleType.Townsfolk);
+                int count = 0;
 
-            //Max 4 Outsiders
-            count = UseTwoColumns ? RoundToNextEvenNumber(townsfolk.Count) : townsfolk.Count;
-            var outsider = roles.Where(n => n.RoleType == ERoleType.Outsider).ToList();
-            DrawRolesOnImage(outsider, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
-            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Outsider);
+                var townsfolk = charactersToDraw.Where(n => n.RoleType == ERoleType.Townsfolk).ToList();
+                if(townsfolk.Count > 0)
+                {
+                    DrawRolesOnImage(townsfolk, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
+                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Townsfolk);
+                    count = UseTwoColumns ? RoundToNextEvenNumber(townsfolk.Count) : townsfolk.Count;
+                }
 
-            //Max 4 Minions
-            count = UseTwoColumns ? RoundToNextEvenNumber(townsfolk.Count) + RoundToNextEvenNumber(outsider.Count) :
-                townsfolk.Count + outsider.Count;
-            var minions = roles.Where(n => n.RoleType == ERoleType.Minion).ToList();
-            DrawRolesOnImage(minions, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
-            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Minion);
+                
+                var outsider = charactersToDraw.Where(n => n.RoleType == ERoleType.Outsider).ToList();
+                if(outsider.Count > 0)
+                {
+                    DrawRolesOnImage(outsider, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
+                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Outsider);
 
-            //Max 4 Demons
-            count = UseTwoColumns ? RoundToNextEvenNumber(townsfolk.Count) + RoundToNextEvenNumber(outsider.Count) + RoundToNextEvenNumber(minions.Count) :
-                townsfolk.Count + outsider.Count + minions.Count;
-            var demons = roles.Where(n => n.RoleType == ERoleType.Demon).ToList();
-            DrawRolesOnImage(demons, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
-            DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Demon);
+                    count = UseTwoColumns ?
+                        RoundToNextEvenNumber(townsfolk.Count) + RoundToNextEvenNumber(outsider.Count) :
+                        townsfolk.Count + outsider.Count;
+                }
 
-            //Draw Not First Night Information
-            DrawNotFirstNightOnImage(graphics);
+                var minions = charactersToDraw.Where(n => n.RoleType == ERoleType.Minion).ToList();
+                if(minions.Count > 0)
+                {
+                    DrawRolesOnImage(minions, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
+                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Minion);
 
-            PagesToPrint.Add(A4);
+                    count = UseTwoColumns ?
+                        RoundToNextEvenNumber(townsfolk.Count) + RoundToNextEvenNumber(outsider.Count) + RoundToNextEvenNumber(minions.Count) :
+                        townsfolk.Count + outsider.Count + minions.Count;
+                }
+
+                var demons = charactersToDraw.Where(n => n.RoleType == ERoleType.Demon).ToList();
+                if(demons.Count > 0)
+                {
+                    DrawRolesOnImage(demons, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
+                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Demon);
+                }
+
+                //Draw Not First Night Information
+                DrawNotFirstNightOnImage(graphics);
+
+                PagesToPrint.Add(A4);
+            }
         }
 
-        private static void CreateNightOrder(Script script, Image A4, List<CharacterRole> allRoles, bool firstNight)
+        private static void CreateNightOrder(Script script, List<CharacterRole> allRoles, bool firstNight)
         {
-            var graphics = Graphics.FromImage(A4);
-            graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, ImageWidth, ImageHeight));
-
-            DrawScriptNameAndAuthor(graphics, script.ScriptName, firstNight ? "First Night" : "Other Nights", script.ScriptAuthor, padding);
-
+            int maxPerPage = 18;
             List<NightInfo> info = firstNight ? script.NightOrder.FirstNight : script.NightOrder.OtherNights;
+            var MaxIconHeight = (ImageHeight - (2 * padding)) / maxPerPage;
 
-            var MaxGraphicLength = (int)info.Max(n => graphics.MeasureString(n.Rolename, new Font("Arial", FontSizeHeader)).Width) + padding;
-
-            var MaxIconHeight = (ImageHeight - (2 * padding)) / 18;
-
-            for (int i = 0; i < info.Count; i++)
+            for (int infosToDraw = 0; infosToDraw < info.Count; infosToDraw += maxPerPage)
             {
-                NightInfo fi = info[i];
-                var roleWithInfo = allRoles.FirstOrDefault(n => n.RoleName == fi.Rolename);
-                Image roleIcon;
-                if (fi.Rolename != "General Info")
+                var A4 = CreateA4Image();
+                var graphics = Graphics.FromImage(A4);
+                graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, ImageWidth, ImageHeight));
+                DrawScriptNameAndAuthor(graphics, script.ScriptName, firstNight ? "First Night" : "Other Nights", script.ScriptAuthor, padding);
+
+                var MaxGraphicLength = (int)info.Max(n => graphics.MeasureString(n.Rolename, new Font("Arial", FontSizeHeader)).Width) + padding;
+
+                var partialInfos = info.Skip(infosToDraw).Take(maxPerPage).ToList();
+
+                for (int i = 0; i < partialInfos.Count; i++)
                 {
+                    NightInfo fi = partialInfos[i];
+                    var roleWithInfo = allRoles.FirstOrDefault(n => n.RoleName == fi.Rolename);
+                    Image roleIcon;
+
                     roleIcon = File.Exists($@"{Application.StartupPath}\Images\{roleWithInfo.RoleName}.png") ?
-                        Image.FromFile($@"{Application.StartupPath}\Images\{roleWithInfo.RoleName}.png") : GetImageFromURL(roleWithInfo.RoleIconURL);
-                }
-                else
-                {
-                    roleIcon = Image.FromFile($@"{Application.StartupPath}\Images\{fi.Rolename}.png");
+                            Image.FromFile($@"{Application.StartupPath}\Images\{roleWithInfo.RoleName}.png") :
+                            GetImageFromURL(roleWithInfo.RoleIconURL);
+
+                    DrawRoleAndRoleInfoForNightOrder(graphics, fi, roleIcon, padding, new Point(0, i * MaxIconHeight), MaxIconHeight, MaxGraphicLength);
                 }
 
-                DrawRoleAndRoleInfoForNightOrder(graphics, fi, roleIcon, padding, new Point(0, i * MaxIconHeight), MaxIconHeight, MaxGraphicLength);
+                PagesToPrint.Add(A4);
             }
+        }
 
-            PagesToPrint.Add(A4);
+        private static void CreateJinxes(Script script, List<Jinx> allJinxes, List<CharacterRole> allRoles)
+        {
+            int maxPerPage = 18;
+            var MaxIconHeight = (ImageHeight - (2 * padding)) / maxPerPage;
+
+            for (int jinxesToDraw = 0; jinxesToDraw < allJinxes.Count; jinxesToDraw += maxPerPage)
+            {
+                var A4 = CreateA4Image();
+                var graphics = Graphics.FromImage(A4);
+                graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, ImageWidth, ImageHeight));
+                DrawScriptNameAndAuthor(graphics, script.ScriptName, "Jinxes", script.ScriptAuthor, padding);
+
+                var MaxGraphicLength = (int)allJinxes.Max(n => graphics.MeasureString(n.JinxText, new Font("Arial", FontSizeHeader)).Width) + padding;
+
+                var partialJinxes = allJinxes.Skip(jinxesToDraw).Take(maxPerPage).ToList();
+
+                for (int i = 0; i < partialJinxes.Count; i++)
+                {
+                    Jinx jinx = partialJinxes[i];
+                    var roleA = allRoles.Single(n => n.RoleName == jinx.RoleA);
+                    var roleB = allRoles.Single(n => n.RoleName == jinx.RoleB);
+                    Image roleIconA;
+                    Image roleIconB;
+
+                    roleIconA = File.Exists($@"{Application.StartupPath}\Images\{roleA.RoleName}.png") ?
+                            Image.FromFile($@"{Application.StartupPath}\Images\{roleA.RoleName}.png") :
+                            GetImageFromURL(roleA.RoleIconURL);
+
+                    roleIconB = File.Exists($@"{Application.StartupPath}\Images\{roleB.RoleName}.png") ?
+                            Image.FromFile($@"{Application.StartupPath}\Images\{roleB.RoleName}.png") :
+                            GetImageFromURL(roleB.RoleIconURL);
+
+                    DrawJinx(graphics, jinx, roleIconA, roleIconB, padding, new Point(0, i * MaxIconHeight), MaxIconHeight, MaxGraphicLength);
+                }
+
+                PagesToPrint.Add(A4);
+            }
         }
 
         private static int RoundToNextEvenNumber(int number)
@@ -293,6 +359,19 @@ namespace BotC_Custom_ScriptTool.Classes
                 ImageWidth - (2 * padding) - IconHeight - MaxLength,
                 IconHeight));
 
+        }
+
+        private static void DrawJinx(Graphics graphics, Jinx jinx, Image roleIconA, Image roleIconB, int padding, Point position, int IconHeight, int MaxLength)
+        {
+            var calculatedX = position.X + padding;
+            var calculatedY = position.Y + padding;
+
+            graphics.DrawImage(roleIconA, calculatedX, calculatedY, IconHeight, IconHeight);
+            calculatedX += IconHeight;
+            graphics.DrawImage(roleIconB, calculatedX, calculatedY, IconHeight, IconHeight);
+            calculatedX += IconHeight;
+
+            graphics.DrawString(jinx.JinxText, new Font("Arial", FontSizeHeader), new SolidBrush(Color.Black), new RectangleF(calculatedX, calculatedY, MaxLength, IconHeight));
         }
 
         private static Image GetImageFromURL(string URL)

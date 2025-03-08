@@ -22,6 +22,21 @@ namespace BotC_Custom_ScriptTool.FileAccess
             return list;
         }
 
+        public static void WriteJinxes(List<Jinx> jinxes, string path)
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            var json = JsonSerializer.Serialize(jinxes, options);
+
+            File.WriteAllText(path, json);
+        }
+
+        public static List<Jinx> ReadJinxes(string path)
+        {
+            var list = JsonSerializer.Deserialize<List<Jinx>>(File.ReadAllText(path));
+
+            return list;
+        }
+
         public static void WriteScript(Script script, string Path)
         {
             var options = new JsonSerializerOptions { WriteIndented = true };

@@ -653,7 +653,7 @@
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/18/Icon_alhadikhia.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 3 Spieler (alle erfahren, wer): Jeder von ihnen w\u00E4hlt stumm \u00ABLeben\u00BB oder \u00ABTod\u00BB, aber falls alle leben, sterben alle.",
     "FirstNight": "",
-    "OtherNights": "The Al-Hadikhia chooses three players. Wake the player marked 1 and say \u0022the Al-Hadikhia has chosen\u0022, the the player\u0027s name, then \u0022Do you choose to live?\u0022 The either nod or shake their head. Put them to sleep. and add or remove the shrounds accodingly. Repeat for players marked 2 and 3. If all 3 players are now alive, add a shroud to all three.",
+    "OtherNights": "Der Al-Hadikhia w\u00E4hlt drei Spieler. Wecke den mit 1 markierten Spieler und sage \u0022Der Al-Hadikhia hat (Spielername) gew\u00E4hlt. W\u00E4hlst du zu leben?\u0022 Der Spieler nickt oder sch\u00FCttelt den Kopf. Lass ihn einschlafen und f\u00FCge Schleier hinzu oder entferne sie entsprechend. Wiederhole dies f\u00FCr die mit 2 und 3 markierten Spieler. Wenn nun alle drei Spieler leben, f\u00FCge allen drei Spielern einen Schleier hinzu.",
     "RoleType": 3
   },
   {
@@ -661,7 +661,7 @@
     "RoleName": "Kazali",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/3/3c/Icon_kazali.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Er stirbt. [Du bestimmst, welche Spieler welche Schergen sind. -? bis \u002B? Au\u00DFenseiter] ",
-    "FirstNight": "Wake the Kazali, allow them to choose Minions.",
+    "FirstNight": "Wecke den Kazali. Erlaube ihm, Schergen zu w\u00E4hlen.",
     "OtherNights": "The Kazali chooses a player.",
     "RoleType": 3
   },
@@ -671,7 +671,7 @@
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/cb/Icon_legion.png",
     "RoleAbilityText": "Jede Nacht* k\u00F6nnte 1 Spieler sterben. Hinrichtungen scheitern, wenn nur b\u00F6se Spieler abgestimmt haben. Du erscheinst auch als Scherge. [Die meisten Spieler sind Legion] ",
     "FirstNight": "",
-    "OtherNights": "A player might die.",
+    "OtherNights": "Ein Spieler stirbt m\u00F6glicherweise.",
     "RoleType": 3
   },
   {
@@ -679,8 +679,8 @@
     "RoleName": "Leviathan",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a7/Icon_leviathan.png",
     "RoleAbilityText": "Falls mehr als 1 guter Spieler hingerichtet wird, gewinnt B\u00F6se. Alle wissen, dass ein Leviathan im Spiel ist. Nach Tag 5 gewinnt B\u00F6se.",
-    "FirstNight": "Declare that \u0022The Leviathan is in play.\u0022 Mark the Leviathan with the DAY 1 reminder.",
-    "OtherNights": "Optionally, declare that \u0022The Leviathan is in play.\u0022 Replace the reminder token.",
+    "FirstNight": "Verk\u00FCnde \u0022Der Leviathan ist im Spiel.\u0022 Markiere den Leviathan mit dem DAY 1 Erinnerungspl\u00E4ttchen.",
+    "OtherNights": "Du kannst optional verk\u00FCnden \u0022Der Leviathan ist im Spiel.\u0022 Ersetze das Erinnerungspl\u00E4ttchen.",
     "RoleType": 3
   },
   {
@@ -688,8 +688,8 @@
     "RoleName": "Lil\u0027 Monsta",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_lilmonsta.png",
     "RoleAbilityText": "Jede Nacht w\u00E4hlen die Schergen, wer Lil\u0027 Monsta h\u00FCtet \u0026 \u00ABder D\u00E4mon\u00BB ist. Jede Nacht* k\u00F6nnte 1 Spieler sterben. [\u002B1 Scherge] ",
-    "FirstNight": "Wake all Minions, allow them to choose a babysitter.",
-    "OtherNights": "Wake all Minions, allow them to choose a babysitter. A player might die.",
+    "FirstNight": "Wecke alle Minions. Erlaube ihnen, einen Babysitter zu w\u00E4hlen.",
+    "OtherNights": "Wecke alle Minions. Erlaube ihnen, einen Babysitter zu w\u00E4hlen. Ein Spieler stirbt m\u00F6glicherweise.",
     "RoleType": 3
   },
   {
@@ -697,8 +697,8 @@
     "RoleName": "Lleech",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/7/70/Icon_lleech.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Er stirbt. W\u00E4hle zu Beginn 1 lebendigen Spieler: Er ist vergiftet. Du stirbst, wenn (\u0026 nur wenn) er tot ist. ",
-    "FirstNight": "The Lleech chooses a player.",
-    "OtherNights": "The Lleech chooses a player.",
+    "FirstNight": "Der Lleech w\u00E4hlt einen Spieler.",
+    "OtherNights": "Der Lleech w\u00E4hlt einen Spieler.",
     "RoleType": 3
   },
   {
@@ -706,8 +706,8 @@
     "RoleName": "Lord of Typhon",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/cf/Icon_lordoftyphon.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Er stirbt. [B\u00F6se Spieler sitzen in einer Reihe. Du bist in der Mitte. \u002B1 Scherge. -? bis \u002B? Au\u00DFenseiter] ",
-    "FirstNight": "Replace neighbors of the Lord of Typhon with Minions, wake them, tell them their new alignment and character. then do minion info.",
-    "OtherNights": "The Lord of Typhon chooses a player.",
+    "FirstNight": "Ersetzte die Nachbarn des Lord of Typhon mit Schergen und wecke sie auf. Verrate ihnen ihre neue Teamzugeh\u00F6rigkeit und Charaktere, dann handle die Schergen Info ab.",
+    "OtherNights": "Der Lord of Typhon w\u00E4hlt einen Spieler.",
     "RoleType": 3
   },
   {
@@ -716,7 +716,7 @@
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6f/Icon_ojo.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Charakter: Er stirbt. Falls der Charakter nicht im Spiel ist, w\u00E4hlt der Erz\u00E4hler, wer stirbt.",
     "FirstNight": "",
-    "OtherNights": "The Ojo chooses a character.",
+    "OtherNights": "Der Ojo w\u00E4hlt einen Charakter.",
     "RoleType": 3
   },
   {
@@ -733,8 +733,8 @@
     "RoleName": "Yaggababble",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_yaggababble.png",
     "RoleAbilityText": "Du kennst zu Beginn 1 geheime Phrase. F\u00FCr jedes Mal, dass du diese Phrase heute \u00F6ffentlich gesagt hast, k\u00F6nnte 1 Spieler sterben. ",
-    "FirstNight": "Choose a secret phrase. Wake the Yaggababble and let them know their secret phrase.",
-    "OtherNights": "For each time the Yaggababble said the phrase today, you may choose a player. They die.",
+    "FirstNight": "W\u00E4hle einen geheimen Satz. Wecke den Yagababble und lass ihn seinen geheimen Satz wissen.",
+    "OtherNights": "F\u00FCr jedes Mal, dass der Yaggababble seinen Satz heute gesagt hat, kannst du einen Spieler w\u00E4hlen. Er stirbt.",
     "RoleType": 3
   },
   {
@@ -751,7 +751,7 @@
     "RoleName": "Boffin",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_boffin.png",
     "RoleAbilityText": "Der D\u00E4mon (selbst wenn er betrunken oder vergiftet ist) hat die F\u00E4higkeit eines nicht im Spiel befindlichen gute Charakters. Ihr wisst beide, welche.",
-    "FirstNight": "Wake the Boffin and the Demon. Show the not-in-play good character token. Put the Boffin and the Demon to sleep.",
+    "FirstNight": "Wecke den Boffin und den D\u00E4mon. Zeige das nicht im Spiel befindliche gute Charakterpl\u00E4ttchen. Lasse den Boffin und den D\u00E4mon einschlafen.",
     "OtherNights": "",
     "RoleType": 2
   },
@@ -760,8 +760,8 @@
     "RoleName": "Fearmonger",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/11/Icon_fearmonger.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler: Falls du ihn nominierst \u0026 er hingerichtet wird, verliert sein Team. Alle erfahren, wenn du 1 neuen Spieler w\u00E4hlst.",
-    "FirstNight": "The Fearmonger chooses a player. Declare that \u0022the Fearmonger has chosen a player.\u0022",
-    "OtherNights": "The Fearmonger chooses a player. If the player wasn\u0027t already marked with the FEAR reminder, declare that \u0022the Fearmonger has chosen a player.\u0022",
+    "FirstNight": "Der Fearmonger w\u00E4hlt einen Spieler. Verk\u00FCnde \u0022Der Fearmonger hat einen Spieler gew\u00E4hlt.\u0022",
+    "OtherNights": "Der Fearmonger w\u00E4hlt einen Spieler. Wenn der Spieler nicht bereits mit dem FEAR Erinnerungspl\u00E4ttchen markiert war, verk\u00FCnde \u0022Der Fearmonger hat einen Spieler gew\u00E4hlt.\u0022",
     "RoleType": 2
   },
   {
@@ -778,8 +778,8 @@
     "RoleName": "Harpy",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_harpy.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 2 Spieler: Morgen ist der 1. Spieler \u0022besessen\u0022 davon, dass der 2. b\u00F6se ist, oder einer/beide von ihnen k\u00F6nnten sterben.",
-    "FirstNight": "The Harpy chooses two players. Put the Harpy to sleep. Wake the 1st target. Show the THIS CHARACTER SELECTED YOU token, the Harpy token, then point to the 2nd target.",
-    "OtherNights": "The Harpy chooses two players. Put the Harpy to sleep. Wake the 1st target. Show the THIS CHARACTER SELECTED YOU token, the Harpy token, then point to the 2nd target.",
+    "FirstNight": "Die Harpy w\u00E4hlt zwei Spieler. Lasse die Harpy einschlafen. Wecke das erste Ziel. Zeige das DIESER CHARAKTER HAT DICH GEW\u00C4HLT Pl\u00E4ttchen und das Harpy Charakterpl\u00E4ttchen. Zeige auf das zweite Ziel.",
+    "OtherNights": "Die Harpy w\u00E4hlt zwei Spieler. Lasse die Harpy einschlafen. Wecke das erste Ziel. Zeige das DIESER CHARAKTER HAT DICH GEW\u00C4HLT Pl\u00E4ttchen und das Harpy Charakterpl\u00E4ttchen. Zeige auf das zweite Ziel.",
     "RoleType": 2
   },
   {
@@ -787,7 +787,7 @@
     "RoleName": "Marionette",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/cf/Icon_marionette.png",
     "RoleAbilityText": "Du denkst, dass du ein guter Charakter bist, aber das stimmt nicht. Der D\u00E4mon wei\u00DF, dass du die Marionette bist. [Der D\u00E4mon ist benachbart] ",
-    "FirstNight": "Wake the Demon. Point to the player marked IS THE MARIONETTE and show the THIS PLAYER IS token and the Marionette character token.",
+    "FirstNight": "Wecke den D\u00E4mon. Zeige an den Spieler, der mit IS THE MARIONETTE markiert ist. Zeige das DIESER SPIELER IST Pl\u00E4ttchen und das Marionette Charakterpl\u00E4ttchen.",
     "OtherNights": "",
     "RoleType": 2
   },
@@ -796,8 +796,8 @@
     "RoleName": "Mezepheles",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f2/Icon_mezepheles.png",
     "RoleAbilityText": "Du kennst zu Beginn ein geheimes Wort. Der 1. gute Spieler, der dieses Wort sagt, wird in dieser Nacht b\u00F6se.",
-    "FirstNight": "Show the written word.",
-    "OtherNights": "If a player is marked with the TURNS EVIL reminder, wake them. Show the YOU ARE info token and a thumbs down. The Mezepheles loses their ability.",
+    "FirstNight": "Zeige das aufgeschriebene Wort.",
+    "OtherNights": "Wenn ein Spieler mit dem TURNS EVIL Erinnerungspl\u00E4ttchen markiert ist, wecke ihn auf. Zeige ihm das DU BIST Pl\u00E4ttchen und einen Daumen nach unten. Der Mezepheles verliert seine F\u00E4higkeit.",
     "RoleType": 2
   },
   {
@@ -805,8 +805,8 @@
     "RoleName": "Organ Grinder",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/61/Icon_organgrinder.png",
     "RoleAbilityText": "Alle Spieler stimmen mit geschlossenen Augen ab \u0026 die Ausz\u00E4hlung ist geheim. W\u00E4hle jede Nacht neu, ob du betrunken bist oder nicht.",
-    "FirstNight": "The Organ Grinder either nods their head yes to be drunk, or shakes their head to be sober.",
-    "OtherNights": "The Organ Grinder either nods their head yes to be drunk, or shakes their head to be sober.",
+    "FirstNight": "Der Organ Grinder nickt entweder um betrunken zu sein, oder sch\u00FCttelt den Kopf um n\u00FCchtern zu sein.",
+    "OtherNights": "Der Organ Grinder nickt entweder um betrunken zu sein, oder sch\u00FCttelt den Kopf um n\u00FCchtern zu sein.",
     "RoleType": 2
   },
   {
@@ -823,8 +823,8 @@
     "RoleName": "Summoner",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_summoner.png",
     "RoleAbilityText": "Du erh\u00E4ltst 3 Bluffs. W\u00E4hle in der 3. Nacht 1 Spieler: Er wird zu einem b\u00F6sen D\u00E4mon deiner Wahl. [Kein D\u00E4mon] ",
-    "FirstNight": "Show the THESE CHACTERS ARE NOT IN PLAY token. Show 3 not-in-play good chacter tokens.",
-    "OtherNights": "Change the Summoner reminder token to the relevat night. If it is night 3, the Summoner chooses a player and a Demon. Put the Summoner to sleep. Wake the chosen player. Show the YOU ARE token, a thumbs down and the chosen Demon token.",
+    "FirstNight": "Zeige das DIESE CHARAKTERE SIND NICHT IM SPIEL Pl\u00E4ttchen. Zeige 3 nicht im Spiel befindliche gute Charakterpl\u00E4ttchen.",
+    "OtherNights": "\u00C4ndere das Summoner Erinnerungspl\u00E4tchen auf das f\u00FCr die aktuelle Nacht relevante Pl\u00E4ttchen. Falls es Nacht 3 ist, w\u00E4hlt der Summoner einen Spieler und einen D\u00E4mon. Lasse den Summoner einschlafen. Wecke den gew\u00E4hlten Spieler. Zeige ihm das DU BIST Pl\u00E4ttchen. Zeige einen Daumen nach unten. Zeige das gew\u00E4hlte D\u00E4mon Charakterpl\u00E4ttchen.",
     "RoleType": 2
   },
   {
@@ -832,7 +832,7 @@
     "RoleName": "Vizier",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a4/Icon_vizier.png",
     "RoleAbilityText": "Alle wissen, dass du der Wesir bist. Du kannst w\u00E4hrend des Tages nicht sterben. Wenn Gute abgestimmt haben, darfst du sofort die Hinrichtung vollziehen.",
-    "FirstNight": "Announce the Vizier player to the group.",
+    "FirstNight": "Verk\u00FCnde der Gruppe, welcher Spieler der Vizier ist.",
     "OtherNights": "",
     "RoleType": 2
   },
@@ -841,7 +841,7 @@
     "RoleName": "Widow",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/99/Icon_widow.png",
     "RoleAbilityText": "In deiner 1. Nacht siehst du das Grimoire. W\u00E4hle 1 Spieler: Er ist vergiftet. 1 guter Spieler wei\u00DF, dass die Schwarze Witwe im Spiel ist.",
-    "FirstNight": "Show the Grimoire for as long as the Widow needs. The Widow chooses a player.",
+    "FirstNight": "Zeige der Widow das Grimoire so lange, wie sie es braucht. Die Widow w\u00E4hlt einen Spieler.",
     "OtherNights": "",
     "RoleType": 2
   },
@@ -850,8 +850,8 @@
     "RoleName": "Damsel",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_damsel.png",
     "RoleAbilityText": "Alle Schergen wissen, dass eine Unschuld im Spiel ist. Falls ein Scherge \u00F6ffentlich err\u00E4t (einmalig), wer du bist, verliert dein Team.",
-    "FirstNight": "If the Damsel was chosen by the Huntsman, show them the YOU ARE info token and their new character token.",
-    "OtherNights": "If the Damsel was chosen by the Huntsman, show them the YOU ARE info token and their new character token.",
+    "FirstNight": "Wenn die Damsel vom Huntsman gew\u00E4hlt wurde, zeige ihr das DU BIST Pl\u00E4ttchen und ihr neues Charakterpl\u00E4ttchen.",
+    "OtherNights": "Wenn die Damsel vom Huntsman gew\u00E4hlt wurde, zeige ihr das DU BIST Pl\u00E4ttchen und ihr neues Charakterpl\u00E4ttchen.",
     "RoleType": 1
   },
   {
@@ -869,7 +869,7 @@
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/4/44/Icon_hatter.png",
     "RoleAbilityText": "Falls du heute am Tag oder in der Nacht gestorben bist, d\u00FCrfen die Schergen- \u0026 D\u00E4mon-Spieler neue Schergen- \u0026 D\u00E4mon-Charaktere w\u00E4hlen.",
     "FirstNight": "",
-    "OtherNights": "If the Hatter died today or tonight, wake Minions and Demons, allow them to choose new characters.",
+    "OtherNights": "Falls der Hatter heute oder heute Nacht gestorben ist, wecke Schergen und D\u00E4mon. Erlaube ihnen, neue Charaktere zu w\u00E4hlen.",
     "RoleType": 1
   },
   {
@@ -886,7 +886,7 @@
     "RoleName": "Ogre",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/25/Icon_ogre.png",
     "RoleAbilityText": "W\u00E4hle in deiner 1. Nacht 1 Spieler (nicht dich selbst): Du wechselst zu seiner Fraktion (du erf\u00E4hrst sie nicht), sogar wenn du betrunken oder vergiftet bist. ",
-    "FirstNight": "The Ogre points to a player.",
+    "FirstNight": "Der Ogre zeigt auf einen Spieler.",
     "OtherNights": "",
     "RoleType": 1
   },
@@ -922,7 +922,7 @@
     "RoleName": "Snitch",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/c1/Icon_snitch.png",
     "RoleAbilityText": "Jeder Scherge erh\u00E4lt 3 Bluffs.",
-    "FirstNight": "Wake each Minion. Show the THESE CHARACTERS ARE NOT IN PLAY token and three not-in-play character tokens. Put each Minion to sleep.",
+    "FirstNight": "Wecke jeden Schergen. Zeige das DIESE CHARAKTERE SIND NICHT IM SPIEL Pl\u00E4ttchen. Zeige 3 nicht im Spiel befindliche gute Charakterpl\u00E4ttchen. Lasse jeden Schergen einschlafen.",
     "OtherNights": "",
     "RoleType": 1
   },
@@ -941,7 +941,7 @@
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/b5/Icon_acrobat.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 Spieler: Falls er heute Nacht betrunken oder vergiftet ist oder wird, stirbst du.",
     "FirstNight": "",
-    "OtherNights": "The Acrobat chooses a player.",
+    "OtherNights": "Der Acrobat w\u00E4hlt einen Spieler.",
     "RoleType": 0
   },
   {
@@ -949,7 +949,7 @@
     "RoleName": "Alchemist",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/54/Icon_alchemist.png",
     "RoleAbilityText": "Du hast die F\u00E4higkeit eines Schergen. Wenn du sie nutzt, k\u00F6nnte der Erz\u00E4hler dich auffordern, anders zu w\u00E4hlen.",
-    "FirstNight": "Zeige das DU BIST Pl\u00E4ttchen und das Charakterpl\u00E4ttchen von einem Schergen",
+    "FirstNight": "Zeige das DU BIST Pl\u00E4ttchen und ein Scherge Charakterpl\u00E4ttchen.",
     "OtherNights": "",
     "RoleType": 0
   },
@@ -967,8 +967,8 @@
     "RoleName": "Amnesiac",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/2/26/Icon_amnesiac.png",
     "RoleAbilityText": "Du kennst deine F\u00E4higkeit nicht. Rate jeden Tag geheim beim Erz\u00E4hler, was es ist: Du erf\u00E4hrst, wie richtig du liegst.",
-    "FirstNight": "Run the Amnesiac\u00C4s ability, if applicable.",
-    "OtherNights": "Run the Amnesiac\u00C4s ability, if applicable.",
+    "FirstNight": "Handle falls notwendig die F\u00E4higkeit des Amnesiac ab.",
+    "OtherNights": "Handle falls notwendig die F\u00E4higkeit des Amnesiac ab.",
     "RoleType": 0
   },
   {
@@ -985,8 +985,8 @@
     "RoleName": "Balloonist",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/cb/Icon_balloonist.png",
     "RoleAbilityText": "Jede Nacht erf\u00E4hrst du 1 Spieler eines anderen Charaktertyps als in der Nacht zuvor. [\u002B0 oder \u002B1 Au\u00DFenseiter] ",
-    "FirstNight": "Show any player.",
-    "OtherNights": "Show a player with a diffrent character type to previously.",
+    "FirstNight": "Zeige irgendeinen Spieler.",
+    "OtherNights": "Zeige einen Spieler mit einem anderen Charaktertyp als in den vorherigen N\u00E4chten.",
     "RoleType": 0
   },
   {
@@ -995,7 +995,7 @@
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/63/Icon_banshee.png",
     "RoleAbilityText": "Falls du vom D\u00E4mon get\u00F6tet wirst, erfahren das alle Spieler. Von nun an darfst du 2x pro Tag nominieren und 2x pro Nominierung abstimmen.",
     "FirstNight": "",
-    "OtherNights": "If the Banshee was killed by the Demon tonight, announce to all players that the Banshee has died.",
+    "OtherNights": "Falls die Banshee heute Nacht vom D\u00E4mon get\u00F6tet wurde, verk\u00FCnde allen Spielern dass die Banshee gestorben ist.",
     "RoleType": 0
   },
   {
@@ -1003,8 +1003,8 @@
     "RoleName": "Bounty Hunter",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/5/5b/Icon_bountyhunter.png",
     "RoleAbilityText": "Du kennst zu Beginn 1 b\u00F6sen Spieler. Falls dieser Spieler stirbt, lernst du in dieser Nacht einen anderen b\u00F6sen Spieler kennen. [1 B\u00FCrger ist b\u00F6se] ",
-    "FirstNight": "Point to the KNOWN player.",
-    "OtherNights": "If the KNOWN player died today or tonight, point to a new KNOWN player.",
+    "FirstNight": "Zeige auf den KNOWN Spieler.",
+    "OtherNights": "Wenn der KNOWN Spieler heute oder heute Nacht gestorben ist, zeige auf einen neuen KNOWN Spieler.",
     "RoleType": 0
   },
   {
@@ -1022,7 +1022,7 @@
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d9/Icon_choirboy.png",
     "RoleAbilityText": "Falls der D\u00E4mon den K\u00F6nig t\u00F6tet, erf\u00E4hrst du, welcher Spieler der D\u00E4mon ist. [\u002B K\u00F6nig] ",
     "FirstNight": "",
-    "OtherNights": "If the Demon killed the King, point to the Demon player.",
+    "OtherNights": "Wenn der D\u00E4mon den K\u00F6nig get\u00F6tet hat, zeige auf den D\u00E4monen.",
     "RoleType": 0
   },
   {
@@ -1030,8 +1030,8 @@
     "RoleName": "Cult Leader",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/6c/Icon_cultleader.png",
     "RoleAbilityText": "Du wechselst jede Nacht zur Fraktion eines lebendigen Nachbarn. Falls sich alle guten Spieler deinem Kult anschlie\u00DFen, gewinnt dein Team.",
-    "FirstNight": "The Cult Leader might change alignment. If so, show the YOU ARE info token and a thumbs up or down for their new alignment.",
-    "OtherNights": "The Cult Leader might change alignment. If so, show the YOU ARE info token and a thumbs up or down for their new alignment.",
+    "FirstNight": "Der Cult Leader wechselt m\u00F6glicherweise seine Teamzugeh\u00F6rigkeit. Falls es so ist, zeige ihm das DU BIST Pl\u00E4ttchen und einen Daumen nach oben oder Daumen nach unten entsprechend seinem neuen Team.",
+    "OtherNights": "Der Cult Leader wechselt m\u00F6glicherweise seine Teamzugeh\u00F6rigkeit. Falls es so ist, zeige ihm das DU BIST Pl\u00E4ttchen und einen Daumen nach oben oder Daumen nach unten entsprechend seinem neuen Team.",
     "RoleType": 0
   },
   {
@@ -1039,8 +1039,8 @@
     "RoleName": "Engineer",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/b9/Icon_engineer.png",
     "RoleAbilityText": "Einmal im Spiel, in der Nacht, w\u00E4hle, welche Schergen oder welcher D\u00E4mon im Spiel sind.",
-    "FirstNight": "The Engineer might choose Minions or Demons. If they do: Put the Engineer to sleep. Wake a target, show them the YOU ARE token and their new character token, then put that target to sleep. Repeat for all players that changes characters.",
-    "OtherNights": "The Engineer might choose Minions or Demons. If they do: Put the Engineer to sleep. Wake a target, show them the YOU ARE token and their new character token, then put that target to sleep. Repeat for all players that changes characters.",
+    "FirstNight": "Der Engineer w\u00E4hlt m\u00F6glicherweise Schergen oder D\u00E4monen. Falls er das tut: Lasse den Engineer schlafen. Wecke ein Ziel, zeige ihm das DU BIST Pl\u00E4ttchen und sein Charakterpl\u00E4ttchen. Lasse ihn einschlafen. Wiederhole die Schritte f\u00FCr alle Spieler, die ihren Charakter gewechselt haben.",
+    "OtherNights": "Der Engineer w\u00E4hlt m\u00F6glicherweise Schergen oder D\u00E4monen. Falls er das tut: Lasse den Engineer schlafen. Wecke ein Ziel, zeige ihm das DU BIST Pl\u00E4ttchen und sein Charakterpl\u00E4ttchen. Lasse ihn einschlafen. Wiederhole die Schritte f\u00FCr alle Spieler, die ihren Charakter gewechselt haben.",
     "RoleType": 0
   },
   {
@@ -1049,7 +1049,7 @@
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/fe/Icon_farmer.png",
     "RoleAbilityText": "Falls du in der Nacht stirbst, wird 1 lebendiger guter Spieler ein Bauer.",
     "FirstNight": "",
-    "OtherNights": "If the Farmer died tonight, wake an alive good player. Show them the YOU ARE info token and a Farmer character token. Replace their previous token with the Farmer token.",
+    "OtherNights": "Falls der Farmer heute Nacht gestorben ist, w\u00E4hle einen lebenden guten Spieler. Zeige ihm das DU BIST Pl\u00E4ttchen und das Farmer Charakterpl\u00E4ttchen. Ersetze sein bisheriges Charakterpl\u00E4ttchen mit dem Farmer Charakterpl\u00E4ttchen.",
     "RoleType": 0
   },
   {
@@ -1066,8 +1066,8 @@
     "RoleName": "General",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/99/Icon_general.png",
     "RoleAbilityText": "Jede Nacht erf\u00E4hrst du, welche Fraktion der Einsch\u00E4tzung des Erz\u00E4hlers nach eher gewinnt: Gut, B\u00F6se oder keine von beiden.",
-    "FirstNight": "Give a tumb signal.",
-    "OtherNights": "Give a tumb signal.",
+    "FirstNight": "Zeige ein Daumensignal.",
+    "OtherNights": "Zeige ein Daumensignal.",
     "RoleType": 0
   },
   {
@@ -1075,8 +1075,8 @@
     "RoleName": "High Priestess",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/6/63/Icon_highpriestess.png",
     "RoleAbilityText": "Jede Nacht erf\u00E4hrst du, mit welchem Spieler du der Einsch\u00E4tzung des Erz\u00E4hlers nach am ehesten reden solltest.",
-    "FirstNight": "Point to a player.",
-    "OtherNights": "Point to a player.",
+    "FirstNight": "Zeige auf einen Spieler.",
+    "OtherNights": "Zeige auf einen Spieler.",
     "RoleType": 0
   },
   {
@@ -1084,8 +1084,8 @@
     "RoleName": "Huntsman",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_huntsman.png",
     "RoleAbilityText": "Einmal im Spiel, in der Nacht, w\u00E4hle 1 lebendigen Spieler: Falls er die Unschuld ist, wird er zu einem nicht im Spiel befindlichen B\u00FCrger. [\u002BUnschuld] ",
-    "FirstNight": "The Huntsman might choose a player. If that player was the Damsel: Put the Huntsman to sleep. Wake the Damsel and show them the YOU ARE info token and their new character token.",
-    "OtherNights": "The Huntsman might choose a player. If that player was the Damsel: Put the Huntsman to sleep. Wake the Damsel and show them the YOU ARE info token and their new character token.",
+    "FirstNight": "Der Huntsman w\u00E4hlt m\u00F6glicherweise einen Spieler. Wenn der Spieler die Damsel war: Lasse den Huntsman einschlafen. Wecke die Damsel und zeige ihr das DU BIST Pl\u00E4ttchen und ihr Charakterpl\u00E4ttchen.",
+    "OtherNights": "Der Huntsman w\u00E4hlt m\u00F6glicherweise einen Spieler. Wenn der Spieler die Damsel war: Lasse den Huntsman einschlafen. Wecke die Damsel und zeige ihr das DU BIST Pl\u00E4ttchen und ihr Charakterpl\u00E4ttchen.",
     "RoleType": 0
   },
   {
@@ -1093,8 +1093,8 @@
     "RoleName": "King",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_king.png",
     "RoleAbilityText": "Jede Nacht, falls es nicht mehr lebendige als tote Spieler gibt, erf\u00E4hrst du 1 lebendigen Charakter. Der D\u00E4mon wei\u00DF, dass du der K\u00F6nig bist.",
-    "FirstNight": "Wake the Demon. Show the THIS PLAYER IS token and the King token, then point to the King.",
-    "OtherNights": "If the dead qual or outnumber the living, show the character token of an alive player.",
+    "FirstNight": "Wecke den D\u00E4mon. Zeige das DIESER SPIELER IST Pl\u00E4ttchen und das King Charakterpl\u00E4ttchen, dann zeige auf den King.",
+    "OtherNights": "Wenn es gleich viele oder mehr tote Spieler als lebendige Spieler gibt, zeige das Charakterpl\u00E4ttchen eines lebenden Spielers.",
     "RoleType": 0
   },
   {
@@ -1102,7 +1102,7 @@
     "RoleName": "Knight",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/8e/Icon_knight.png",
     "RoleAbilityText": "Du kennst zu Beginn 2 Spieler, die nicht der D\u00E4mon sind.",
-    "FirstNight": "Point to the two non-Demon players marked KNOW.",
+    "FirstNight": "Zeige auf die zwei nicht-D\u00E4mon Spieler die mit KNOW markiert sind.",
     "OtherNights": "",
     "RoleType": 0
   },
@@ -1112,7 +1112,7 @@
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/92/Icon_lycanthrope.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht* 1 lebendigen Spieler: Falls er gut ist, stirbt er \u0026 der D\u00E4mon t\u00F6tet heute Nacht nicht. 1 guter Spieler erscheint als b\u00F6se.",
     "FirstNight": "",
-    "OtherNights": "The Lycanthrope chooses a player.",
+    "OtherNights": "Der Lycanthrope w\u00E4hlt einen Spieler.",
     "RoleType": 0
   },
   {
@@ -1120,7 +1120,7 @@
     "RoleName": "Magician",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/93/Icon_magician.png",
     "RoleAbilityText": "Der D\u00E4mon glaubt, dass du ein Scherge bist. Die Schergen glauben, dass du ein D\u00E4mon bist.",
-    "FirstNight": "Include the Madician in the Minion and Demon Info steps.",
+    "FirstNight": "Inkludiere den Magician in den Schergen Info und D\u00E4mon Info Schritten.",
     "OtherNights": "",
     "RoleType": 0
   },
@@ -1129,8 +1129,8 @@
     "RoleName": "Nightwatchman",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/f0/Icon_nightwatchman.png",
     "RoleAbilityText": "Einmal im Spiel, in der Nacht, w\u00E4hle 1 Spieler: Er erf\u00E4hrt, dass du der Nachtw\u00E4chter bist.",
-    "FirstNight": "The Nightwatchman might choose a player. Put the Nightwatchman to sleep. Wake the target and show the THIS PLAYER IS and Nightwatchman tokens and point to the Nightwatchman.",
-    "OtherNights": "The Nightwatchman might choose a player. Put the Nightwatchman to sleep. Wake the target and show the THIS PLAYER IS and Nightwatchman tokens and point to the Nightwatchman.",
+    "FirstNight": "Der Nightwatchman w\u00E4hlt m\u00F6glicherweise einen Spieler. Lasse den Nightwatchman einschlafen. Wecke das Ziel und zeige ihm das DIESER SPIELER IST Pl\u00E4ttchen und das Nightwatchman Charakterpl\u00E4ttchen und zeige auf den Nightwatchman.",
+    "OtherNights": "Der Nightwatchman w\u00E4hlt m\u00F6glicherweise einen Spieler. Lasse den Nightwatchman einschlafen. Wecke das Ziel und zeige ihm das DIESER SPIELER IST Pl\u00E4ttchen und das Nightwatchman Charakterpl\u00E4ttchen und zeige auf den Nightwatchman.",
     "RoleType": 0
   },
   {
@@ -1138,7 +1138,7 @@
     "RoleName": "Noble",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/c/cc/Icon_noble.png",
     "RoleAbilityText": "Du wei\u00DFt zu Beginn von 3 Spielern, dass genau 1 von ihnen b\u00F6se ist.",
-    "FirstNight": "Point to all the players marked KNOW.",
+    "FirstNight": "Zeige auf alle drei Spieler die mit KNOW markiert sind.",
     "OtherNights": "",
     "RoleType": 0
   },
@@ -1147,7 +1147,7 @@
     "RoleName": "Pixie",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_pixie.png",
     "RoleAbilityText": "Du kennst zu Beginn 1 im Spiel befindlichen B\u00FCrger. Falls du \u0022besessen\u0022 davon warst, dieser B\u00FCrger zu sein, erh\u00E4ltst du seine F\u00E4higkeit, wenn er stirbt. ",
-    "FirstNight": "Show the Townsfolk character token marked MAD.",
+    "FirstNight": "Zeige das B\u00FCrger Charakterpl\u00E4ttchen das mit MAD markiert ist.",
     "OtherNights": "",
     "RoleType": 0
   },
@@ -1156,8 +1156,8 @@
     "RoleName": "Poppy Grower",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/9/91/Icon_poppygrower.png",
     "RoleAbilityText": "Schergen \u0026 D\u00E4monen kennen einander nicht. Falls du stirbst, erfahren sie in dieser Nacht, wer die anderen sind.",
-    "FirstNight": "Do not do the Minion Info and Demon Info steps. Wake the Demon, show the THESE CHARACTERS ARE NOT IN PLAY info token and any three good chacater tokens that are not in play.",
-    "OtherNights": "If the Poppy Grower died today or tonight, wake the Minions, show the THIS IS THE DEMON info token and point to the Demon. Put them to sleep. Wake the Demon, show the THESE ARE YOUR MINIONS info token and point to the Minions. Put the Demon to Sleep.",
+    "FirstNight": "F\u00FChre die Schergen Info und D\u00E4mon Info Schritte nicht aus. Wecke den D\u00E4mon. Zeige das DIESE CHARAKTERE SIND NICHT IM SPIEL Pl\u00E4ttchen. Zeige 3 nicht im Spiel befindliche gute Charakterpl\u00E4ttchen.",
+    "OtherNights": "Falls der Poppy Grower heute oder heute Nacht gestorben ist, wecke die Schergen, zeige das DIES IST DER D\u00C4MON Pl\u00E4ttchen. Zeige auf den D\u00E4mon. Lasse sie einschlafen. Wecke den D\u00E4mon, zeige ihm das DIES SIND DEINE SCHERGEN Pl\u00E4ttchen. Zeige auf alle Schergen. Lasse den D\u00E4mon einschlafen.",
     "RoleType": 0
   },
   {
@@ -1165,8 +1165,8 @@
     "RoleName": "Preacher",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/8/82/Icon_preacher.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler: Falls er ein Scherge ist, erf\u00E4hrt er das. Alle gew\u00E4hlten Schergen haben keine F\u00E4higkeit.",
-    "FirstNight": "The Preacher chooses a player. If the chose a Minion: Put the Preacher to sleep. Wake the target. Show the THIS CHARACTER SELECTED YOU token and the Preacher token.",
-    "OtherNights": "The Preacher chooses a player. If the chose a Minion: Put the Preacher to sleep. Wake the target. Show the THIS CHARACTER SELECTED YOU token and the Preacher token.",
+    "FirstNight": "Der Preacher w\u00E4hlt einen Spieler. Falls er einen Schergen gew\u00E4hlt hat: Lasse den Preacher einschlafen. Wecke das Ziel. Zeige das DIESER CHARAKTER HAT DICH GEW\u00C4HLT Pl\u00E4ttchen und das Preacher Charakterpl\u00E4ttchen.",
+    "OtherNights": "Der Preacher w\u00E4hlt einen Spieler. Falls er einen Schergen gew\u00E4hlt hat: Lasse den Preacher einschlafen. Wecke das Ziel. Zeige das DIESER CHARAKTER HAT DICH GEW\u00C4HLT Pl\u00E4ttchen und das Preacher Charakterpl\u00E4ttchen.",
     "RoleType": 0
   },
   {
@@ -1174,7 +1174,7 @@
     "RoleName": "Shugenja",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/1/11/Icon_shugenja.png",
     "RoleAbilityText": "Du wei\u00DFt zu Beginn, ob der dir n\u00E4chste b\u00F6se Spieler im oder gegen den Uhrzeigersinn sitzt. Bei gleicher Entfernung ist diese Info willk\u00FCrlich.",
-    "FirstNight": "Point clockwise or anticlockwise around the circle.",
+    "FirstNight": "Zeige im Uhrzeigersinn oder gegen den Uhrzeigersinn im Kreis.",
     "OtherNights": "",
     "RoleType": 0
   },
@@ -1183,7 +1183,7 @@
     "RoleName": "Steward",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/f/fe/Icon_steward.png",
     "RoleAbilityText": "Du kennst zu Beginn 1 guten Spieler.",
-    "FirstNight": "Point to the good player marked KNOW.",
+    "FirstNight": "Zeige auf den guten Spieler der mit KNOW markiert ist.",
     "OtherNights": "",
     "RoleType": 0
   },
@@ -1192,8 +1192,8 @@
     "RoleName": "Village Idiot",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/d/da/Icon_villageidiot.png",
     "RoleAbilityText": "W\u00E4hle jede Nacht 1 Spieler: Du erf\u00E4hrst seine Fraktion. [\u002B0 bis \u002B2 Dorftrottel. 1 der zus\u00E4tzlichen ist betrunken] ",
-    "FirstNight": "Choose a Village Idiot to be drunk. Wake the Village Ifiots one at a time, the choose a player, show either good or evil thumbs according to the alignment of that player.",
-    "OtherNights": "Choose a Village Idiot to be drunk. Wake the Village Ifiots one at a time, the choose a player, show either good or evil thumbs according to the alignment of that player.",
+    "FirstNight": "W\u00E4hle einen Village Idiot der betrunken ist. Wecke die Village Idiots einen nach dem anderen. Sie w\u00E4hlen jeder einen Spieler. Zeige ihnen jeweils einen Daumen nach oben oder einen Daumen nach unten, entsprechend dem Team des gew\u00E4hlten Spielers.",
+    "OtherNights": "Wecke die Village Idiots einen nach dem anderen. Sie w\u00E4hlen jeder einen Spieler. Zeige ihnen jeweils einen Daumen nach oben oder einen Daumen nach unten, entsprechend dem Team des gew\u00E4hlten Spielers.",
     "RoleType": 0
   },
   {
@@ -1201,8 +1201,8 @@
     "RoleName": "Xaan",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/0/0c/Icon_xaan.png",
     "RoleAbilityText": "In Nacht X, sind alle B\u00FCrger betrunken bis zur Morgend\u00E4mmerung. [X Au\u00DFenseiter]",
-    "FirstNight": "Mark the Xaan with the NIGHT 1 reminder. If X is 1, mark the Xaan with the X reminder token.",
-    "OtherNights": "Change the Xaan reminder token to the relevant night. If it is night X, mark the Xaan with the X reminder token.",
+    "FirstNight": "Markiere den Xaan mit dem NACHT 1 Erinnerungspl\u00E4ttchen. Falls X 1 ist, markiere den Xaan mit dem X Erinnerungspl\u00E4ttchen.",
+    "OtherNights": "\u00C4ndere das Xaan Erinnerungspl\u00E4ttchen auf das f\u00FCr die aktuelle Nacht relevante Pl\u00E4ttchen. Wenn es Nacht X ist, markiere den Xaan mit dem X Erinnerungspl\u00E4tchen.",
     "RoleType": 2
   },
   {
@@ -1210,8 +1210,8 @@
     "RoleName": "Wizard",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/b/b5/Icon_wizard.png",
     "RoleAbilityText": "Einmal im Spiel kannst du einen Wunsch \u00E4u\u00DFern. Falls er erf\u00FCllt wird, k\u00F6nnte er einen Preis kosten \u0026 einen Hinweis auf seine Art geben.",
-    "FirstNight": "Run the Wizard\u0027s ability, if applicable.",
-    "OtherNights": "Run the Wizard\u0027s ability, if applicable.",
+    "FirstNight": "Handle falls notwendig die F\u00E4higkeit des Wizard ab.",
+    "OtherNights": "Handle falls notwendig die F\u00E4higkeit des Wizard ab.",
     "RoleType": 2
   },
   {
@@ -1255,18 +1255,18 @@
     "RoleName": "Gangster",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/a/a5/Icon_gangster.png",
     "RoleAbilityText": "Einmal pro Tag darfst du 1 deiner lebendigen Nachbarn t\u00F6ten, wenn dein anderer lebendiger Nachbar zustimmt.",
-    "FirstNight": null,
-    "OtherNights": null,
-    "RoleType": 0
+    "FirstNight": "",
+    "OtherNights": "",
+    "RoleType": 4
   },
   {
     "EnglishOriginalRoleName": "gnome",
     "RoleName": "Gnome",
     "RoleIconURL": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_gnome.png",
     "RoleAbilityText": "Alle Spieler kennen zu Beginn einen Spieler von deiner Fraktion. Du darfst jeden Spieler t\u00F6ten, der diesen nominiert.",
-    "FirstNight": null,
-    "OtherNights": null,
-    "RoleType": 0
+    "FirstNight": "",
+    "OtherNights": "",
+    "RoleType": 4
   },
   {
     "EnglishOriginalRoleName": " ",

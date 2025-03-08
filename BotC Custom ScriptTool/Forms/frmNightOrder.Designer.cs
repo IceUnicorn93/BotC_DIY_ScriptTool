@@ -42,9 +42,9 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 112);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 54);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(385, 326);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(385, 384);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -52,16 +52,16 @@
             // 
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(403, 112);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(403, 54);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(385, 326);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(385, 384);
             this.flowLayoutPanel2.TabIndex = 1;
             this.flowLayoutPanel2.WrapContents = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 96);
+            this.label1.Location = new System.Drawing.Point(12, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 2;
@@ -70,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(400, 96);
+            this.label2.Location = new System.Drawing.Point(400, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 3;
@@ -101,7 +101,7 @@
             this.cbFirstNight.FormattingEnabled = true;
             this.cbFirstNight.Location = new System.Drawing.Point(12, 14);
             this.cbFirstNight.Name = "cbFirstNight";
-            this.cbFirstNight.Size = new System.Drawing.Size(151, 21);
+            this.cbFirstNight.Size = new System.Drawing.Size(255, 21);
             this.cbFirstNight.TabIndex = 8;
             // 
             // cbOtherNights
@@ -109,7 +109,7 @@
             this.cbOtherNights.FormattingEnabled = true;
             this.cbOtherNights.Location = new System.Drawing.Point(403, 14);
             this.cbOtherNights.Name = "cbOtherNights";
-            this.cbOtherNights.Size = new System.Drawing.Size(151, 21);
+            this.cbOtherNights.Size = new System.Drawing.Size(255, 21);
             this.cbOtherNights.TabIndex = 9;
             // 
             // frmNightOrder

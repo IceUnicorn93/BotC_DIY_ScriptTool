@@ -56,6 +56,8 @@
             this.btnSafe = new System.Windows.Forms.Button();
             this.lbRoles = new System.Windows.Forms.ListBox();
             this.tpScript = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnConfigureNightOrder = new System.Windows.Forms.Button();
             this.lbJinxes = new System.Windows.Forms.ListBox();
             this.btnJinxes = new System.Windows.Forms.Button();
@@ -228,6 +230,7 @@
             this.btnClipboardImport.TabIndex = 17;
             this.btnClipboardImport.Text = "Clipboard Import";
             this.btnClipboardImport.UseVisualStyleBackColor = true;
+            this.btnClipboardImport.Visible = false;
             this.btnClipboardImport.Click += new System.EventHandler(this.ClipboardImport_Click);
             // 
             // pbRoleIcon
@@ -393,6 +396,8 @@
             // 
             // tpScript
             // 
+            this.tpScript.Controls.Add(this.button2);
+            this.tpScript.Controls.Add(this.button1);
             this.tpScript.Controls.Add(this.btnConfigureNightOrder);
             this.tpScript.Controls.Add(this.lbJinxes);
             this.tpScript.Controls.Add(this.btnJinxes);
@@ -420,6 +425,27 @@
             this.tpScript.TabIndex = 1;
             this.tpScript.Text = "Script";
             this.tpScript.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(569, 279);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Import Jinxes";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(569, 234);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 39);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Check All Roles";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnConfigureNightOrder
             // 
@@ -866,6 +892,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tbOtherNights;
         private System.Windows.Forms.TextBox tbFirstNight;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

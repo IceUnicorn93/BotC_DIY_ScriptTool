@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BotC_Custom_ScriptTool.Forms
@@ -16,35 +17,51 @@ namespace BotC_Custom_ScriptTool.Forms
 
             Order = no;
 
-            foreach (var FirstNight in Order.FirstNight)
+            for (int i = 0; i < Order.FirstNight.Count; i++)
             {
+                NightInfo FirstNight = Order.FirstNight[i];
                 var btn = new Button();
-                var role = (CharacterRole)cbFirstNight.SelectedItem;
+                var role = rolesFirstNight.SingleOrDefault(rfn => FirstNight.Rolename == rfn.RoleName);
 
-                btn.Text = $"{cbFirstNight.Text}";
+                if (role == null) continue;
+
+                btn.Text = $"{role.RoleName}";
                 btn.Size = new Size(flowLayoutPanel1.Width - 20, btn.Size.Height);
+                btn.Name = $"FN_{i}";
                 btn.Click += (s, ea) =>
                 {
                     var senderButton = (Button)s;
                     var senderRole = (CharacterRole)senderButton.Tag;
                     flowLayoutPanel1.Controls.Remove(senderButton);
                     NightInfo info = new NightInfo { NightInformation = senderRole.FirstNight, Rolename = senderRole.RoleName };
-                    Order.FirstNight.Remove(info);
+                    var pos = Convert.ToInt32(senderButton.Name.Split('_')[1]);
+                    Order.FirstNight.RemoveAt(pos);
                 };
                 btn.Tag = role;
                 flowLayoutPanel1.Controls.Add(btn);
             }
 
-            foreach (var OtherNight in Order.OtherNights)
+            for (int i = 0; i < Order.OtherNights.Count; i++)
             {
+                NightInfo OtherNight = Order.OtherNights[i];
                 var btn = new Button();
-                btn.Text = $"{OtherNight.Rolename} - {OtherNight.NightInformation}";
-                btn.Size = new Size(flowLayoutPanel2.Width - 20, btn.Size.Height);
+                var role = rolesOtherNights.SingleOrDefault(rfn => OtherNight.Rolename == rfn.RoleName);
+
+                if (role == null) continue;
+
+                btn.Text = $"{role.RoleName}";
+                btn.Size = new Size(flowLayoutPanel1.Width - 20, btn.Size.Height);
+                btn.Name = $"ON_{i}";
                 btn.Click += (s, ea) =>
                 {
-                    flowLayoutPanel2.Controls.Remove(btn);
-                    Order.OtherNights.Remove(OtherNight);
+                    var senderButton = (Button)s;
+                    var senderRole = (CharacterRole)senderButton.Tag;
+                    flowLayoutPanel2.Controls.Remove(senderButton);
+                    NightInfo info = new NightInfo { NightInformation = senderRole.OtherNights, Rolename = senderRole.RoleName };
+                    var pos = Convert.ToInt32(senderButton.Name.Split('_')[1]);
+                    Order.OtherNights.RemoveAt(pos);
                 };
+                btn.Tag = role;
                 flowLayoutPanel2.Controls.Add(btn);
             }
 
@@ -92,12 +109,12 @@ namespace BotC_Custom_ScriptTool.Forms
                 var senderButton = (Button)s;
                 var senderRole = (CharacterRole)senderButton.Tag;
                 flowLayoutPanel2.Controls.Remove(senderButton);
-                NightInfo info = new NightInfo { NightInformation = senderRole.FirstNight, Rolename = senderRole.RoleName };
+                NightInfo info = new NightInfo { NightInformation = senderRole.OtherNights, Rolename = senderRole.RoleName };
                 Order.OtherNights.Remove(info);
             };
             btn.Tag = role;
             flowLayoutPanel2.Controls.Add(btn);
-            Order.OtherNights.Add(new NightInfo { NightInformation = role.FirstNight, Rolename = role.RoleName });
+            Order.OtherNights.Add(new NightInfo { NightInformation = role.OtherNights, Rolename = role.RoleName });
         }
     }
 }

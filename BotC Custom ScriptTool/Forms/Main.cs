@@ -147,8 +147,8 @@ namespace BotC_Custom_ScriptTool.Forms
             {
                 if(File.Exists($@"{Application.StartupPath}\Images\{tbRoleName.Text}.png"))
                     pbRoleIcon.Load($@"{Application.StartupPath}\Images\{tbRoleName.Text}.png");
-                else
-                    pbRoleIcon.Load(tbRoleIconURL.Text);
+                else if(tbRoleIconURL.Text != "")
+                        pbRoleIcon.Load(tbRoleIconURL.Text);
             }
             catch{}
         }
@@ -246,6 +246,12 @@ namespace BotC_Custom_ScriptTool.Forms
                 }
                 catch { }
             });
+
+            if (File.Exists($@"{Application.StartupPath}\jinxes.json") == false) return;
+
+            jinxes = FileAccessor.ReadJinxes($@"{Application.StartupPath}\jinxes.json");
+            lbJinxes.Items.Clear();
+            lbJinxes.Items.AddRange(jinxes.ToArray());
         }
 
         /// <summary>
@@ -299,7 +305,7 @@ namespace BotC_Custom_ScriptTool.Forms
             clbScriptRoles.Items.Clear();
 
             if (rbFilterAll.Checked)
-                clbScriptRoles.Items.AddRange(roles.OrderBy(n => n.ToString()).ToArray());
+                clbScriptRoles.Items.AddRange(roles.Where(n => n.RoleType != Enums.ERoleType.System).OrderBy(n => n.ToString()).ToArray());
             else
             {
                 var filterValue = -1;
@@ -386,7 +392,6 @@ namespace BotC_Custom_ScriptTool.Forms
             FileAccessor.WriteScript(new Script
             {
                 Roles = selectedScriptRoles.Select(n => n.RoleName).ToList(),
-                Jinxes = jinxes,
                 NightOrder = nightOrder,
                 ScriptAuthor = tbScriptAuthor.Text,
                 ScriptName = tbScriptName.Text
@@ -409,9 +414,6 @@ namespace BotC_Custom_ScriptTool.Forms
                     
                     tbScriptName.Text = script.ScriptName;
                     tbScriptAuthor.Text = script.ScriptAuthor;
-                    jinxes = script.Jinxes;
-                    lbJinxes.Items.Clear();
-                    lbJinxes.Items.AddRange(script.Jinxes.ToArray());
 
                     nightOrder = script.NightOrder;
 
@@ -441,6 +443,8 @@ namespace BotC_Custom_ScriptTool.Forms
 
             lbJinxes.Items.Add(newJinx);
             jinxes.Add(newJinx);
+
+            FileAccessor.WriteJinxes(jinxes, $@"{Application.StartupPath}\jinxes.json");
         }
 
         /// <summary>
@@ -456,6 +460,8 @@ namespace BotC_Custom_ScriptTool.Forms
 
             lbJinxes.Items.Remove(selectedJinx);
             lbJinxes.Items.Add(selectedJinx);
+
+            FileAccessor.WriteJinxes(jinxes, $@"{Application.StartupPath}\jinxes.json");
         }
 
         /// <summary>
@@ -471,6 +477,8 @@ namespace BotC_Custom_ScriptTool.Forms
                 lbJinxes.Items.Remove(selectedJinx);
                 jinxes.Remove(selectedJinx);
             }
+
+            FileAccessor.WriteJinxes(jinxes, $@"{Application.StartupPath}\jinxes.json");
         }
 
         /// <summary>
@@ -498,7 +506,6 @@ namespace BotC_Custom_ScriptTool.Forms
             var script = new Script
             {
                 Roles = selectedScriptRoles.Select(n => n.RoleName).ToList(),
-                Jinxes = jinxes,
                 NightOrder = nightOrder,
                 ScriptAuthor = tbScriptAuthor.Text,
                 ScriptName = tbScriptName.Text
@@ -507,7 +514,7 @@ namespace BotC_Custom_ScriptTool.Forms
             PDF_ImageCreator.PrintToPDF = true;
             PDF_ImageCreator.FontSizeRoles = (int)nudPdfCharacterNameSize.Value;
             PDF_ImageCreator.FontSizeRoleAbility = (int)nudPdfCharacterAbilitySize.Value;
-            PDF_ImageCreator.CreateScript(script, roles, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
+            PDF_ImageCreator.CreateScript(script, roles, jinxes, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -515,7 +522,6 @@ namespace BotC_Custom_ScriptTool.Forms
             var script = new Script
             {
                 Roles = selectedScriptRoles.Select(n => n.RoleName).ToList(),
-                Jinxes = jinxes,
                 NightOrder = nightOrder,
                 ScriptAuthor = tbScriptAuthor.Text,
                 ScriptName = tbScriptName.Text
@@ -524,7 +530,7 @@ namespace BotC_Custom_ScriptTool.Forms
             PDF_ImageCreator.PrintToPDF = false;
             PDF_ImageCreator.FontSizeRoles = (int)nudPdfCharacterNameSize.Value;
             PDF_ImageCreator.FontSizeRoleAbility = (int)nudPdfCharacterAbilitySize.Value;
-            PDF_ImageCreator.CreateScript(script, roles, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
+            PDF_ImageCreator.CreateScript(script, roles, jinxes, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
         }
 
         //--------------------- Temporary Stuff
@@ -574,6 +580,52 @@ namespace BotC_Custom_ScriptTool.Forms
 
             lbRoles.Items.Clear();
             lbRoles.Items.AddRange(roles.OrderBy(n => n.ToString()).ToArray());
+        }
+
+        //Checkt alle Rollen an
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < clbScriptRoles.Items.Count; i++)
+            {
+                clbScriptRoles.SetItemChecked(i, true);
+            }
+        }
+
+        //Temporärer Button um Jinxes zu importieren
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //string FullCleanUp(string Name)
+            //{
+            //    Name = CleanUpName(Name, " ");
+            //    Name = CleanUpName(Name, "'");
+            //    Name = CleanUpName(Name, "-");
+            //    return Name;
+            //}
+
+            //string CleanUpName(string Name, string remove)
+            //{
+            //    return Name.Replace(remove, "");
+            //}
+
+            //var clipboardString = Clipboard.GetText();
+            //var lines = clipboardString.Split('\r', '\n').Where(n => n != "").ToList();
+            //foreach (var line in lines)
+            //{
+            //    var rolesAndJinx = line.Split(':');
+            //    var roles = rolesAndJinx[0].Trim().Split('/');
+            //    var jinx = rolesAndJinx[1].Trim();
+            //    var roleA = roles[0].Trim();
+            //    var roleB = roles[1].Trim();
+
+            //    var newJinx = new Jinx();
+            //    newJinx.JinxText = jinx;
+            //    newJinx.RoleA = this.roles.Single(n => n.EnglishOriginalRoleName.ToLower() == FullCleanUp(roleA.ToLower())).RoleName;
+            //    newJinx.RoleB = this.roles.Single(n => n.EnglishOriginalRoleName.ToLower() == FullCleanUp(roleB.ToLower())).RoleName;
+            //    jinxes.Add(newJinx);
+            //    lbJinxes.Items.Add(newJinx);
+            //}
+
+            //FileAccessor.WriteJinxes(jinxes, $@"{Application.StartupPath}\jinxes.json");
         }
     }
 

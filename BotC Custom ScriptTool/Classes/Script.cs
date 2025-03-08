@@ -4,7 +4,6 @@ namespace BotC_Custom_ScriptTool.Classes
 {
     public class Script
     {
-        public List<Jinx> Jinxes { get; set; }
         public List<string> Roles { get; set; }
         public NightOrder NightOrder { get; set; }
 

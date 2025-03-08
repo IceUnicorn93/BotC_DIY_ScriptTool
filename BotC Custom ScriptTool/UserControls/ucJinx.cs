@@ -17,9 +17,9 @@ namespace BotC_Custom_ScriptTool.UserControls
             cbxRoleA.Items.AddRange(roles.ToArray());
             cbxRoleB.Items.AddRange(roles.ToArray());
 
-            tbJinxAbility.Text = jinx.JinxText;
-            cbxRoleA.SelectedItem = jinx.RoleA;
-            cbxRoleB.SelectedItem = jinx.RoleB;
+            tbJinxAbility.Text = jinx.JinxText ?? "";
+            cbxRoleA.SelectedItem = jinx.RoleA ?? "";
+            cbxRoleB.SelectedItem = jinx.RoleB ?? "";
 
             cbxRoleA.SelectedIndexChanged += (s, e) =>
             {
