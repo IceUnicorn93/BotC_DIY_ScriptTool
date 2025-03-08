@@ -79,6 +79,11 @@
             this.clbScriptRoles = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tpPDF = new System.Windows.Forms.TabPage();
+            this.btnGeneratePreview = new System.Windows.Forms.Button();
+            this.lblPreViewPage = new System.Windows.Forms.Label();
+            this.btnNextImage = new System.Windows.Forms.Button();
+            this.btnPreviousImage = new System.Windows.Forms.Button();
+            this.pbPreview = new System.Windows.Forms.PictureBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.nudPdfCharacterNameSize = new System.Windows.Forms.NumericUpDown();
@@ -91,11 +96,13 @@
             this.rbUse1Column = new System.Windows.Forms.RadioButton();
             this.tbCustomBackgroundPath = new System.Windows.Forms.TextBox();
             this.btnGeneratePDF = new System.Windows.Forms.Button();
+            this.btnChooseBackground = new System.Windows.Forms.Button();
             this.tcMainControl.SuspendLayout();
             this.tpCharacters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoleIcon)).BeginInit();
             this.tpScript.SuspendLayout();
             this.tpPDF.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterNameSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterAbilitySize)).BeginInit();
             this.SuspendLayout();
@@ -445,6 +452,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "Check All Roles";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnConfigureNightOrder
@@ -655,6 +663,12 @@
             // 
             // tpPDF
             // 
+            this.tpPDF.Controls.Add(this.btnChooseBackground);
+            this.tpPDF.Controls.Add(this.btnGeneratePreview);
+            this.tpPDF.Controls.Add(this.lblPreViewPage);
+            this.tpPDF.Controls.Add(this.btnNextImage);
+            this.tpPDF.Controls.Add(this.btnPreviousImage);
+            this.tpPDF.Controls.Add(this.pbPreview);
             this.tpPDF.Controls.Add(this.btnPrint);
             this.tpPDF.Controls.Add(this.label11);
             this.tpPDF.Controls.Add(this.nudPdfCharacterNameSize);
@@ -675,10 +689,65 @@
             this.tpPDF.Text = "PDF";
             this.tpPDF.UseVisualStyleBackColor = true;
             // 
+            // btnGeneratePreview
+            // 
+            this.btnGeneratePreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnGeneratePreview.Location = new System.Drawing.Point(125, 297);
+            this.btnGeneratePreview.Name = "btnGeneratePreview";
+            this.btnGeneratePreview.Size = new System.Drawing.Size(75, 39);
+            this.btnGeneratePreview.TabIndex = 16;
+            this.btnGeneratePreview.Text = "Generate Preview";
+            this.btnGeneratePreview.UseVisualStyleBackColor = true;
+            this.btnGeneratePreview.Click += new System.EventHandler(this.btnGeneratePreview_Click);
+            // 
+            // lblPreViewPage
+            // 
+            this.lblPreViewPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblPreViewPage.AutoSize = true;
+            this.lblPreViewPage.Location = new System.Drawing.Point(128, 347);
+            this.lblPreViewPage.Name = "lblPreViewPage";
+            this.lblPreViewPage.Size = new System.Drawing.Size(30, 13);
+            this.lblPreViewPage.TabIndex = 15;
+            this.lblPreViewPage.Text = "0 / 0";
+            // 
+            // btnNextImage
+            // 
+            this.btnNextImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNextImage.Location = new System.Drawing.Point(177, 342);
+            this.btnNextImage.Name = "btnNextImage";
+            this.btnNextImage.Size = new System.Drawing.Size(23, 23);
+            this.btnNextImage.TabIndex = 14;
+            this.btnNextImage.Text = ">";
+            this.btnNextImage.UseVisualStyleBackColor = true;
+            this.btnNextImage.Click += new System.EventHandler(this.btnNextImage_Click);
+            // 
+            // btnPreviousImage
+            // 
+            this.btnPreviousImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPreviousImage.Location = new System.Drawing.Point(83, 342);
+            this.btnPreviousImage.Name = "btnPreviousImage";
+            this.btnPreviousImage.Size = new System.Drawing.Size(23, 23);
+            this.btnPreviousImage.TabIndex = 13;
+            this.btnPreviousImage.Text = "<";
+            this.btnPreviousImage.UseVisualStyleBackColor = true;
+            this.btnPreviousImage.Click += new System.EventHandler(this.btnPreviousImage_Click);
+            // 
+            // pbPreview
+            // 
+            this.pbPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPreview.Location = new System.Drawing.Point(206, 58);
+            this.pbPreview.Name = "pbPreview";
+            this.pbPreview.Size = new System.Drawing.Size(467, 307);
+            this.pbPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPreview.TabIndex = 12;
+            this.pbPreview.TabStop = false;
+            // 
             // btnPrint
             // 
-            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.Location = new System.Drawing.Point(517, 326);
+            this.btnPrint.Location = new System.Drawing.Point(125, 130);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 39);
             this.btnPrint.TabIndex = 11;
@@ -793,19 +862,30 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbCustomBackgroundPath.Location = new System.Drawing.Point(141, 9);
             this.tbCustomBackgroundPath.Name = "tbCustomBackgroundPath";
-            this.tbCustomBackgroundPath.Size = new System.Drawing.Size(532, 20);
+            this.tbCustomBackgroundPath.Size = new System.Drawing.Size(408, 20);
             this.tbCustomBackgroundPath.TabIndex = 1;
             // 
             // btnGeneratePDF
             // 
-            this.btnGeneratePDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGeneratePDF.Location = new System.Drawing.Point(598, 326);
+            this.btnGeneratePDF.Location = new System.Drawing.Point(125, 175);
             this.btnGeneratePDF.Name = "btnGeneratePDF";
             this.btnGeneratePDF.Size = new System.Drawing.Size(75, 39);
             this.btnGeneratePDF.TabIndex = 0;
             this.btnGeneratePDF.Text = "Generate PDF";
             this.btnGeneratePDF.UseVisualStyleBackColor = true;
+            this.btnGeneratePDF.Visible = false;
             this.btnGeneratePDF.Click += new System.EventHandler(this.btnGeneratePDF_Click);
+            // 
+            // btnChooseBackground
+            // 
+            this.btnChooseBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChooseBackground.Location = new System.Drawing.Point(555, 7);
+            this.btnChooseBackground.Name = "btnChooseBackground";
+            this.btnChooseBackground.Size = new System.Drawing.Size(118, 23);
+            this.btnChooseBackground.TabIndex = 17;
+            this.btnChooseBackground.Text = "Choose Background";
+            this.btnChooseBackground.UseVisualStyleBackColor = true;
+            this.btnChooseBackground.Click += new System.EventHandler(this.btnChooseBackground_Click);
             // 
             // Main
             // 
@@ -823,6 +903,7 @@
             this.tpScript.PerformLayout();
             this.tpPDF.ResumeLayout(false);
             this.tpPDF.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterNameSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPdfCharacterAbilitySize)).EndInit();
             this.ResumeLayout(false);
@@ -894,6 +975,12 @@
         private System.Windows.Forms.TextBox tbFirstNight;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNextImage;
+        private System.Windows.Forms.Button btnPreviousImage;
+        private System.Windows.Forms.PictureBox pbPreview;
+        private System.Windows.Forms.Button btnGeneratePreview;
+        private System.Windows.Forms.Label lblPreViewPage;
+        private System.Windows.Forms.Button btnChooseBackground;
     }
 }
 

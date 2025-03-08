@@ -8,7 +8,6 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace BotC_Custom_ScriptTool.Classes
 {
@@ -21,7 +20,7 @@ namespace BotC_Custom_ScriptTool.Classes
 
         public static bool PrintToPDF = false;
 
-        private static List<Image> PagesToPrint = new List<Image>();
+        public static List<Image> PagesToPrint = new List<Image>();
 
 
         //Image Variables!
@@ -33,6 +32,29 @@ namespace BotC_Custom_ScriptTool.Classes
 
         static private int padding = 50;
         static private int pageIndex = 0;
+
+
+        public static void CreatePreview(Script script, List<CharacterRole> allRoles, List<Jinx> allJinxes, string ScriptName, string Author, string PathToCustomImage, bool UseTwoColumns, bool printCharacterBorders)
+        {
+            foreach (var img in PagesToPrint)
+            {
+                img.Dispose();
+            }
+            PagesToPrint.Clear();
+            pageIndex = 0;
+
+            var jinxesWhereRole_A_IsMet = allJinxes.Where(jinx => script.Roles.Contains(jinx.RoleA)).ToList();
+            var jinxesWhereRole_B_IsAlsoMet = jinxesWhereRole_A_IsMet.Where(jinx => script.Roles.Contains(jinx.RoleB)).ToList();
+
+            if (script.Roles.Count > 0)
+                CreateCharacterSheet(script, allRoles, ScriptName, Author, PathToCustomImage, UseTwoColumns, printCharacterBorders);
+            if (script.NightOrder.FirstNight.Count > 0)
+                CreateNightOrder(script, allRoles, true);
+            if (script.NightOrder.OtherNights.Count > 0)
+                CreateNightOrder(script, allRoles, false);
+            if (jinxesWhereRole_B_IsAlsoMet.Count > 0)
+                CreateJinxes(script, jinxesWhereRole_B_IsAlsoMet, allRoles);
+        }
 
         public static void CreateScript(Script script, List<CharacterRole> allRoles, List<Jinx> allJinxes, string ScriptName, string Author, string PathToCustomImage, bool UseTwoColumns, bool printCharacterBorders)
         {
@@ -371,7 +393,7 @@ namespace BotC_Custom_ScriptTool.Classes
             graphics.DrawImage(roleIconB, calculatedX, calculatedY, IconHeight, IconHeight);
             calculatedX += IconHeight;
 
-            graphics.DrawString(jinx.JinxText, new Font("Arial", FontSizeHeader), new SolidBrush(Color.Black), new RectangleF(calculatedX, calculatedY, MaxLength, IconHeight));
+            graphics.DrawString(jinx.JinxText, new Font("Arial", FontSizeRoleAbility), new SolidBrush(Color.Black), new RectangleF(calculatedX, calculatedY, ImageWidth - padding - calculatedX, IconHeight));
         }
 
         private static Image GetImageFromURL(string URL)

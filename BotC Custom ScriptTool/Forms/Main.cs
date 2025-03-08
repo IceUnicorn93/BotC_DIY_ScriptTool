@@ -34,8 +34,7 @@ namespace BotC_Custom_ScriptTool.Forms
         private NightOrder nightOrder = new NightOrder();
 
         //Tab 3 (PDF)
-
-        //--------------------- Private Methods
+        private int page = 0;
 
         //Tab 1 (Character)
 
@@ -110,10 +109,10 @@ namespace BotC_Custom_ScriptTool.Forms
         /// </summary>
         private void UpdateScriptCountLabel()
         {
-            lblScriptCountTownsfolk.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Townsfolk)} / 14";
-            lblScriptCountOutsiders.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Outsider)} / 4";
-            lblScriptCountMinions.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Minion)} / 4";
-            lblScriptCountDemons.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Demon)} / 4";
+            lblScriptCountTownsfolk.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Townsfolk)}";
+            lblScriptCountOutsiders.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Outsider)}";
+            lblScriptCountMinions.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Minion)}";
+            lblScriptCountDemons.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Demon)}";
         }
 
         /// <summary>
@@ -132,7 +131,6 @@ namespace BotC_Custom_ScriptTool.Forms
 
         // Tab 3 (PDF)
 
-        //--------------------- Control Events
         //--------------------- Tab Page 1 (Character)
 
         /// <summary>
@@ -408,7 +406,8 @@ namespace BotC_Custom_ScriptTool.Forms
             using(var ofd = new OpenFileDialog())
             {
                 ofd.InitialDirectory = $@"{Application.StartupPath}\Scripts";
-                if(ofd.ShowDialog() == DialogResult.OK)
+                ofd.Filter = "Script Files|*.json";
+                if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     var script = FileAccessor.ReadScript(ofd.FileName);
                     
@@ -422,8 +421,9 @@ namespace BotC_Custom_ScriptTool.Forms
                     {
                         return script.Roles.Contains(n.RoleName);
                     }).ToList();
-
-
+                    foreach ( var role in selectedScriptRoles ) {
+                        clbScriptRoles.SetItemChecked(clbScriptRoles.Items.IndexOf(role), true);
+                    }
 
                     UpdateScriptCountLabel();
                 }
@@ -531,6 +531,48 @@ namespace BotC_Custom_ScriptTool.Forms
             PDF_ImageCreator.FontSizeRoles = (int)nudPdfCharacterNameSize.Value;
             PDF_ImageCreator.FontSizeRoleAbility = (int)nudPdfCharacterAbilitySize.Value;
             PDF_ImageCreator.CreateScript(script, roles, jinxes, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
+        }
+
+        private void btnGeneratePreview_Click(object sender, EventArgs e)
+        {
+            var script = new Script
+            {
+                Roles = selectedScriptRoles.Select(n => n.RoleName).ToList(),
+                NightOrder = nightOrder,
+                ScriptAuthor = tbScriptAuthor.Text,
+                ScriptName = tbScriptName.Text
+            };
+
+            PDF_ImageCreator.CreatePreview(script, roles, jinxes, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
+
+            lblPreViewPage.Text = $"1 / {PDF_ImageCreator.PagesToPrint.Count}";
+            pbPreview.Image = PDF_ImageCreator.PagesToPrint[0];
+        }
+
+        private void btnPreviousImage_Click(object sender, EventArgs e)
+        {
+            if(page == 0) return;
+            page--;
+            pbPreview.Image = PDF_ImageCreator.PagesToPrint[page];
+            lblPreViewPage.Text = $"{page + 1} / {PDF_ImageCreator.PagesToPrint.Count}";
+        }
+
+        private void btnNextImage_Click(object sender, EventArgs e)
+        {
+            if(page == PDF_ImageCreator.PagesToPrint.Count - 1) return;
+            page++;
+            pbPreview.Image = PDF_ImageCreator.PagesToPrint[page];
+            lblPreViewPage.Text = $"{page + 1} / {PDF_ImageCreator.PagesToPrint.Count}";
+        }
+
+        private void btnChooseBackground_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                tbCustomBackgroundPath.Text = ofd.FileName;
+            }
         }
 
         //--------------------- Temporary Stuff
