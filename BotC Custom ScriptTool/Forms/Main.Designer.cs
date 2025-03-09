@@ -59,6 +59,9 @@
             this.btnSafe = new System.Windows.Forms.Button();
             this.lbRoles = new System.Windows.Forms.ListBox();
             this.tpScript = new System.Windows.Forms.TabPage();
+            this.lblSelectedData = new System.Windows.Forms.Label();
+            this.rbFilterFabled = new System.Windows.Forms.RadioButton();
+            this.rbFilterTraveler = new System.Windows.Forms.RadioButton();
             this.btnUseAutomaticNightOrder = new System.Windows.Forms.Button();
             this.btnConfigureAutomaticNightOrder = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -98,9 +101,6 @@
             this.rbUse1Column = new System.Windows.Forms.RadioButton();
             this.tbCustomBackgroundPath = new System.Windows.Forms.TextBox();
             this.btnGeneratePDF = new System.Windows.Forms.Button();
-            this.rbFilterTraveler = new System.Windows.Forms.RadioButton();
-            this.rbFilterFabled = new System.Windows.Forms.RadioButton();
-            this.lblSelectedData = new System.Windows.Forms.Label();
             this.tcMainControl.SuspendLayout();
             this.tpCharacters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoleIcon)).BeginInit();
@@ -469,6 +469,39 @@
             this.tpScript.TabIndex = 1;
             this.tpScript.Text = "Script";
             this.tpScript.UseVisualStyleBackColor = true;
+            // 
+            // lblSelectedData
+            // 
+            this.lblSelectedData.AutoSize = true;
+            this.lblSelectedData.Location = new System.Drawing.Point(346, 108);
+            this.lblSelectedData.Name = "lblSelectedData";
+            this.lblSelectedData.Size = new System.Drawing.Size(41, 13);
+            this.lblSelectedData.TabIndex = 27;
+            this.lblSelectedData.Text = "Display";
+            // 
+            // rbFilterFabled
+            // 
+            this.rbFilterFabled.AutoSize = true;
+            this.rbFilterFabled.Location = new System.Drawing.Point(349, 83);
+            this.rbFilterFabled.Name = "rbFilterFabled";
+            this.rbFilterFabled.Size = new System.Drawing.Size(57, 17);
+            this.rbFilterFabled.TabIndex = 26;
+            this.rbFilterFabled.TabStop = true;
+            this.rbFilterFabled.Text = "Fabled";
+            this.rbFilterFabled.UseVisualStyleBackColor = true;
+            this.rbFilterFabled.CheckedChanged += new System.EventHandler(this.rbFilter_CheckedChanged);
+            // 
+            // rbFilterTraveler
+            // 
+            this.rbFilterTraveler.AutoSize = true;
+            this.rbFilterTraveler.Location = new System.Drawing.Point(349, 60);
+            this.rbFilterTraveler.Name = "rbFilterTraveler";
+            this.rbFilterTraveler.Size = new System.Drawing.Size(64, 17);
+            this.rbFilterTraveler.TabIndex = 25;
+            this.rbFilterTraveler.TabStop = true;
+            this.rbFilterTraveler.Text = "Traveler";
+            this.rbFilterTraveler.UseVisualStyleBackColor = true;
+            this.rbFilterTraveler.CheckedChanged += new System.EventHandler(this.rbFilter_CheckedChanged);
             // 
             // btnUseAutomaticNightOrder
             // 
@@ -910,39 +943,6 @@
             this.btnGeneratePDF.Visible = false;
             this.btnGeneratePDF.Click += new System.EventHandler(this.btnGeneratePDF_Click);
             // 
-            // rbFilterTraveler
-            // 
-            this.rbFilterTraveler.AutoSize = true;
-            this.rbFilterTraveler.Location = new System.Drawing.Point(349, 60);
-            this.rbFilterTraveler.Name = "rbFilterTraveler";
-            this.rbFilterTraveler.Size = new System.Drawing.Size(64, 17);
-            this.rbFilterTraveler.TabIndex = 25;
-            this.rbFilterTraveler.TabStop = true;
-            this.rbFilterTraveler.Text = "Traveler";
-            this.rbFilterTraveler.UseVisualStyleBackColor = true;
-            this.rbFilterTraveler.CheckedChanged += new System.EventHandler(this.rbFilter_CheckedChanged);
-            // 
-            // rbFilterFabled
-            // 
-            this.rbFilterFabled.AutoSize = true;
-            this.rbFilterFabled.Location = new System.Drawing.Point(349, 83);
-            this.rbFilterFabled.Name = "rbFilterFabled";
-            this.rbFilterFabled.Size = new System.Drawing.Size(57, 17);
-            this.rbFilterFabled.TabIndex = 26;
-            this.rbFilterFabled.TabStop = true;
-            this.rbFilterFabled.Text = "Fabled";
-            this.rbFilterFabled.UseVisualStyleBackColor = true;
-            this.rbFilterFabled.CheckedChanged += new System.EventHandler(this.rbFilter_CheckedChanged);
-            // 
-            // lblSelectedData
-            // 
-            this.lblSelectedData.AutoSize = true;
-            this.lblSelectedData.Location = new System.Drawing.Point(346, 108);
-            this.lblSelectedData.Name = "lblSelectedData";
-            this.lblSelectedData.Size = new System.Drawing.Size(41, 13);
-            this.lblSelectedData.TabIndex = 27;
-            this.lblSelectedData.Text = "Display";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -950,7 +950,7 @@
             this.ClientSize = new System.Drawing.Size(689, 419);
             this.Controls.Add(this.tcMainControl);
             this.Name = "Main";
-            this.Text = "Blood on the Clocktower - Custom Script Tool - Nils 02";
+            this.Text = "Blood on the Clocktower - Custom Script Tool";
             this.tcMainControl.ResumeLayout(false);
             this.tpCharacters.ResumeLayout(false);
             this.tpCharacters.PerformLayout();

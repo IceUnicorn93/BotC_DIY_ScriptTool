@@ -26,6 +26,7 @@ namespace BotC_Custom_ScriptTool.Forms
                 if (role == null)
                 {
                     Order.FirstNight.RemoveAt(i);
+                    i--;
                     continue;
                 }
 
@@ -52,6 +53,7 @@ namespace BotC_Custom_ScriptTool.Forms
                 if (role == null)
                 {
                     Order.OtherNights.RemoveAt(i);
+                    i--;
                     continue;
                 }
 

@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "E:\\C# Repos\\BotC_DIY_ScriptTool\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|e:\\c# repos\\botc_diy_scripttool\\botc custom scripttool\\classes\\pdf_imagecreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|solutionrelative:botc custom scripttool\\classes\\pdf_imagecreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|e:\\c# repos\\botc_diy_scripttool\\botc custom scripttool\\forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|solutionrelative:botc custom scripttool\\forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|e:\\c# repos\\botc_diy_scripttool\\botc custom scripttool\\forms\\frmnightorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|solutionrelative:botc custom scripttool\\forms\\frmnightorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|e:\\c# repos\\botc_diy_scripttool\\botc custom scripttool\\forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2EB820E9-19EC-4C2C-8F48-FB088197741F}|BotC Custom ScriptTool\\BotC Custom ScriptTool.csproj|solutionrelative:botc custom scripttool\\forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,15 +39,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PDF_ImageCreator.cs",
-              "DocumentMoniker": "E:\\C# Repos\\BotC_DIY_ScriptTool\\BotC Custom ScriptTool\\Classes\\PDF_ImageCreator.cs",
-              "RelativeDocumentMoniker": "BotC Custom ScriptTool\\Classes\\PDF_ImageCreator.cs",
-              "ToolTip": "E:\\C# Repos\\BotC_DIY_ScriptTool\\BotC Custom ScriptTool\\Classes\\PDF_ImageCreator.cs",
-              "RelativeToolTip": "BotC Custom ScriptTool\\Classes\\PDF_ImageCreator.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAcwBoBAABSAAAAAAAAAA==",
+              "Title": "Main.cs",
+              "DocumentMoniker": "E:\\C# Repos\\BotC_DIY_ScriptTool\\BotC Custom ScriptTool\\Forms\\Main.cs",
+              "RelativeDocumentMoniker": "BotC Custom ScriptTool\\Forms\\Main.cs",
+              "ToolTip": "E:\\C# Repos\\BotC_DIY_ScriptTool\\BotC Custom ScriptTool\\Forms\\Main.cs",
+              "RelativeToolTip": "BotC Custom ScriptTool\\Forms\\Main.cs",
+              "ViewState": "AgIAAJQBAAAAAAAAAAAmwAcCAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:36:07.278Z",
+              "WhenOpened": "2025-03-09T16:12:59.053Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmNightOrder.cs",
+              "DocumentMoniker": "E:\\C# Repos\\BotC_DIY_ScriptTool\\BotC Custom ScriptTool\\Forms\\frmNightOrder.cs",
+              "RelativeDocumentMoniker": "BotC Custom ScriptTool\\Forms\\frmNightOrder.cs",
+              "ToolTip": "E:\\C# Repos\\BotC_DIY_ScriptTool\\BotC Custom ScriptTool\\Forms\\frmNightOrder.cs",
+              "RelativeToolTip": "BotC Custom ScriptTool\\Forms\\frmNightOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T15:57:16.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main.cs [Entwurf]",
+              "DocumentMoniker": "E:\\C# Repos\\BotC_DIY_ScriptTool\\BotC Custom ScriptTool\\Forms\\Main.cs",
+              "RelativeDocumentMoniker": "BotC Custom ScriptTool\\Forms\\Main.cs",
+              "ToolTip": "E:\\C# Repos\\BotC_DIY_ScriptTool\\BotC Custom ScriptTool\\Forms\\Main.cs [Entwurf]",
+              "RelativeToolTip": "BotC Custom ScriptTool\\Forms\\Main.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T12:45:37.921Z",
+              "EditorCaption": " [Entwurf]"
             }
           ]
         }
