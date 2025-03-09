@@ -12,5 +12,10 @@ namespace BotC_Custom_ScriptTool.Classes
     {
         public string Rolename { get; set; }
         public string NightInformation { get; set; }
+
+        public override string ToString()
+        {
+            return Rolename.ToString();
+        }
     }
 }

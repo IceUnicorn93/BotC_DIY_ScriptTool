@@ -51,5 +51,18 @@ namespace BotC_Custom_ScriptTool.FileAccess
 
             return list;
         }
+
+        public static void WriteAutomaticNightOrderConfig(AutomaticNightOrderConfig config, string Path)
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            var json = JsonSerializer.Serialize(config, options);
+            File.WriteAllText(Path, json);
+        }
+
+        public static AutomaticNightOrderConfig ReadAutomaticNightOrderConfig(string Path)
+        {
+            var list = JsonSerializer.Deserialize<AutomaticNightOrderConfig>(File.ReadAllText(Path));
+            return list;
+        }
     }
 }

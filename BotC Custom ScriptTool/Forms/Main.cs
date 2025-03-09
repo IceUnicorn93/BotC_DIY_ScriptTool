@@ -19,6 +19,15 @@ namespace BotC_Custom_ScriptTool.Forms
             InitializeComponent();
 
             SetEnableState(false);
+
+            if (File.Exists($@"{Application.StartupPath}\jinxes.json") == false) return;
+
+            jinxes = FileAccessor.ReadJinxes($@"{Application.StartupPath}\jinxes.json");
+            lbJinxes.Items.Clear();
+            lbJinxes.Items.AddRange(jinxes.ToArray());
+
+            if (File.Exists($@"{Application.StartupPath}\AutomaticNightOrderConfig.json") == false) return;
+            nightOrderConfig = FileAccessor.ReadAutomaticNightOrderConfig($@"{Application.StartupPath}\AutomaticNightOrderConfig.json");
         }
 
         //--------------------- Private Fields
@@ -32,6 +41,7 @@ namespace BotC_Custom_ScriptTool.Forms
         private List<CharacterRole> selectedScriptRoles = new List<CharacterRole>();
         private List<Jinx> jinxes = new List<Jinx>();
         private NightOrder nightOrder = new NightOrder();
+        private AutomaticNightOrderConfig nightOrderConfig = new AutomaticNightOrderConfig();
 
         //Tab 3 (PDF)
         private int page = 0;
@@ -45,6 +55,7 @@ namespace BotC_Custom_ScriptTool.Forms
         private void SetEnableState(bool state)
         {
             tbRoleName.Enabled = state;
+            tbRoleEnglishName.Enabled = state;
             tbRoleIconURL.Enabled = state;
             tbRoleAbility.Enabled = state;
             btnAdd.Enabled = state;
@@ -57,6 +68,7 @@ namespace BotC_Custom_ScriptTool.Forms
             rbDemon.Enabled = state;
             rbTraveler.Enabled = state;
             rbFabled.Enabled = state;
+            rbSystem.Enabled = state;
         }
         
         /// <summary>
@@ -65,6 +77,7 @@ namespace BotC_Custom_ScriptTool.Forms
         private void ClearInputFileds()
         {
             tbRoleName.Text = "";
+            tbRoleEnglishName.Text = "";
             tbRoleIconURL.Text = "";
             tbRoleAbility.Text = "";
             tbFirstNight.Text = "";
@@ -76,6 +89,7 @@ namespace BotC_Custom_ScriptTool.Forms
             rbDemon.Checked = false;
             rbTraveler.Checked = false;
             rbFabled.Checked = false;
+            rbSystem.Checked = false;
         }
 
         /// <summary>
@@ -91,6 +105,7 @@ namespace BotC_Custom_ScriptTool.Forms
             }
 
             tbRoleName.Text = role.RoleName;
+            tbRoleEnglishName.Text = role.EnglishOriginalRoleName;
             tbRoleIconURL.Text = role.RoleIconURL;
             tbRoleAbility.Text = role.RoleAbilityText;
             tbFirstNight.Text = role.FirstNight;
@@ -100,6 +115,9 @@ namespace BotC_Custom_ScriptTool.Forms
             rbOutsider.Checked = role.RoleType == Enums.ERoleType.Outsider;
             rbMinion.Checked = role.RoleType == Enums.ERoleType.Minion;
             rbDemon.Checked = role.RoleType == Enums.ERoleType.Demon;
+            rbTraveler.Checked = role.RoleType == Enums.ERoleType.Traveler;
+            rbFabled.Checked = role.RoleType == Enums.ERoleType.Fabled;
+            rbSystem.Checked = role.RoleType == Enums.ERoleType.System;
         }
 
         // Tab 2 (Script)
@@ -109,10 +127,13 @@ namespace BotC_Custom_ScriptTool.Forms
         /// </summary>
         private void UpdateScriptCountLabel()
         {
-            lblScriptCountTownsfolk.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Townsfolk)}";
-            lblScriptCountOutsiders.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Outsider)}";
-            lblScriptCountMinions.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Minion)}";
-            lblScriptCountDemons.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Demon)}";
+            lblSelectedData.Text = $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Townsfolk)} / " +
+                $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Outsider)} / " +
+                $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Minion)}  / " +
+                $"{selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Demon)}{Environment.NewLine}" +
+                $"Travelers: {selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Traveler)}{Environment.NewLine}" +
+                $"Fabled: {selectedScriptRoles.Count(n => n.RoleType == Enums.ERoleType.Fabled)}";
+
         }
 
         /// <summary>
@@ -173,6 +194,7 @@ namespace BotC_Custom_ScriptTool.Forms
         private void btnAdd_Click(object sender, EventArgs e)
         {
             currentSelectedRole.RoleName = tbRoleName.Text;
+            currentSelectedRole.EnglishOriginalRoleName = tbRoleEnglishName.Text;
             currentSelectedRole.RoleIconURL = tbRoleIconURL.Text;
             currentSelectedRole.RoleAbilityText = tbRoleAbility.Text;
             currentSelectedRole.FirstNight = tbFirstNight.Text;
@@ -183,7 +205,8 @@ namespace BotC_Custom_ScriptTool.Forms
                 rbMinion.Checked ? Enums.ERoleType.Minion :
                 rbDemon.Checked ? Enums.ERoleType.Demon :
                 rbTraveler.Checked ? Enums.ERoleType.Traveler :
-                rbFabled.Checked ? Enums.ERoleType.Fabled : Enums.ERoleType.Townsfolk;
+                rbFabled.Checked ? Enums.ERoleType.Fabled :
+                rbSystem.Checked ? Enums.ERoleType.System : Enums.ERoleType.Townsfolk;
 
             if (isNewRole)
                 roles.Add(currentSelectedRole);
@@ -240,16 +263,11 @@ namespace BotC_Custom_ScriptTool.Forms
             {
                 try
                 {
-                    role.EnglishOriginalRoleName = role.RoleIconURL.Split('/').Last().Split('.').First().Replace("Icon_", "");
+                    if (role.EnglishOriginalRoleName == "")
+                        role.EnglishOriginalRoleName = role.RoleIconURL.Split('/').Last().Split('.').First().Replace("Icon_", ""); 
                 }
                 catch { }
             });
-
-            if (File.Exists($@"{Application.StartupPath}\jinxes.json") == false) return;
-
-            jinxes = FileAccessor.ReadJinxes($@"{Application.StartupPath}\jinxes.json");
-            lbJinxes.Items.Clear();
-            lbJinxes.Items.AddRange(jinxes.ToArray());
         }
 
         /// <summary>
@@ -311,6 +329,8 @@ namespace BotC_Custom_ScriptTool.Forms
                 if (rbFilterOutsider.Checked) filterValue = 1;
                 if (rbFilterMinions.Checked) filterValue = 2;
                 if (rbFilterDemons.Checked) filterValue = 3;
+                if (rbFilterTraveler.Checked) filterValue = 4;
+                if (rbFilterFabled.Checked) filterValue = 5;
 
                 clbScriptRoles.Items.AddRange(roles
                     .Where(n => (int)n.RoleType == filterValue)
@@ -499,6 +519,43 @@ namespace BotC_Custom_ScriptTool.Forms
             nightOrder = frmNightOrder.Order;
         }
 
+        /// <summary>
+        /// Opens the Window to configure the Automatic Night Order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnConfigureAutomaticNightOrder_Click(object sender, EventArgs e)
+        {
+            var frm = new frmAutomaticNightOrderConfig(nightOrderConfig);
+            frm.ShowDialog();
+            nightOrderConfig = frm.Config;
+            FileAccessor.WriteAutomaticNightOrderConfig(nightOrderConfig, $@"{Application.StartupPath}\AutomaticNightOrderConfig.json");
+        }
+
+        /// <summary>
+        /// Uses the Automatic Night Order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnUseAutomaticNightOrder_Click(object sender, EventArgs e)
+        {
+            var firstNightRoles = selectedScriptRoles.Where(n => !string.IsNullOrEmpty(n.FirstNight)).ToList();
+            firstNightRoles.AddRange(roles.Where(n => n.RoleType == Enums.ERoleType.System && !string.IsNullOrEmpty(n.FirstNight)));
+            var otherNightsRoles = selectedScriptRoles.Where(n => !string.IsNullOrEmpty(n.OtherNights)).ToList();
+            otherNightsRoles.AddRange(roles.Where(n => n.RoleType == Enums.ERoleType.System && !string.IsNullOrEmpty(n.OtherNights)));
+
+
+            nightOrder = new NightOrder();
+            nightOrder.FirstNight = firstNightRoles
+                .OrderBy(r => nightOrderConfig.FirstNight.IndexOf(r.EnglishOriginalRoleName))
+                .Select(n => new NightInfo { Rolename = n.RoleName, NightInformation = n.FirstNight })
+                .ToList();
+            nightOrder.OtherNights = otherNightsRoles
+                .OrderBy(r => nightOrderConfig.OtherNights.IndexOf(r.EnglishOriginalRoleName))
+                .Select(n => new NightInfo { Rolename = n.RoleName, NightInformation = n.OtherNights })
+                .ToList();
+        }
+
         //--------------------- Tab Page 3 (PDF)
 
         private void btnGeneratePDF_Click(object sender, EventArgs e)
@@ -510,6 +567,9 @@ namespace BotC_Custom_ScriptTool.Forms
                 ScriptAuthor = tbScriptAuthor.Text,
                 ScriptName = tbScriptName.Text
             };
+
+            pbPreview.Image.Dispose();
+            pbPreview.Image = null;
 
             PDF_ImageCreator.PrintToPDF = true;
             PDF_ImageCreator.FontSizeRoles = (int)nudPdfCharacterNameSize.Value;
@@ -527,6 +587,9 @@ namespace BotC_Custom_ScriptTool.Forms
                 ScriptName = tbScriptName.Text
             };
 
+            pbPreview.Image.Dispose();
+            pbPreview.Image = null;
+
             PDF_ImageCreator.PrintToPDF = false;
             PDF_ImageCreator.FontSizeRoles = (int)nudPdfCharacterNameSize.Value;
             PDF_ImageCreator.FontSizeRoleAbility = (int)nudPdfCharacterAbilitySize.Value;
@@ -543,6 +606,8 @@ namespace BotC_Custom_ScriptTool.Forms
                 ScriptName = tbScriptName.Text
             };
 
+            PDF_ImageCreator.FontSizeRoles = (int)nudPdfCharacterNameSize.Value;
+            PDF_ImageCreator.FontSizeRoleAbility = (int)nudPdfCharacterAbilitySize.Value;
             PDF_ImageCreator.CreatePreview(script, roles, jinxes, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
 
             lblPreViewPage.Text = $"1 / {PDF_ImageCreator.PagesToPrint.Count}";

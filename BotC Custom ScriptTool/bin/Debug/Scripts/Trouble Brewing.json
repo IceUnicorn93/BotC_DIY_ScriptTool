@@ -1,0 +1,32 @@
+{
+  "Roles": [
+    "M\u00F6nch",
+    "Jungfrau",
+    "Trunkenbold",
+    "Spion",
+    "Imp",
+    "Waschweib",
+    "Bibliothekar",
+    "Detektiv",
+    "Koch",
+    "Empath",
+    "Wahrsagerin",
+    "Totengr\u00E4ber",
+    "Rabenh\u00FCter",
+    "D\u00E4monenj\u00E4ger",
+    "Soldat",
+    "B\u00FCrgermeister",
+    "Butler",
+    "Heilige",
+    "Einsiedler",
+    "Giftmischer",
+    "Baron",
+    "Scharlachrote Frau"
+  ],
+  "NightOrder": {
+    "FirstNight": [],
+    "OtherNights": []
+  },
+  "ScriptName": "Trouble Brewing",
+  "ScriptAuthor": "TPI / Funtails"
+}

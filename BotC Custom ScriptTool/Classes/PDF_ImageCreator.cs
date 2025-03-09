@@ -43,16 +43,24 @@ namespace BotC_Custom_ScriptTool.Classes
             PagesToPrint.Clear();
             pageIndex = 0;
 
+
+            if (script.Roles.Count == 0) return;
+            if(allJinxes.Count == 0) return;
+
             var jinxesWhereRole_A_IsMet = allJinxes.Where(jinx => script.Roles.Contains(jinx.RoleA)).ToList();
             var jinxesWhereRole_B_IsAlsoMet = jinxesWhereRole_A_IsMet.Where(jinx => script.Roles.Contains(jinx.RoleB)).ToList();
 
-            if (script.Roles.Count > 0)
+            if (script.Roles.Count > 0) // Normal Character Sheet / Script
                 CreateCharacterSheet(script, allRoles, ScriptName, Author, PathToCustomImage, UseTwoColumns, printCharacterBorders);
-            if (script.NightOrder.FirstNight.Count > 0)
+            if (script.Roles.Count > 0) // Travelers
+                CreateTravelers(script, allRoles, ScriptName, Author, PathToCustomImage, UseTwoColumns, printCharacterBorders);
+            if (script.Roles.Count > 0) // Fabled
+                CreateFabled(script, allRoles, ScriptName, Author, PathToCustomImage, UseTwoColumns, printCharacterBorders);
+            if (script.NightOrder.FirstNight.Count > 0) // NIght Order, first Night
                 CreateNightOrder(script, allRoles, true);
-            if (script.NightOrder.OtherNights.Count > 0)
+            if (script.NightOrder.OtherNights.Count > 0) // Night Order, other Nights
                 CreateNightOrder(script, allRoles, false);
-            if (jinxesWhereRole_B_IsAlsoMet.Count > 0)
+            if (jinxesWhereRole_B_IsAlsoMet.Count > 0) // Jinxes
                 CreateJinxes(script, jinxesWhereRole_B_IsAlsoMet, allRoles);
         }
 
@@ -64,6 +72,12 @@ namespace BotC_Custom_ScriptTool.Classes
             }
             PagesToPrint.Clear();
             pageIndex = 0;
+
+            if (script.Roles.Count == 0 || allRoles.Count == 0)
+            {
+                MessageBox.Show("No Roles selected! Unable to create something");
+                return;
+            }
 
             var jinxesWhereRole_A_IsMet = allJinxes.Where(jinx => script.Roles.Contains(jinx.RoleA)).ToList();
             var jinxesWhereRole_B_IsAlsoMet = jinxesWhereRole_A_IsMet.Where(jinx => script.Roles.Contains(jinx.RoleB)).ToList();
@@ -101,7 +115,9 @@ namespace BotC_Custom_ScriptTool.Classes
         {
             var maxPerPage = 26;
             var maxRolesOnOneSheet = UseTwoColumns ? maxPerPage / 2 : maxPerPage;
-            var roles = allRoles.Where(n => script.Roles.Contains(n.RoleName) && n.RoleType != ERoleType.System).OrderBy(n => n.RoleType).ToList();
+            var roles = allRoles.Where(n => script.Roles.Contains(n.RoleName) && n.RoleType != ERoleType.System && n.RoleType != ERoleType.Traveler && n.RoleType != ERoleType.Fabled).ToList();
+
+            roles = roles.OrderBy(r => script.Roles.IndexOf(r.RoleName)).ToList();
 
             var roleCount = UseTwoColumns == false ? roles.Count :
                 RoundToNextEvenNumber(roles.Count(n => n.RoleType == ERoleType.Townsfolk)) +
@@ -129,8 +145,8 @@ namespace BotC_Custom_ScriptTool.Classes
                 var townsfolk = charactersToDraw.Where(n => n.RoleType == ERoleType.Townsfolk).ToList();
                 if(townsfolk.Count > 0)
                 {
-                    DrawRolesOnImage(townsfolk, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
-                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Townsfolk);
+                    DrawRolesOnImage(townsfolk, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders, 5);
+                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Townsfolk, 0);
                     count = UseTwoColumns ? RoundToNextEvenNumber(townsfolk.Count) : townsfolk.Count;
                 }
 
@@ -138,8 +154,8 @@ namespace BotC_Custom_ScriptTool.Classes
                 var outsider = charactersToDraw.Where(n => n.RoleType == ERoleType.Outsider).ToList();
                 if(outsider.Count > 0)
                 {
-                    DrawRolesOnImage(outsider, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
-                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Outsider);
+                    DrawRolesOnImage(outsider, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders, 20);
+                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Outsider, 15);
 
                     count = UseTwoColumns ?
                         RoundToNextEvenNumber(townsfolk.Count) + RoundToNextEvenNumber(outsider.Count) :
@@ -149,8 +165,8 @@ namespace BotC_Custom_ScriptTool.Classes
                 var minions = charactersToDraw.Where(n => n.RoleType == ERoleType.Minion).ToList();
                 if(minions.Count > 0)
                 {
-                    DrawRolesOnImage(minions, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
-                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Minion);
+                    DrawRolesOnImage(minions, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders, 35);
+                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Minion, 30);
 
                     count = UseTwoColumns ?
                         RoundToNextEvenNumber(townsfolk.Count) + RoundToNextEvenNumber(outsider.Count) + RoundToNextEvenNumber(minions.Count) :
@@ -160,8 +176,8 @@ namespace BotC_Custom_ScriptTool.Classes
                 var demons = charactersToDraw.Where(n => n.RoleType == ERoleType.Demon).ToList();
                 if(demons.Count > 0)
                 {
-                    DrawRolesOnImage(demons, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders);
-                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Demon);
+                    DrawRolesOnImage(demons, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders, 50);
+                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Demon, 45);
                 }
 
                 //Draw Not First Night Information
@@ -200,6 +216,102 @@ namespace BotC_Custom_ScriptTool.Classes
 
                     DrawRoleAndRoleInfoForNightOrder(graphics, fi, roleIcon, padding, new Point(0, i * MaxIconHeight), MaxIconHeight, MaxGraphicLength);
                 }
+
+                PagesToPrint.Add(A4);
+            }
+        }
+
+        private static void CreateTravelers(Script script, List<CharacterRole> allRoles,
+            string ScriptName, string Author, string PathToCustomImage,
+            bool UseTwoColumns, bool printCharacterBorders)
+        {
+            //If we want to use two columns
+            UseTwoColumns = false;
+
+            var maxPerPage = 26;
+            var maxRolesOnOneSheet = UseTwoColumns ? maxPerPage / 2 : maxPerPage;
+            var roles = allRoles.Where(n => script.Roles.Contains(n.RoleName) && n.RoleType == ERoleType.Traveler).ToList();
+
+            roles = roles.OrderBy(r => script.Roles.IndexOf(r.RoleName)).ToList();
+
+            var roleCount = UseTwoColumns == false ? roles.Count :
+                RoundToNextEvenNumber(roles.Count(n => n.RoleType == ERoleType.Traveler));
+
+            var IconHeight = (ImageHeight - (2 * padding)) / maxRolesOnOneSheet;
+
+            for (int charactersDrawn = 0; charactersDrawn < roles.Count; charactersDrawn += maxPerPage)
+            {
+                var charactersToDraw = roles.Skip(charactersDrawn).Take(maxPerPage).ToList();
+                var A4 = CreateA4Image();
+                var graphics = Graphics.FromImage(A4);
+                if (PathToCustomImage == "")
+                    graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, ImageWidth, ImageHeight));
+                else
+                    graphics.DrawImage(Image.FromFile(PathToCustomImage), new Rectangle(0, 0, ImageWidth, ImageHeight));
+
+                //ScriptName and Author
+                DrawScriptNameAndAuthor(graphics, ScriptName, "", Author, padding);
+
+                int count = 0;
+
+                var travelers = charactersToDraw.Where(n => n.RoleType == ERoleType.Traveler).ToList();
+                if (travelers.Count > 0)
+                {
+                    DrawRolesOnImage(travelers, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders, 5);
+                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Traveler, 0);
+                    count = UseTwoColumns ? RoundToNextEvenNumber(travelers.Count) : travelers.Count;
+                }
+
+                //Draw Not First Night Information
+                DrawNotFirstNightOnImage(graphics);
+
+                PagesToPrint.Add(A4);
+            }
+        }
+
+        private static void CreateFabled(Script script, List<CharacterRole> allRoles,
+            string ScriptName, string Author, string PathToCustomImage,
+            bool UseTwoColumns, bool printCharacterBorders)
+        {
+            //If we want to use two columns
+            UseTwoColumns = false;
+
+            var maxPerPage = 26;
+            var maxRolesOnOneSheet = UseTwoColumns ? maxPerPage / 2 : maxPerPage;
+            var roles = allRoles.Where(n => script.Roles.Contains(n.RoleName) && n.RoleType == ERoleType.Fabled).ToList();
+
+            roles = roles.OrderBy(r => script.Roles.IndexOf(r.RoleName)).ToList();
+
+            var roleCount = UseTwoColumns == false ? roles.Count :
+                RoundToNextEvenNumber(roles.Count(n => n.RoleType == ERoleType.Fabled));
+
+            var IconHeight = (ImageHeight - (2 * padding)) / maxRolesOnOneSheet;
+
+            for (int charactersDrawn = 0; charactersDrawn < roles.Count; charactersDrawn += maxPerPage)
+            {
+                var charactersToDraw = roles.Skip(charactersDrawn).Take(maxPerPage).ToList();
+                var A4 = CreateA4Image();
+                var graphics = Graphics.FromImage(A4);
+                if (PathToCustomImage == "")
+                    graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, ImageWidth, ImageHeight));
+                else
+                    graphics.DrawImage(Image.FromFile(PathToCustomImage), new Rectangle(0, 0, ImageWidth, ImageHeight));
+
+                //ScriptName and Author
+                DrawScriptNameAndAuthor(graphics, ScriptName, "", Author, padding);
+
+                int count = 0;
+
+                var fabled = charactersToDraw.Where(n => n.RoleType == ERoleType.Fabled).ToList();
+                if (fabled.Count > 0)
+                {
+                    DrawRolesOnImage(fabled, graphics, padding, IconHeight, count, ImageWidth, UseTwoColumns, printCharacterBorders, 5);
+                    DrawLineOnImage(graphics, ImageWidth, padding, IconHeight, UseTwoColumns ? (int)Math.Round((decimal)count / 2) : count, ERoleType.Fabled, 0);
+                    count = UseTwoColumns ? RoundToNextEvenNumber(fabled.Count) : fabled.Count;
+                }
+
+                //Draw Not First Night Information
+                DrawNotFirstNightOnImage(graphics);
 
                 PagesToPrint.Add(A4);
             }
@@ -280,11 +392,11 @@ namespace BotC_Custom_ScriptTool.Classes
                 );
         }
 
-        private static void DrawLineOnImage(Graphics graphics, int imageWidth, int padding, int iconHeight, int offset, ERoleType roleType)
+        private static void DrawLineOnImage(Graphics graphics, int imageWidth, int padding, int iconHeight, int offset, ERoleType roleType, int nicePadding = 0)
         {
             graphics.DrawLine(new Pen(new SolidBrush(Color.Black), 2),
-                new Point(padding, padding + (offset * iconHeight)),
-                new Point(imageWidth - padding, padding + (offset * iconHeight)));
+                new Point(padding, padding + (offset * iconHeight) + nicePadding),
+                new Point(imageWidth - padding, padding + (offset * iconHeight) + nicePadding));
 
             var mesarued = graphics.MeasureString($"{roleType}", new Font("Arial", FontSizeRoleType));
             graphics.DrawString($"{roleType}",
@@ -292,10 +404,10 @@ namespace BotC_Custom_ScriptTool.Classes
                 new SolidBrush(Color.FromArgb(255, 92, 31, 35)),
                 new Point(
                     imageWidth - padding - (int)mesarued.Width,
-                    padding + (offset * iconHeight) - (int)mesarued.Height));
+                    padding + (offset * iconHeight) - (int)mesarued.Height + nicePadding));
         }
 
-        private static void DrawRolesOnImage(List<CharacterRole> roles, Graphics graphics, int padding, int iconHeight, int offset, int imageWidth, bool useTwoColumns, bool printCharacterBorders)
+        private static void DrawRolesOnImage(List<CharacterRole> roles, Graphics graphics, int padding, int iconHeight, int offset, int imageWidth, bool useTwoColumns, bool printCharacterBorders, int nicePadding = 0)
         {
             bool DrawLeft = true;
 
@@ -312,6 +424,7 @@ namespace BotC_Custom_ScriptTool.Classes
                 var posY = padding +
                     (useTwoColumns ? ((int)Math.Round((decimal)offset / 2) * iconHeight) : (offset * iconHeight)) +
                     (useTwoColumns ? ((i / 2) * iconHeight) : (i * iconHeight));
+                posY += nicePadding;
                 var drawWidth = (useTwoColumns ? (imageWidth - 2 * padding) / 2 - iconHeight : (imageWidth - 2 * padding) - iconHeight);
                 var drawWidthRectangle = (useTwoColumns ? (imageWidth - 2 * padding) / 2 : (imageWidth - 2 * padding));
 

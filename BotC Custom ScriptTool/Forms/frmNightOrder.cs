@@ -23,7 +23,11 @@ namespace BotC_Custom_ScriptTool.Forms
                 var btn = new Button();
                 var role = rolesFirstNight.SingleOrDefault(rfn => FirstNight.Rolename == rfn.RoleName);
 
-                if (role == null) continue;
+                if (role == null)
+                {
+                    Order.FirstNight.RemoveAt(i);
+                    continue;
+                }
 
                 btn.Text = $"{role.RoleName}";
                 btn.Size = new Size(flowLayoutPanel1.Width - 20, btn.Size.Height);
@@ -45,7 +49,11 @@ namespace BotC_Custom_ScriptTool.Forms
                 var btn = new Button();
                 var role = rolesOtherNights.SingleOrDefault(rfn => OtherNight.Rolename == rfn.RoleName);
 
-                if (role == null) continue;
+                if (role == null)
+                {
+                    Order.OtherNights.RemoveAt(i);
+                    continue;
+                }
 
                 btn.Text = $"{role.RoleName}";
                 btn.Size = new Size(flowLayoutPanel1.Width - 20, btn.Size.Height);

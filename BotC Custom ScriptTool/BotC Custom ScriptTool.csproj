@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AutomaticNightOrderConfig.cs" />
     <Compile Include="Classes\CharacterRole.cs" />
     <Compile Include="Classes\Jinx.cs" />
     <Compile Include="Classes\NightOrder.cs" />
@@ -53,6 +54,12 @@
     <Compile Include="Classes\Script.cs" />
     <Compile Include="Enums\ERoleType.cs" />
     <Compile Include="FileAccess\FileAccessor.cs" />
+    <Compile Include="Forms\frmAutomaticNightOrderConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAutomaticNightOrderConfig.Designer.cs">
+      <DependentUpon>frmAutomaticNightOrderConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmNightOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +80,9 @@
     <Compile Include="UserControls\ucJinx.Designer.cs">
       <DependentUpon>ucJinx.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\frmAutomaticNightOrderConfig.resx">
+      <DependentUpon>frmAutomaticNightOrderConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmNightOrder.resx">
       <DependentUpon>frmNightOrder.cs</DependentUpon>
     </EmbeddedResource>

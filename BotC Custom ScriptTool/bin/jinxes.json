@@ -1,0 +1,612 @@
+[
+  {
+    "RoleA": "Bounty Hunter",
+    "RoleB": "Kazali",
+    "JinxText": "Es wird nur ein b\u00F6ser B\u00FCrger erschaffen, falls der Bounty Hunter immer noch im Spiel ist, nachdem der Kazali gehandelt hat."
+  },
+  {
+    "RoleA": "Bounty Hunter",
+    "RoleB": "Philosoph",
+    "JinxText": "Falls der Philosoph die Bounty Hunter F\u00E4higkeit erh\u00E4lt, wird m\u00F6glicherweise ein B\u00FCrger b\u00F6se."
+  },
+  {
+    "RoleA": "Cannibal",
+    "RoleB": "Butler",
+    "JinxText": "Falls der Cannibal die Butler F\u00E4higkeit erh\u00E4lt, erf\u00E4hrt der Cannibal das."
+  },
+  {
+    "RoleA": "Cannibal",
+    "RoleB": "Jongleur",
+    "JinxText": "Falls der Jongleur am ersten Tag r\u00E4t und durch Hinrichtung stirbt, erf\u00E4hrt der Cannibal in der Nacht wie viele Charaktere der Jongleur korrekt erraten hat."
+  },
+  {
+    "RoleA": "Cannibal",
+    "RoleB": "Poppy Grower",
+    "JinxText": "Falls der Cannibal den Poppy Grower verspeist und danach stirbt oder die Poppy Grower F\u00E4higkeit verliert, lernen sich D\u00E4mon und Schergen in der Nacht kennen."
+  },
+  {
+    "RoleA": "Cannibal",
+    "RoleB": "Zealot",
+    "JinxText": "Falls der Cannibal die Zealot F\u00E4higkeit erh\u00E4lt, erf\u00E4hrt der Cannibal das."
+  },
+  {
+    "RoleA": "Mathematiker",
+    "RoleB": "Kammerzofe",
+    "JinxText": "Die Kammerzofe erf\u00E4hrt, ob der Mathematiker diese Nacht aufwachen w\u00FCrde oder nicht, obwohl die Kammerzofe zu erst aufwacht."
+  },
+  {
+    "RoleA": "Mathematiker",
+    "RoleB": "Verr\u00FCckte",
+    "JinxText": "Der Mathematiker erf\u00E4hrt, ob der Verr\u00FCckte einen oder mehrere andere Spieler angegriffen hat als der echte D\u00E4mon."
+  },
+  {
+    "RoleA": "Butler",
+    "RoleB": "Organ Grinder",
+    "JinxText": "Falls der Organ Grinder eine Abstimmung mit geschlo\u00DFenen Augen verursacht, darf der Butler seine Hand zur Abstimmung heben, aber seine Stimme z\u00E4hlt nur, wenn sein Meister ebenfalls abgestimmt hat."
+  },
+  {
+    "RoleA": "Heretic",
+    "RoleB": "Baron",
+    "JinxText": "Der Baron kann m\u00F6glicherweise nur 1 Au\u00DFenseiter hinzuf\u00FCgen anstatt 2."
+  },
+  {
+    "RoleA": "Heretic",
+    "RoleB": "Boffin",
+    "JinxText": "Der D\u00E4mon kann nicht die Heretic F\u00E4higkeit erhalten."
+  },
+  {
+    "RoleA": "Heretic",
+    "RoleB": "Pate",
+    "JinxText": "Nur 1 verhexter Charakter kann im Spiel sein."
+  },
+  {
+    "RoleA": "Heretic",
+    "RoleB": "Lleech",
+    "JinxText": "Falls der Lleech den Heretic vergiftet hat und dann der Lleech stirbt, bleibt der Heretic vergiftet."
+  },
+  {
+    "RoleA": "Heretic",
+    "RoleB": "Grubenweib",
+    "JinxText": "Ein Grubenweib kann keinen Heretic erschaffen."
+  },
+  {
+    "RoleA": "Heretic",
+    "RoleB": "Spion",
+    "JinxText": "Nur 1 verhexter Charakter kann im Spiel sein."
+  },
+  {
+    "RoleA": "Heretic",
+    "RoleB": "Widow",
+    "JinxText": "Nur 1 verhexter Charakter kann im Spiel sein."
+  },
+  {
+    "RoleA": "Ogre",
+    "RoleB": "Einsiedler",
+    "JinxText": "Falls der Einsiedler dem Ogre als b\u00F6se angezeigt wird, erf\u00E4hrt der Ogre da\u00DF er b\u00F6se ist."
+  },
+  {
+    "RoleA": "Plague Doctor",
+    "RoleB": "Baron",
+    "JinxText": "Falls der Storyteller die Baron F\u00E4higkeit erh\u00E4lt, werden bis zu 2 Spieler zu nicht im Spiel befindlichen Au\u00DFenseitern."
+  },
+  {
+    "RoleA": "Plague Doctor",
+    "RoleB": "Boomdandy",
+    "JinxText": "Falls der Plague Doctor hingerichtet wird und der Storyteller die Boomdandy F\u00E4higkeit erhalten w\u00FCrde, l\u00F6st die Boomdandy F\u00E4higkeit sofort aus."
+  },
+  {
+    "RoleA": "Plague Doctor",
+    "RoleB": "B\u00F6ser Zwilling",
+    "JinxText": "Der Storyteller kann nicht die B\u00F6ser Zwilling F\u00E4higkeit erhalten falls der Plague Doctor stirbt."
+  },
+  {
+    "RoleA": "Plague Doctor",
+    "RoleB": "Fearmonger",
+    "JinxText": "Falls der Plague Doctor stirbt, erh\u00E4lt ein lebender Scherge die Fearmonger F\u00E4higkeit zus\u00E4tzlich zu seiner eigenen F\u00E4higkeit. Der Scherge erf\u00E4hrt davon."
+  },
+  {
+    "RoleA": "Plague Doctor",
+    "RoleB": "Goblin",
+    "JinxText": "Falls der Plague Doctor stirbt, erh\u00E4lt ein lebender Scherge die Goblin F\u00E4higkeit zus\u00E4tzlich zu seiner eigenen F\u00E4higkeit. Der Scherge erf\u00E4hrt davon."
+  },
+  {
+    "RoleA": "Plague Doctor",
+    "RoleB": "Marionette",
+    "JinxText": "Falls der D\u00E4mon einen lebenden B\u00FCrger oder Au\u00DFenseiter als Nachbarn hat wenn der Plague Doctor stirbt, wird der Spieler eine b\u00F6se Marionette, au\u00DFer wenn es bereits einen zus\u00E4tzlichen b\u00F6sen Spieler gibt."
+  },
+  {
+    "RoleA": "Plague Doctor",
+    "RoleB": "Scharlachrote Frau",
+    "JinxText": "Falls der Plague Doctor stirbt, erh\u00E4lt ein lebender Scherge die Scharlachrote Frau F\u00E4higkeit zus\u00E4tzlich zu seiner eigenen F\u00E4higkeit. Der Scherge erf\u00E4hrt davon."
+  },
+  {
+    "RoleA": "Plague Doctor",
+    "RoleB": "Spion",
+    "JinxText": "Falls der Plague Doctor stirbt, erh\u00E4lt ein lebender Scherge die Spion F\u00E4higkeit zus\u00E4tzlich zu seiner eigenen F\u00E4higkeit. Der Scherge erf\u00E4hrt davon."
+  },
+  {
+    "RoleA": "Boffin",
+    "RoleB": "Alchemist",
+    "JinxText": "Falls der Alchemist die Boffin F\u00E4higkeit hat, erf\u00E4hrt der Alchemist nicht, welche F\u00E4higkeit der D\u00E4mon hat."
+  },
+  {
+    "RoleA": "Boffin",
+    "RoleB": "Cult Leader",
+    "JinxText": "Falls der D\u00E4mon die Cult Leader F\u00E4higkeit hat, kann er durch diese F\u00E4higkeit nicht gut werden."
+  },
+  {
+    "RoleA": "Boffin",
+    "RoleB": "Trunkenbold",
+    "JinxText": "Falls der D\u00E4mon die Trunkenbold F\u00E4higkeit haben w\u00FCrde, w\u00E4hlt der Boffin einen B\u00FCrger Spieler der stattde\u00DFen diese F\u00E4higkeit hat."
+  },
+  {
+    "RoleA": "Boffin",
+    "RoleB": "Schl\u00E4ger",
+    "JinxText": "Falls der D\u00E4mon die Cult Leader F\u00E4higkeit hat, kann er durch diese F\u00E4higkeit nicht gut werden."
+  },
+  {
+    "RoleA": "Boffin",
+    "RoleB": "Ogre",
+    "JinxText": "Der D\u00E4mon kann nicht die Ogre F\u00E4higkeit haben."
+  },
+  {
+    "RoleA": "Boffin",
+    "RoleB": "Politician",
+    "JinxText": "Der D\u00E4mon kann nicht die Politician F\u00E4higkeit haben."
+  },
+  {
+    "RoleA": "Boffin",
+    "RoleB": "Village Idiot",
+    "JinxText": "Falls es noch freie Village Idiot Charakterpl\u00E4ttchen gibt, kann der Boffin dem D\u00E4mon die Village Idiot F\u00E4higkeit geben."
+  },
+  {
+    "RoleA": "Cerenovus",
+    "RoleB": "Goblin",
+    "JinxText": "Der Cerenovus kann w\u00E4hlen, da\u00DF ein Spieler davon bese\u00DFen ist, der Goblin zu sein."
+  },
+  {
+    "RoleA": "Marionette",
+    "RoleB": "Balloonist",
+    "JinxText": "Falls die Marionette denkt, sie sei der Balloonist, wurden m\u00F6glicherweise \u002B1 Au\u00DFenseiter hinzugef\u00FCgt."
+  },
+  {
+    "RoleA": "Marionette",
+    "RoleB": "Damsel",
+    "JinxText": "Die Marionette erf\u00E4hrt nicht, da\u00DF eine Damsel im Spiel ist."
+  },
+  {
+    "RoleA": "Marionette",
+    "RoleB": "Huntsman",
+    "JinxText": "Falls die Marionette denkt, sie sei der Huntsman, wurde eine Damsel hinzugef\u00FCgt."
+  },
+  {
+    "RoleA": "Marionette",
+    "RoleB": "Lil\u0027 Monsta",
+    "JinxText": "Die Marionette sitzt neben einem Schergen statt dem D\u00E4mon. Die Marinette wird nicht geweckt um zu w\u00E4hlen, wer das Lil\u0027 Monsta Pl\u00E4ttchen nimmt. Die Marionette erf\u00E4hrt nicht, ob sie das Lil\u0027 Monsta Pl\u00E4ttchen hat."
+  },
+  {
+    "RoleA": "Marionette",
+    "RoleB": "Poppy Grower",
+    "JinxText": "Wenn der Poppy Grower stirbt, erf\u00E4hrt der D\u00E4mon wer die Marionette ist. Die Marionette erf\u00E4hrt nichts."
+  },
+  {
+    "RoleA": "Marionette",
+    "RoleB": "Snitch",
+    "JinxText": "Die Marionette erf\u00E4hrt keine 3 nicht im Spiel befindliche Charaktere. Stattde\u00DFen erf\u00E4hrt der D\u00E4mon 3 zus\u00E4tzliche nicht im Spiel befindliche Charaktere."
+  },
+  {
+    "RoleA": "Strippenzieher",
+    "RoleB": "Al-Hadikhia",
+    "JinxText": "Falls der Al-Hadikhia hingerichtet wird und der Strippenzieher ist noch am leben, w\u00E4hlt der Al-Hadikhia in der Nacht 3 gute Spieler."
+  },
+  {
+    "RoleA": "Grubenweib",
+    "RoleB": "Cult Leader",
+    "JinxText": "Falls das Grubenweib einen b\u00F6sen Spieler in den Cult Leader verwandelt, kann er nicht durch seine eigene F\u00E4higkeit gut werden."
+  },
+  {
+    "RoleA": "Grubenweib",
+    "RoleB": "Damsel",
+    "JinxText": "Falls das Grubenweib eine Damsel generiert, w\u00E4hlt der Storyteller welcher Spieler es ist."
+  },
+  {
+    "RoleA": "Grubenweib",
+    "RoleB": "Schl\u00E4ger",
+    "JinxText": "Falls das Grubenweib einen b\u00F6sen Spieler in den Schl\u00E4ger verwandelt, kann er nicht durch seine eigene F\u00E4higkeit gut werden."
+  },
+  {
+    "RoleA": "Grubenweib",
+    "RoleB": "Ogre",
+    "JinxText": "Falls das Grubenweib einen b\u00F6sen Spieler in den Ogre verwandelt, kann er nicht durch seine eigene F\u00E4higkeit gut werden."
+  },
+  {
+    "RoleA": "Grubenweib",
+    "RoleB": "Politician",
+    "JinxText": "Falls das Grubenweib einen b\u00F6sen Spieler in den Politician verwandelt, kann er nicht durch seine eigene F\u00E4higkeit gut werden."
+  },
+  {
+    "RoleA": "Grubenweib",
+    "RoleB": "Village Idiot",
+    "JinxText": "Falls es noch freie Village Idiot Charakterpl\u00E4ttchen gibt, kann das Grubenweib einen weiteren Village Idiot generieren. In dem Fall \u00E4ndert sich m\u00F6glicherweise, welcher Village Idiot betrunken ist."
+  },
+  {
+    "RoleA": "Scharlachrote Frau",
+    "RoleB": "Al-Hadikhia",
+    "JinxText": "Wenn es zwei lebende Al-Hadikhias gibt, wird der Scharlachrote Frau Al-Hadikhia wieder zur Scharlachroten Frau."
+  },
+  {
+    "RoleA": "Scharlachrote Frau",
+    "RoleB": "Fang Gu",
+    "JinxText": "Falls der Fang Gu einen Au\u00DFenseiter w\u00E4hlt und dadurch stirbt, wird die Scharlachrote Frau nicht zum Fang Gu."
+  },
+  {
+    "RoleA": "Spion",
+    "RoleB": "Alchemist",
+    "JinxText": "Falls der Alchemist die Spion F\u00E4higkeit hat, sieht er nicht das Grimoire und der echte Spion kann nicht falsch angezeigt werden."
+  },
+  {
+    "RoleA": "Spion",
+    "RoleB": "Damsel",
+    "JinxText": "Falls der Spion im Spiel ist (oder war), ist die Damsel vergiftet."
+  },
+  {
+    "RoleA": "Spion",
+    "RoleB": "Magician",
+    "JinxText": "Wenn der Spion das Grimoire sieht, werden das D\u00E4mon und Magician Charaterpl\u00E4ttchen entfernt."
+  },
+  {
+    "RoleA": "Spion",
+    "RoleB": "Ogre",
+    "JinxText": "Der Spion wird dem Ogre als b\u00F6se angezeigt."
+  },
+  {
+    "RoleA": "Spion",
+    "RoleB": "Poppy Grower",
+    "JinxText": "Falls der Poppy Grower im Spiel ist, sieht der Spion das Grimoire erst nachdem der Poppy Grower stirbt."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Alchemist",
+    "JinxText": "Falls ein Alchemist-Summoner im spiel ist startet die Runde ganz normal mit einem D\u00E4mon im Spiel. Wenn der Alchemist-Summoner einen Spieler w\u00E4hlt, verwandelt er den Spieler in einen D\u00E4mon aber \u00E4ndert nicht sein Team."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Uhrmacher",
+    "JinxText": "Falls der Summoner im Spel ist, erh\u00E4lt der Uhrmacher seine Information erst wenn ein D\u00E4mon generiert wurde."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "H\u00F6fling",
+    "JinxText": "Falls der Summoner in der 3. Nacht betrunken ist, w\u00E4hlt der Summoner einen D\u00E4mon aber der Storyteller den Spieler."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Engineer",
+    "JinxText": "Falls der Engineer den Summoner aus dem Spiel nimmt bevor der Summoner seine F\u00E4higkeit einsetzt, benutzt der Summoner sofort seine F\u00E4higkeit."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Hatter",
+    "JinxText": "Der Summoner kann keinen D\u00E4mon generieren, der bereits im Spiel ist. Wenn der Summoner einen nicht im Spiel befindlichen D\u00E4mon generiert sind Tode in dieser Nacht willk\u00FCrlich."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Kazali",
+    "JinxText": "Der Summoner kann keinen D\u00E4mon generieren, der bereits im Spiel ist. Wenn der Summoner einen nicht im Spiel befindlichen D\u00E4mon generiert sind Tode in dieser Nacht willk\u00FCrlich."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Legion",
+    "JinxText": "Falls der Summoner Legion generiert, wird die Mehrheit der Spieler (inklusive allen b\u00F6sen Spielern) b\u00F6se Legion."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Lord of Typhon",
+    "JinxText": "Falls der Summoner einen Lord of Typhon generiert, mu\u00DF der Lord of Typhon neben einem Schergen sitzen. Der andere Nachbar wird ein nicht im Spiel befindlicher b\u00F6ser Scherge."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Marionette",
+    "JinxText": "Die Marionette sitzt neben dem Summoner. Der Summoner wei\u00DF, wer die Marionette ist."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Grubenweib",
+    "JinxText": "Der Summoner kann keinen D\u00E4mon generieren, der bereits im Spiel ist. Wenn der Summoner einen nicht im Spiel befindlichen D\u00E4mon generiert sind Tode in dieser Nacht willk\u00FCrlich."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Poppy Grower",
+    "JinxText": "Falls der Poppy Grower lebt, wenn der Summoner agiert, w\u00E4hlt der Summoner einen D\u00E4mon aber der Storyteller den Spieler."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Preacher",
+    "JinxText": "Falls der Preacher den Summoner in oder vor der 3. Nacht w\u00E4hlt, w\u00E4hlt der Summoner einen D\u00E4mon aber der Storyteller den Spieler."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Pukka",
+    "JinxText": "Der Summoner kann in der 2. Nacht einen Spieler w\u00E4hlen, der zum Pukka wird."
+  },
+  {
+    "RoleA": "Summoner",
+    "RoleB": "Zombuul",
+    "JinxText": "Falls der Summoner einen toten Spieler in den Zombuul verwandelt, behandelt der Storyteller diesen Spieler wie einen Zombuul, der bereits einmal gestorben ist."
+  },
+  {
+    "RoleA": "Vizier",
+    "RoleB": "Alsaahir",
+    "JinxText": "Falls der Vizier im Spiel ist, mu\u00DF der Alsaahir auch raten, welche D\u00E4monen im Spiel sind."
+  },
+  {
+    "RoleA": "Vizier",
+    "RoleB": "H\u00F6fling",
+    "JinxText": "Falls der Vizier seine F\u00E4higkeit verliert, erf\u00E4hrt er das. Falls der Vizier hingerichtet wird w\u00E4hrend er seine F\u00E4higkeit hat, gewinnt sein Team."
+  },
+  {
+    "RoleA": "Vizier",
+    "RoleB": "Fearmonger",
+    "JinxText": "Der Vizier erwacht gleichzeitig mit dem Fearmonger und erf\u00E4hrt, welchen Spieler dieser w\u00E4hlt. Diesen Spieler kann der Vizier nicht direkt hinrichten."
+  },
+  {
+    "RoleA": "Vizier",
+    "RoleB": "Detektiv",
+    "JinxText": "Falls ein Detektiv erf\u00E4hrt, da\u00DF der Vizier im Spiel ist, wird die Existenz eines Viziers nicht vom Storyteller angek\u00FCndigt."
+  },
+  {
+    "RoleA": "Vizier",
+    "RoleB": "Magician",
+    "JinxText": "Falls sowohl Vizier als auch Magician im Spiel sind, erf\u00E4hrt der D\u00E4mon nicht, wer seine Minions sind."
+  },
+  {
+    "RoleA": "Vizier",
+    "RoleB": "Politician",
+    "JinxText": "Der Politician wird dem Vizier m\u00F6glicherweise als b\u00F6se angezeigt."
+  },
+  {
+    "RoleA": "Vizier",
+    "RoleB": "Preacher",
+    "JinxText": "Falls der Vizier seine F\u00E4higkeit verliert, erf\u00E4hrt er das. Falls der Vizier hingerichtet wird w\u00E4hrend er seine F\u00E4higkeit hat, gewinnt sein Team."
+  },
+  {
+    "RoleA": "Vizier",
+    "RoleB": "Zealot",
+    "JinxText": "Der Zealot wird dem Vizier m\u00F6glicherweise als b\u00F6se angezeigt."
+  },
+  {
+    "RoleA": "Widow",
+    "RoleB": "Alchemist",
+    "JinxText": "Falls der Alchemist die Widow F\u00E4higkeit hat, sieht er nicht das Grimoire."
+  },
+  {
+    "RoleA": "Widow",
+    "RoleB": "Damsel",
+    "JinxText": "Falls die Widow im Spiel ist (oder war), ist die Damsel vergiftet."
+  },
+  {
+    "RoleA": "Widow",
+    "RoleB": "Magician",
+    "JinxText": "Wenn die Widow das Grimoire sieht, werden das D\u00E4mon und Magician Charaterpl\u00E4ttchen entfernt."
+  },
+  {
+    "RoleA": "Widow",
+    "RoleB": "Poppy Grower",
+    "JinxText": "Falls der Poppy Grower im Spiel ist, sieht die Widow das Grimoire erst nachdem der Poppy Grower stirbt."
+  },
+  {
+    "RoleA": "Kazali",
+    "RoleB": "Choir Boy",
+    "JinxText": "Falls ein Choirboy im Spiel ist, kann der Kazali nicht w\u00E4hlen, da\u00DF der King ein Scherge wird."
+  },
+  {
+    "RoleA": "Kazali",
+    "RoleB": "Schl\u00E4ger",
+    "JinxText": "Der Kazali kann w\u00E4hlen, da\u00DF der Schl\u00E4ger Spieler einer seiner b\u00F6sen Schergen ist."
+  },
+  {
+    "RoleA": "Kazali",
+    "RoleB": "Huntsman",
+    "JinxText": "Falls der Kazali w\u00E4hlt, da\u00DF die Damsel ein Scherge wird und ein Huntsman im Spiel ist, wird ein guter Spieler die Damsel."
+  },
+  {
+    "RoleA": "Kazali",
+    "RoleB": "Marionette",
+    "JinxText": "Falls der Kazali eine Marionette generiert, mu\u00DF er daf\u00FCr einen seiner Nachbarn w\u00E4hlen."
+  },
+  {
+    "RoleA": "Kazali",
+    "RoleB": "Soldat",
+    "JinxText": "Der Kazali kann w\u00E4hlen, da\u00DF der Soldat Spieler einer seiner b\u00F6sen Schergen ist."
+  },
+  {
+    "RoleA": "Legion",
+    "RoleB": "Engineer",
+    "JinxText": "Legion und der Engineer k\u00F6nnen zu Beginn der Runde nicht beide im Spiel sein. Falls der Egineer Legion generiert, wird die Mehrheit der Spieler (inklusive aller b\u00F6sen Spieler) b\u00F6se Legion."
+  },
+  {
+    "RoleA": "Legion",
+    "RoleB": "Hatter",
+    "JinxText": "Falls der Hatter stirbt und Legion im Spiel ist, pa\u00DFiert nichts. Falls der Hatter stirbt und ein b\u00F6ser Spieler w\u00E4hlt Legion, werden alle aktuell b\u00F6sen Spieler Legion."
+  },
+  {
+    "RoleA": "Legion",
+    "RoleB": "Minnes\u00E4nger",
+    "JinxText": "Falls Legion heute hingerichtet wurde, beh\u00E4lt Legion ihre F\u00E4higkeit, aber der Minnes\u00E4nger erf\u00E4hrt m\u00F6glicherweise, da\u00DF sie Legion sind."
+  },
+  {
+    "RoleA": "Legion",
+    "RoleB": "Preacher",
+    "JinxText": "Falls der Preacher Legion w\u00E4hlt, beh\u00E4lt Legion ihre F\u00E4higkeit, aber der Preacher erf\u00E4hrt m\u00F6glicherweise, da\u00DF sie Legion sind."
+  },
+  {
+    "RoleA": "Legion",
+    "RoleB": "Zealot",
+    "JinxText": "Der Zealot k\u00F6nnte f\u00FCr Legions F\u00E4higkeit als b\u00F6se angezeigt werden."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "Banshee",
+    "JinxText": "Jede Nacht* w\u00E4hlt der Leviathan einen lebenden guten Spieler (einen anderen Spieler als die vorherigen N\u00E4chte)."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "Exorzist",
+    "JinxText": "Falls der Exorzist lebt und mindestens einmal erfolgreich den Leviathan gew\u00E4hlt hat, gewinnt das b\u00F6se Team nicht, falls mehr als 1 guter Spieler hingerichtet wurde."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "Farmer",
+    "JinxText": "Jede Nacht* w\u00E4hlt der Leviathan einen lebenden guten Spieler (einen anderen Spieler als die vorherigen N\u00E4chte)."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "Gro\u00DFmutter",
+    "JinxText": "Falls der Leviathan im Spiel ist und das Enkelkind durch Hinrichtung stirbt, gewinnt das b\u00F6se Team."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "Hatter",
+    "JinxText": "Falls der Hatter an oder nach Tag 5 stirbt, kann der D\u00E4mon nicht den Leviathan w\u00E4hlen."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "Gastwirt",
+    "JinxText": "Falls der Leviathan im Spiel ist, sind die vom Gastwirt gesch\u00FCtzten Spieler sicher vor allen b\u00F6sen F\u00E4higkeiten."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "King",
+    "JinxText": "Falls der Leviathan im Spiel ist und mindestens 1 Spieler tot ist, erf\u00E4hrt der King jede Nacht einen lebenden Charakter."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "B\u00FCrgermeister",
+    "JinxText": "Falls der Leviathan im Spiel ist und an Tag 5 keine Hinrichtung stattfindet, gewinnt das gute Team."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "M\u00F6nch",
+    "JinxText": "Falls der Leviathan im Spiel ist, ist der vom M\u00F6nch gesch\u00FCtzte Spieler sicher vor allen b\u00F6sen F\u00E4higkeiten."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "Grubenweib",
+    "JinxText": "Nach Tag 5 kann das Grubenweib nicht den Leviathan w\u00E4hlen."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "Rabenh\u00FCter",
+    "JinxText": "Jede Nacht* w\u00E4hlt der Leviathan einen lebenden guten Spieler (einen anderen Spieler als die vorherigen N\u00E4chte)."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "Weise",
+    "JinxText": "Jede Nacht* w\u00E4hlt der Leviathan einen lebenden guten Spieler (einen anderen Spieler als die vorherigen N\u00E4chte)."
+  },
+  {
+    "RoleA": "Leviathan",
+    "RoleB": "Soldat",
+    "JinxText": "Falls der Leviathan im Spiel ist, ist der Soldat sicher vor allen b\u00F6sen F\u00E4higkeiten."
+  },
+  {
+    "RoleA": "Lil\u0027 Monsta",
+    "RoleB": "Hatter",
+    "JinxText": "Falls ein D\u00E4mon Lil\u0027 Monsta w\u00E4hlt, w\u00E4hlt er auch einen Schergen, der diese Nacht das Lil\u0027 Monsta Pl\u00E4ttchen erh\u00E4lt."
+  },
+  {
+    "RoleA": "Lil\u0027 Monsta",
+    "RoleB": "Magician",
+    "JinxText": "Jede Nacht w\u00E4hlt der Magician einen Schergen."
+  },
+  {
+    "RoleA": "Lil\u0027 Monsta",
+    "RoleB": "Poppy Grower",
+    "JinxText": "Falls der Poppy Grower im Spiel ist, wachen die Schergen nicht gleichzeitig auf. Sie werden einer nach dem anderen geweckt, bis einer von ihnen sich entscheidet, das Lil\u0027 Monsta Pl\u00E4ttchen zu nehmen."
+  },
+  {
+    "RoleA": "Lil\u0027 Monsta",
+    "RoleB": "Scharlachrote Frau",
+    "JinxText": "Falls 5 oder mehr Spieler leben und der Spieler mit dem Lil\u0027 Monsta Pl\u00E4ttchen stirbt, erh\u00E4lt die Scharlachrote Frau in der Nacht das Lil\u0027 Monsta Pl\u00E4ttchen."
+  },
+  {
+    "RoleA": "Lil\u0027 Monsta",
+    "RoleB": "Vizier",
+    "JinxText": "Der Vizier kann durch Hinrichtung sterben wenn er das Lil\u0027 Monsta Pl\u00E4ttchen hat."
+  },
+  {
+    "RoleA": "Lleech",
+    "RoleB": "Strippenzieher",
+    "JinxText": "Falls der Strippenzieher lebt und der Lleech Host durch Hinrichtung stirbt, bleibt der Lleech am Leben aber verliert seine F\u00E4higkeit."
+  },
+  {
+    "RoleA": "Lleech",
+    "RoleB": "D\u00E4monenj\u00E4ger",
+    "JinxText": "Falls der D\u00E4monj\u00E4ger den Lleech Host angreift, stirbt dieser."
+  },
+  {
+    "RoleA": "Riot",
+    "RoleB": "Banshee",
+    "JinxText": "Jede Nacht* w\u00E4hlt Riot einen lebenden guten Spieler (einen anderen Spieler als die vorherigen N\u00E4chte)."
+  },
+  {
+    "RoleA": "Riot",
+    "RoleB": "Exorzist",
+    "JinxText": "Falls der Exorzist Riot in der 3. Nacht w\u00E4hlt werden Schergen nicht Riot."
+  },
+  {
+    "RoleA": "Riot",
+    "RoleB": "Farmer",
+    "JinxText": "Jede Nacht* w\u00E4hlt Riot einen lebenden guten Spieler (einen anderen Spieler als die vorherigen N\u00E4chte)."
+  },
+  {
+    "RoleA": "Riot",
+    "RoleB": "Gro\u00DFmutter",
+    "JinxText": "Falls Riot im Spiel ist und das Enkelkind am Tag stirbt, stirbt die Gro\u00DFmutter ebenfalls."
+  },
+  {
+    "RoleA": "Riot",
+    "RoleB": "Gastwirt",
+    "JinxText": "Falls Riot im Spiel ist, sind die vom Gastwirt gesch\u00FCtzten Spieler sicher vor allen b\u00F6sen F\u00E4higkeiten."
+  },
+  {
+    "RoleA": "Riot",
+    "RoleB": "King",
+    "JinxText": "Falls Riot im Spiel ist und mindestens 1 Spieler tot ist, erf\u00E4hrt der King jede Nacht einen lebenden Charakter."
+  },
+  {
+    "RoleA": "Riot",
+    "RoleB": "B\u00FCrgermeister",
+    "JinxText": "Der B\u00FCrgermeister kann w\u00E4hlen die Nominierungen zu beenden. Falls er das tut wenn nur 1 Riot lebt, gewinnt das gute Team, ansonsten gewinnt das b\u00F6se Team."
+  },
+  {
+    "RoleA": "Riot",
+    "RoleB": "M\u00F6nch",
+    "JinxText": "Falls Riot im Spiel ist, ist der vom M\u00F6nch gesch\u00FCtzte Spieler sicher vor allen b\u00F6sen F\u00E4higkeiten."
+  },
+  {
+    "RoleA": "Riot",
+    "RoleB": "Rabenh\u00FCter",
+    "JinxText": "Jede Nacht* w\u00E4hlt Riot einen lebenden guten Spieler (einen anderen Spieler als die vorherigen N\u00E4chte)."
+  },
+  {
+    "RoleA": "Riot",
+    "RoleB": "Weise",
+    "JinxText": "Jede Nacht* w\u00E4hlt Riot einen lebenden guten Spieler (einen anderen Spieler als die vorherigen N\u00E4chte)."
+  },
+  {
+    "RoleA": "Riot",
+    "RoleB": "Soldat",
+    "JinxText": "Falls Riot im Spiel ist, ist der Soldat sicher vor allen b\u00F6sen F\u00E4higkeiten."
+  },
+  {
+    "RoleA": "Vortox",
+    "RoleB": "Banshee",
+    "JinxText": "Falls der Vorox im Spiel ist und der D\u00E4mon die Banshee t\u00F6tet, erfahren die Spieler dennoch da\u00DF die Banshee gestorben ist."
+  },
+  {
+    "RoleA": "Yaggababble",
+    "RoleB": "Exorzist",
+    "JinxText": "Falls der Exorzist den Yaggababble w\u00E4hlt, t\u00F6tet die Yaggababble F\u00E4higkeit in dieser Nacht nicht."
+  }
+]

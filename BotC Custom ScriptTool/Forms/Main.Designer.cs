@@ -31,6 +31,9 @@
             this.btnNewRole = new System.Windows.Forms.Button();
             this.tcMainControl = new System.Windows.Forms.TabControl();
             this.tpCharacters = new System.Windows.Forms.TabPage();
+            this.rbSystem = new System.Windows.Forms.RadioButton();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbRoleEnglishName = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tbOtherNights = new System.Windows.Forms.TextBox();
@@ -56,6 +59,8 @@
             this.btnSafe = new System.Windows.Forms.Button();
             this.lbRoles = new System.Windows.Forms.ListBox();
             this.tpScript = new System.Windows.Forms.TabPage();
+            this.btnUseAutomaticNightOrder = new System.Windows.Forms.Button();
+            this.btnConfigureAutomaticNightOrder = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnConfigureNightOrder = new System.Windows.Forms.Button();
@@ -67,10 +72,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbScriptName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblScriptCountDemons = new System.Windows.Forms.Label();
-            this.lblScriptCountMinions = new System.Windows.Forms.Label();
-            this.lblScriptCountOutsiders = new System.Windows.Forms.Label();
-            this.lblScriptCountTownsfolk = new System.Windows.Forms.Label();
             this.rbFilterAll = new System.Windows.Forms.RadioButton();
             this.rbFilterDemons = new System.Windows.Forms.RadioButton();
             this.rbFilterMinions = new System.Windows.Forms.RadioButton();
@@ -79,6 +80,7 @@
             this.clbScriptRoles = new System.Windows.Forms.CheckedListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tpPDF = new System.Windows.Forms.TabPage();
+            this.btnChooseBackground = new System.Windows.Forms.Button();
             this.btnGeneratePreview = new System.Windows.Forms.Button();
             this.lblPreViewPage = new System.Windows.Forms.Label();
             this.btnNextImage = new System.Windows.Forms.Button();
@@ -96,7 +98,9 @@
             this.rbUse1Column = new System.Windows.Forms.RadioButton();
             this.tbCustomBackgroundPath = new System.Windows.Forms.TextBox();
             this.btnGeneratePDF = new System.Windows.Forms.Button();
-            this.btnChooseBackground = new System.Windows.Forms.Button();
+            this.rbFilterTraveler = new System.Windows.Forms.RadioButton();
+            this.rbFilterFabled = new System.Windows.Forms.RadioButton();
+            this.lblSelectedData = new System.Windows.Forms.Label();
             this.tcMainControl.SuspendLayout();
             this.tpCharacters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoleIcon)).BeginInit();
@@ -126,12 +130,15 @@
             this.tcMainControl.Location = new System.Drawing.Point(0, 0);
             this.tcMainControl.Name = "tcMainControl";
             this.tcMainControl.SelectedIndex = 0;
-            this.tcMainControl.Size = new System.Drawing.Size(689, 399);
+            this.tcMainControl.Size = new System.Drawing.Size(689, 419);
             this.tcMainControl.TabIndex = 1;
             this.tcMainControl.SelectedIndexChanged += new System.EventHandler(this.tcMainControl_SelectedIndexChanged);
             // 
             // tpCharacters
             // 
+            this.tpCharacters.Controls.Add(this.rbSystem);
+            this.tpCharacters.Controls.Add(this.label14);
+            this.tpCharacters.Controls.Add(this.tbRoleEnglishName);
             this.tpCharacters.Controls.Add(this.label13);
             this.tpCharacters.Controls.Add(this.label12);
             this.tpCharacters.Controls.Add(this.tbOtherNights);
@@ -160,15 +167,44 @@
             this.tpCharacters.Location = new System.Drawing.Point(4, 22);
             this.tpCharacters.Name = "tpCharacters";
             this.tpCharacters.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCharacters.Size = new System.Drawing.Size(681, 373);
+            this.tpCharacters.Size = new System.Drawing.Size(681, 393);
             this.tpCharacters.TabIndex = 0;
             this.tpCharacters.Text = "Characters";
             this.tpCharacters.UseVisualStyleBackColor = true;
             // 
+            // rbSystem
+            // 
+            this.rbSystem.AutoSize = true;
+            this.rbSystem.Location = new System.Drawing.Point(551, 137);
+            this.rbSystem.Name = "rbSystem";
+            this.rbSystem.Size = new System.Drawing.Size(59, 17);
+            this.rbSystem.TabIndex = 27;
+            this.rbSystem.TabStop = true;
+            this.rbSystem.Text = "System";
+            this.rbSystem.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(280, 64);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(72, 13);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "English-Name";
+            // 
+            // tbRoleEnglishName
+            // 
+            this.tbRoleEnglishName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbRoleEnglishName.Location = new System.Drawing.Point(358, 61);
+            this.tbRoleEnglishName.Name = "tbRoleEnglishName";
+            this.tbRoleEnglishName.Size = new System.Drawing.Size(315, 20);
+            this.tbRoleEnglishName.TabIndex = 25;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(280, 189);
+            this.label13.Location = new System.Drawing.Point(280, 215);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(66, 13);
             this.label13.TabIndex = 24;
@@ -177,7 +213,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(280, 163);
+            this.label12.Location = new System.Drawing.Point(280, 189);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(54, 13);
             this.label12.TabIndex = 23;
@@ -185,14 +221,14 @@
             // 
             // tbOtherNights
             // 
-            this.tbOtherNights.Location = new System.Drawing.Point(352, 186);
+            this.tbOtherNights.Location = new System.Drawing.Point(352, 212);
             this.tbOtherNights.Name = "tbOtherNights";
             this.tbOtherNights.Size = new System.Drawing.Size(321, 20);
             this.tbOtherNights.TabIndex = 22;
             // 
             // tbFirstNight
             // 
-            this.tbFirstNight.Location = new System.Drawing.Point(352, 160);
+            this.tbFirstNight.Location = new System.Drawing.Point(352, 186);
             this.tbFirstNight.Name = "tbFirstNight";
             this.tbFirstNight.Size = new System.Drawing.Size(321, 20);
             this.tbFirstNight.TabIndex = 21;
@@ -200,7 +236,7 @@
             // rbFabled
             // 
             this.rbFabled.AutoSize = true;
-            this.rbFabled.Location = new System.Drawing.Point(419, 111);
+            this.rbFabled.Location = new System.Drawing.Point(419, 137);
             this.rbFabled.Name = "rbFabled";
             this.rbFabled.Size = new System.Drawing.Size(57, 17);
             this.rbFabled.TabIndex = 20;
@@ -211,7 +247,7 @@
             // rbTraveler
             // 
             this.rbTraveler.AutoSize = true;
-            this.rbTraveler.Location = new System.Drawing.Point(339, 111);
+            this.rbTraveler.Location = new System.Drawing.Point(339, 137);
             this.rbTraveler.Name = "rbTraveler";
             this.rbTraveler.Size = new System.Drawing.Size(64, 17);
             this.rbTraveler.TabIndex = 19;
@@ -242,7 +278,7 @@
             // 
             // pbRoleIcon
             // 
-            this.pbRoleIcon.Location = new System.Drawing.Point(339, 216);
+            this.pbRoleIcon.Location = new System.Drawing.Point(339, 238);
             this.pbRoleIcon.Name = "pbRoleIcon";
             this.pbRoleIcon.Size = new System.Drawing.Size(149, 149);
             this.pbRoleIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -252,7 +288,7 @@
             // rbDemon
             // 
             this.rbDemon.AutoSize = true;
-            this.rbDemon.Location = new System.Drawing.Point(551, 90);
+            this.rbDemon.Location = new System.Drawing.Point(551, 116);
             this.rbDemon.Name = "rbDemon";
             this.rbDemon.Size = new System.Drawing.Size(59, 17);
             this.rbDemon.TabIndex = 15;
@@ -263,7 +299,7 @@
             // rbOutsider
             // 
             this.rbOutsider.AutoSize = true;
-            this.rbOutsider.Location = new System.Drawing.Point(419, 88);
+            this.rbOutsider.Location = new System.Drawing.Point(419, 114);
             this.rbOutsider.Name = "rbOutsider";
             this.rbOutsider.Size = new System.Drawing.Size(64, 17);
             this.rbOutsider.TabIndex = 14;
@@ -274,7 +310,7 @@
             // rbMinion
             // 
             this.rbMinion.AutoSize = true;
-            this.rbMinion.Location = new System.Drawing.Point(489, 90);
+            this.rbMinion.Location = new System.Drawing.Point(489, 116);
             this.rbMinion.Name = "rbMinion";
             this.rbMinion.Size = new System.Drawing.Size(56, 17);
             this.rbMinion.TabIndex = 13;
@@ -285,7 +321,7 @@
             // rbTownsfolk
             // 
             this.rbTownsfolk.AutoSize = true;
-            this.rbTownsfolk.Location = new System.Drawing.Point(339, 88);
+            this.rbTownsfolk.Location = new System.Drawing.Point(339, 114);
             this.rbTownsfolk.Name = "rbTownsfolk";
             this.rbTownsfolk.Size = new System.Drawing.Size(74, 17);
             this.rbTownsfolk.TabIndex = 12;
@@ -297,7 +333,7 @@
             // 
             this.tbRoleAbility.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbRoleAbility.Location = new System.Drawing.Point(339, 134);
+            this.tbRoleAbility.Location = new System.Drawing.Point(339, 160);
             this.tbRoleAbility.Multiline = true;
             this.tbRoleAbility.Name = "tbRoleAbility";
             this.tbRoleAbility.Size = new System.Drawing.Size(334, 20);
@@ -307,7 +343,7 @@
             // 
             this.tbRoleIconURL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbRoleIconURL.Location = new System.Drawing.Point(339, 61);
+            this.tbRoleIconURL.Location = new System.Drawing.Point(339, 87);
             this.tbRoleIconURL.Name = "tbRoleIconURL";
             this.tbRoleIconURL.Size = new System.Drawing.Size(334, 20);
             this.tbRoleIconURL.TabIndex = 10;
@@ -325,7 +361,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(280, 90);
+            this.label4.Location = new System.Drawing.Point(280, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 8;
@@ -334,7 +370,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(280, 137);
+            this.label3.Location = new System.Drawing.Point(280, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 7;
@@ -343,7 +379,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(280, 64);
+            this.label2.Location = new System.Drawing.Point(280, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 6;
@@ -361,7 +397,7 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(598, 342);
+            this.btnAdd.Location = new System.Drawing.Point(598, 362);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 4;
@@ -385,7 +421,7 @@
             this.btnSafe.Name = "btnSafe";
             this.btnSafe.Size = new System.Drawing.Size(75, 23);
             this.btnSafe.TabIndex = 2;
-            this.btnSafe.Text = "Safe";
+            this.btnSafe.Text = "Save";
             this.btnSafe.UseVisualStyleBackColor = true;
             this.btnSafe.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -397,12 +433,17 @@
             this.lbRoles.FormattingEnabled = true;
             this.lbRoles.Location = new System.Drawing.Point(8, 35);
             this.lbRoles.Name = "lbRoles";
-            this.lbRoles.Size = new System.Drawing.Size(255, 329);
+            this.lbRoles.Size = new System.Drawing.Size(255, 342);
             this.lbRoles.TabIndex = 1;
             this.lbRoles.SelectedIndexChanged += new System.EventHandler(this.lbRoles_SelectedIndexChanged);
             // 
             // tpScript
             // 
+            this.tpScript.Controls.Add(this.lblSelectedData);
+            this.tpScript.Controls.Add(this.rbFilterFabled);
+            this.tpScript.Controls.Add(this.rbFilterTraveler);
+            this.tpScript.Controls.Add(this.btnUseAutomaticNightOrder);
+            this.tpScript.Controls.Add(this.btnConfigureAutomaticNightOrder);
             this.tpScript.Controls.Add(this.button2);
             this.tpScript.Controls.Add(this.button1);
             this.tpScript.Controls.Add(this.btnConfigureNightOrder);
@@ -414,10 +455,6 @@
             this.tpScript.Controls.Add(this.label7);
             this.tpScript.Controls.Add(this.tbScriptName);
             this.tpScript.Controls.Add(this.label6);
-            this.tpScript.Controls.Add(this.lblScriptCountDemons);
-            this.tpScript.Controls.Add(this.lblScriptCountMinions);
-            this.tpScript.Controls.Add(this.lblScriptCountOutsiders);
-            this.tpScript.Controls.Add(this.lblScriptCountTownsfolk);
             this.tpScript.Controls.Add(this.rbFilterAll);
             this.tpScript.Controls.Add(this.rbFilterDemons);
             this.tpScript.Controls.Add(this.rbFilterMinions);
@@ -428,14 +465,36 @@
             this.tpScript.Location = new System.Drawing.Point(4, 22);
             this.tpScript.Name = "tpScript";
             this.tpScript.Padding = new System.Windows.Forms.Padding(3);
-            this.tpScript.Size = new System.Drawing.Size(681, 373);
+            this.tpScript.Size = new System.Drawing.Size(681, 393);
             this.tpScript.TabIndex = 1;
             this.tpScript.Text = "Script";
             this.tpScript.UseVisualStyleBackColor = true;
             // 
+            // btnUseAutomaticNightOrder
+            // 
+            this.btnUseAutomaticNightOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUseAutomaticNightOrder.Location = new System.Drawing.Point(514, 218);
+            this.btnUseAutomaticNightOrder.Name = "btnUseAutomaticNightOrder";
+            this.btnUseAutomaticNightOrder.Size = new System.Drawing.Size(123, 37);
+            this.btnUseAutomaticNightOrder.TabIndex = 24;
+            this.btnUseAutomaticNightOrder.Text = "Use Automatic Night Order";
+            this.btnUseAutomaticNightOrder.UseVisualStyleBackColor = true;
+            this.btnUseAutomaticNightOrder.Click += new System.EventHandler(this.btnUseAutomaticNightOrder_Click);
+            // 
+            // btnConfigureAutomaticNightOrder
+            // 
+            this.btnConfigureAutomaticNightOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfigureAutomaticNightOrder.Location = new System.Drawing.Point(514, 175);
+            this.btnConfigureAutomaticNightOrder.Name = "btnConfigureAutomaticNightOrder";
+            this.btnConfigureAutomaticNightOrder.Size = new System.Drawing.Size(123, 37);
+            this.btnConfigureAutomaticNightOrder.TabIndex = 23;
+            this.btnConfigureAutomaticNightOrder.Text = "Configure Automatic Night Order";
+            this.btnConfigureAutomaticNightOrder.UseVisualStyleBackColor = true;
+            this.btnConfigureAutomaticNightOrder.Click += new System.EventHandler(this.btnConfigureAutomaticNightOrder_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(569, 279);
+            this.button2.Location = new System.Drawing.Point(517, 105);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 22;
@@ -446,7 +505,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(569, 234);
+            this.button1.Location = new System.Drawing.Point(517, 60);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 39);
             this.button1.TabIndex = 21;
@@ -543,42 +602,6 @@
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 12;
             this.label6.Text = "Script";
-            // 
-            // lblScriptCountDemons
-            // 
-            this.lblScriptCountDemons.AutoSize = true;
-            this.lblScriptCountDemons.Location = new System.Drawing.Point(349, 135);
-            this.lblScriptCountDemons.Name = "lblScriptCountDemons";
-            this.lblScriptCountDemons.Size = new System.Drawing.Size(35, 13);
-            this.lblScriptCountDemons.TabIndex = 10;
-            this.lblScriptCountDemons.Text = "label6";
-            // 
-            // lblScriptCountMinions
-            // 
-            this.lblScriptCountMinions.AutoSize = true;
-            this.lblScriptCountMinions.Location = new System.Drawing.Point(349, 112);
-            this.lblScriptCountMinions.Name = "lblScriptCountMinions";
-            this.lblScriptCountMinions.Size = new System.Drawing.Size(35, 13);
-            this.lblScriptCountMinions.TabIndex = 9;
-            this.lblScriptCountMinions.Text = "label6";
-            // 
-            // lblScriptCountOutsiders
-            // 
-            this.lblScriptCountOutsiders.AutoSize = true;
-            this.lblScriptCountOutsiders.Location = new System.Drawing.Point(349, 89);
-            this.lblScriptCountOutsiders.Name = "lblScriptCountOutsiders";
-            this.lblScriptCountOutsiders.Size = new System.Drawing.Size(35, 13);
-            this.lblScriptCountOutsiders.TabIndex = 8;
-            this.lblScriptCountOutsiders.Text = "label6";
-            // 
-            // lblScriptCountTownsfolk
-            // 
-            this.lblScriptCountTownsfolk.AutoSize = true;
-            this.lblScriptCountTownsfolk.Location = new System.Drawing.Point(349, 64);
-            this.lblScriptCountTownsfolk.Name = "lblScriptCountTownsfolk";
-            this.lblScriptCountTownsfolk.Size = new System.Drawing.Size(35, 13);
-            this.lblScriptCountTownsfolk.TabIndex = 7;
-            this.lblScriptCountTownsfolk.Text = "label6";
             // 
             // rbFilterAll
             // 
@@ -684,10 +707,21 @@
             this.tpPDF.Location = new System.Drawing.Point(4, 22);
             this.tpPDF.Name = "tpPDF";
             this.tpPDF.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPDF.Size = new System.Drawing.Size(681, 373);
+            this.tpPDF.Size = new System.Drawing.Size(681, 393);
             this.tpPDF.TabIndex = 2;
             this.tpPDF.Text = "PDF";
             this.tpPDF.UseVisualStyleBackColor = true;
+            // 
+            // btnChooseBackground
+            // 
+            this.btnChooseBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChooseBackground.Location = new System.Drawing.Point(555, 7);
+            this.btnChooseBackground.Name = "btnChooseBackground";
+            this.btnChooseBackground.Size = new System.Drawing.Size(118, 23);
+            this.btnChooseBackground.TabIndex = 17;
+            this.btnChooseBackground.Text = "Choose Background";
+            this.btnChooseBackground.UseVisualStyleBackColor = true;
+            this.btnChooseBackground.Click += new System.EventHandler(this.btnChooseBackground_Click);
             // 
             // btnGeneratePreview
             // 
@@ -876,25 +910,47 @@
             this.btnGeneratePDF.Visible = false;
             this.btnGeneratePDF.Click += new System.EventHandler(this.btnGeneratePDF_Click);
             // 
-            // btnChooseBackground
+            // rbFilterTraveler
             // 
-            this.btnChooseBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnChooseBackground.Location = new System.Drawing.Point(555, 7);
-            this.btnChooseBackground.Name = "btnChooseBackground";
-            this.btnChooseBackground.Size = new System.Drawing.Size(118, 23);
-            this.btnChooseBackground.TabIndex = 17;
-            this.btnChooseBackground.Text = "Choose Background";
-            this.btnChooseBackground.UseVisualStyleBackColor = true;
-            this.btnChooseBackground.Click += new System.EventHandler(this.btnChooseBackground_Click);
+            this.rbFilterTraveler.AutoSize = true;
+            this.rbFilterTraveler.Location = new System.Drawing.Point(349, 60);
+            this.rbFilterTraveler.Name = "rbFilterTraveler";
+            this.rbFilterTraveler.Size = new System.Drawing.Size(64, 17);
+            this.rbFilterTraveler.TabIndex = 25;
+            this.rbFilterTraveler.TabStop = true;
+            this.rbFilterTraveler.Text = "Traveler";
+            this.rbFilterTraveler.UseVisualStyleBackColor = true;
+            this.rbFilterTraveler.CheckedChanged += new System.EventHandler(this.rbFilter_CheckedChanged);
+            // 
+            // rbFilterFabled
+            // 
+            this.rbFilterFabled.AutoSize = true;
+            this.rbFilterFabled.Location = new System.Drawing.Point(349, 83);
+            this.rbFilterFabled.Name = "rbFilterFabled";
+            this.rbFilterFabled.Size = new System.Drawing.Size(57, 17);
+            this.rbFilterFabled.TabIndex = 26;
+            this.rbFilterFabled.TabStop = true;
+            this.rbFilterFabled.Text = "Fabled";
+            this.rbFilterFabled.UseVisualStyleBackColor = true;
+            this.rbFilterFabled.CheckedChanged += new System.EventHandler(this.rbFilter_CheckedChanged);
+            // 
+            // lblSelectedData
+            // 
+            this.lblSelectedData.AutoSize = true;
+            this.lblSelectedData.Location = new System.Drawing.Point(346, 108);
+            this.lblSelectedData.Name = "lblSelectedData";
+            this.lblSelectedData.Size = new System.Drawing.Size(41, 13);
+            this.lblSelectedData.TabIndex = 27;
+            this.lblSelectedData.Text = "Display";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 399);
+            this.ClientSize = new System.Drawing.Size(689, 419);
             this.Controls.Add(this.tcMainControl);
             this.Name = "Main";
-            this.Text = "Blood on the Clocktower - Custom Script Tool";
+            this.Text = "Blood on the Clocktower - Custom Script Tool - Nils 02";
             this.tcMainControl.ResumeLayout(false);
             this.tpCharacters.ResumeLayout(false);
             this.tpCharacters.PerformLayout();
@@ -940,10 +996,6 @@
         private System.Windows.Forms.RadioButton rbFilterOutsider;
         private System.Windows.Forms.RadioButton rbFilterTownsfolk;
         private System.Windows.Forms.RadioButton rbFilterAll;
-        private System.Windows.Forms.Label lblScriptCountTownsfolk;
-        private System.Windows.Forms.Label lblScriptCountDemons;
-        private System.Windows.Forms.Label lblScriptCountMinions;
-        private System.Windows.Forms.Label lblScriptCountOutsiders;
         private System.Windows.Forms.TextBox tbScriptAuthor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbScriptName;
@@ -981,6 +1033,14 @@
         private System.Windows.Forms.Button btnGeneratePreview;
         private System.Windows.Forms.Label lblPreViewPage;
         private System.Windows.Forms.Button btnChooseBackground;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox tbRoleEnglishName;
+        private System.Windows.Forms.RadioButton rbSystem;
+        private System.Windows.Forms.Button btnConfigureAutomaticNightOrder;
+        private System.Windows.Forms.Button btnUseAutomaticNightOrder;
+        private System.Windows.Forms.RadioButton rbFilterFabled;
+        private System.Windows.Forms.RadioButton rbFilterTraveler;
+        private System.Windows.Forms.Label lblSelectedData;
     }
 }
 
