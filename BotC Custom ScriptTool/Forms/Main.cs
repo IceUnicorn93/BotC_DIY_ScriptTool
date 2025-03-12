@@ -611,7 +611,8 @@ namespace BotC_Custom_ScriptTool.Forms
             PDF_ImageCreator.CreatePreview(script, roles, jinxes, tbScriptName.Text, tbScriptAuthor.Text, tbCustomBackgroundPath.Text, rbUse2Columns.Checked, cbxPrintCharacterBorder.Checked);
 
             lblPreViewPage.Text = $"1 / {PDF_ImageCreator.PagesToPrint.Count}";
-            pbPreview.Image = PDF_ImageCreator.PagesToPrint[0];
+            if(PDF_ImageCreator.PagesToPrint.Count > 0)
+                pbPreview.Image = PDF_ImageCreator.PagesToPrint[0];
         }
 
         private void btnPreviousImage_Click(object sender, EventArgs e)
