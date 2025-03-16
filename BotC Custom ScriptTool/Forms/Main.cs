@@ -587,8 +587,11 @@ namespace BotC_Custom_ScriptTool.Forms
                 ScriptName = tbScriptName.Text
             };
 
-            pbPreview.Image.Dispose();
-            pbPreview.Image = null;
+            if (pbPreview.Image != null)
+            {
+                pbPreview.Image.Dispose();
+                pbPreview.Image = null; 
+            }
 
             PDF_ImageCreator.PrintToPDF = false;
             PDF_ImageCreator.FontSizeRoles = (int)nudPdfCharacterNameSize.Value;

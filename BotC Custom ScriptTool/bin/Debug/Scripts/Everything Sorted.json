@@ -1,0 +1,864 @@
+{
+  "Roles": [
+    "Acrobat",
+    "Alchemist",
+    "Alsaahir",
+    "Amnesiac",
+    "Atheist",
+    "Balloonist",
+    "Banshee",
+    "Bibliothekar",
+    "Blumenm\u00E4dchen",
+    "Bounty Hunter",
+    "B\u00FCrgermeister",
+    "Cannibal",
+    "Choir Boy",
+    "Cult Leader",
+    "D\u00E4monenj\u00E4ger",
+    "Detektiv",
+    "Empath",
+    "Engineer",
+    "Exorzist",
+    "Farmer",
+    "Fisherman",
+    "Gastwirt",
+    "General",
+    "Gl\u00FCcksspieler",
+    "Gro\u00DFmutter",
+    "High Priestess",
+    "H\u00F6fling",
+    "Huntsman",
+    "Jongleur",
+    "Jungfrau",
+    "Kammerzofe",
+    "King",
+    "Knight",
+    "Koch",
+    "K\u00FCnstler",
+    "Lycanthrope",
+    "Magician",
+    "Marktschreier",
+    "Mathematiker",
+    "Minnes\u00E4nger",
+    "M\u00F6nch",
+    "Narr",
+    "Nightwatchman",
+    "Noble",
+    "Orakel",
+    "Pazifist",
+    "Philosoph",
+    "Pixie",
+    "Poppy Grower",
+    "Preacher",
+    "Professor",
+    "Rabenh\u00FCter",
+    "Savant",
+    "Schlangenbeschw\u00F6rer",
+    "Schneiderin",
+    "Schw\u00E4tzer",
+    "Segler",
+    "Shugenja",
+    "Soldat",
+    "Steward",
+    "Teedame",
+    "Totengr\u00E4ber",
+    "Tr\u00E4umer",
+    "Uhrmacher",
+    "Village Idiot",
+    "Wahrsagerin",
+    "Waschweib",
+    "Weise",
+    "Barbier",
+    "Bastler",
+    "Butler",
+    "Damsel",
+    "Einsiedler",
+    "Golem",
+    "Hatter",
+    "Heilige",
+    "Heretic",
+    "Liebchen",
+    "Mondkind",
+    "Mutant",
+    "Ogre",
+    "Plague Doctor",
+    "Politician",
+    "Puzzlemaster",
+    "Schl\u00E4ger",
+    "Snitch",
+    "Tollpatsch",
+    "Trunkenbold",
+    "Verr\u00FCckte",
+    "Zealot",
+    "Baron",
+    "Boffin",
+    "Boomdandy",
+    "B\u00F6ser Zwilling",
+    "Cerenovus",
+    "Fearmonger",
+    "Giftmischer",
+    "Goblin",
+    "Grubenweib",
+    "Harpy",
+    "Hexe",
+    "Marionette",
+    "Meuchelm\u00F6rder",
+    "Mezepheles",
+    "Organ Grinder",
+    "Pate",
+    "Psychopath",
+    "Scharlachrote Frau",
+    "Spion",
+    "Strippenzieher",
+    "Summoner",
+    "Teufelsadvokat",
+    "Vizier",
+    "Widow",
+    "Wizard",
+    "Xaan",
+    "Al-Hadikhia",
+    "Fang Gu",
+    "Imp",
+    "Kazali",
+    "Legion",
+    "Leviathan",
+    "Lil\u0027 Monsta",
+    "Lleech",
+    "Lord of Typhon",
+    "No Dashii",
+    "Ojo",
+    "Poe",
+    "Pukka",
+    "Riot",
+    "Shabaloth",
+    "Vigormortis",
+    "Vortox",
+    "Yaggababble",
+    "Zombuul",
+    "Barista",
+    "Bettler",
+    "Bischof",
+    "B\u00FCrokrat",
+    "Dieb",
+    "Dirne",
+    "Gangster",
+    "Gnome",
+    "Knochensammler",
+    "Lehrling",
+    "Metzger",
+    "Oberin",
+    "Querulant",
+    "Revolverheld",
+    "Richter",
+    "S\u00FCndenbock",
+    "Voudon",
+    "Bootlegger",
+    "Buddhist",
+    "Dschinn",
+    "Elfenbeingeist",
+    "Engel",
+    "Ferryman",
+    "Gardener",
+    "Geiger",
+    "Herzogin",
+    "H\u00F6llenbibliothekar",
+    "M\u00E4rchenonkel",
+    "Revolution\u00E4r",
+    "Spielzeugmacher",
+    "Storm Catcher",
+    "Unheilsprohet",
+    "W\u00E4chter"
+  ],
+  "NightOrder": {
+    "FirstNight": [
+      {
+        "Rolename": "Abendd\u00E4mmerung",
+        "NightInformation": "Vergewissere dich, dass alle Augen geschlossen sind. Einige Reisende \u0026 Legenden handeln."
+      },
+      {
+        "Rolename": "Spielzeugmacher",
+        "NightInformation": "Der D\u00E4mon w\u00E4hlt m\u00F6glicherweise keinen Spieler."
+      },
+      {
+        "Rolename": "Engel",
+        "NightInformation": "Verk\u00FCnde welche Spieler durch den Engel besch\u00FCtzt sind. Platziere das \u0022Besch\u00FCtzt\u0022 Pl\u00E4ttchen bei den betroffenen Spielern."
+      },
+      {
+        "Rolename": "Buddhist",
+        "NightInformation": "Verk\u00FCnde welche Spieler vom Buddhisten betroffen sind"
+      },
+      {
+        "Rolename": "Storm Catcher",
+        "NightInformation": "Zu Beginn der Nacht, verk\u00FCnde welche Rolle von Storm Catcher besch\u00FCtzt ist. Wenn die Rolle im Spiel ist, platziere das \u0022Safe\u0022 Pl\u00E4ttchen bei dem betroffenen Spieler. Wecke jeden b\u00F6sen Spieler und zeige Ihnen das Rollen-Pl\u00E4ttchen, dann den Spieler. Wenn nicht im Spiel, wecke jeden b\u00F6sen Spieler, zeige Ihnen das \u0022DIESE ROLLEN SIND NICHT IM SPIEL\u0022 Pl\u00E4ttchen und die betroffene Rolle."
+      },
+      {
+        "Rolename": "Lord of Typhon",
+        "NightInformation": "Ersetzte die Nachbarn des Lord of Typhon mit Schergen und wecke sie auf. Verrate ihnen ihre neue Teamzugeh\u00F6rigkeit und Charaktere, dann handle die Schergen Info ab."
+      },
+      {
+        "Rolename": "Lehrling",
+        "NightInformation": "Der Lehrling f\u00FChrt die Rollen-Aktion eventuell aus."
+      },
+      {
+        "Rolename": "Barista",
+        "NightInformation": "Der Barista w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "B\u00FCrokrat",
+        "NightInformation": "Der B\u00FCrokrat w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Dieb",
+        "NightInformation": "Der Dieb w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Boffin",
+        "NightInformation": "Wecke den Boffin und den D\u00E4mon. Zeige das nicht im Spiel befindliche gute Charakterpl\u00E4ttchen. Lasse den Boffin und den D\u00E4mon einschlafen."
+      },
+      {
+        "Rolename": "Philosoph",
+        "NightInformation": "Der Philosoph w\u00E4hlt m\u00F6glicherweise einen Charakter. Falls n\u00F6tig, tausche sein Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Kazali",
+        "NightInformation": "Wecke den Kazali. Erlaube ihm, Schergen zu w\u00E4hlen."
+      },
+      {
+        "Rolename": "Alchemist",
+        "NightInformation": "Zeige das DU BIST Pl\u00E4ttchen und ein Scherge Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Poppy Grower",
+        "NightInformation": "F\u00FChre die Schergen Info und D\u00E4mon Info Schritte nicht aus. Wecke den D\u00E4mon. Zeige das DIESE CHARAKTERE SIND NICHT IM SPIEL Pl\u00E4ttchen. Zeige 3 nicht im Spiel befindliche gute Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Yaggababble",
+        "NightInformation": "W\u00E4hle einen geheimen Satz. Wecke den Yagababble und lass ihn seinen geheimen Satz wissen."
+      },
+      {
+        "Rolename": "Magician",
+        "NightInformation": "Inkludiere den Magician in den Schergen Info und D\u00E4mon Info Schritten."
+      },
+      {
+        "Rolename": "Schergen Info",
+        "NightInformation": "Falls 7 oder mehr Spieler mitspielen, wecke alle Schergen: Zeige das DIES IST DER D\u00C4MON Pl\u00E4ttchen. Zeige auf den D\u00E4mon."
+      },
+      {
+        "Rolename": "Snitch",
+        "NightInformation": "Wecke jeden Schergen. Zeige das DIESE CHARAKTERE SIND NICHT IM SPIEL Pl\u00E4ttchen. Zeige 3 nicht im Spiel befindliche gute Charakterpl\u00E4ttchen. Lasse jeden Schergen einschlafen."
+      },
+      {
+        "Rolename": "Verr\u00FCckte",
+        "NightInformation": "Falls 7 oder mehr Spieler mitspielen, wecke die Verr\u00FCckte: Zeige das DIES SIND DEINE SCHERGEN Pl\u00E4ttchen. Zeige auf beliebige Spieler. Zeige das DIESE CHARAKTERE SIND NICHT IM SPIEL Pl\u00E4ttchen. Zeige 3 gute Charakterpl\u00E4ttchen. Lasse die Verr\u00FCckte einschlafen. Wecke den D\u00E4mon. Zeige das DU BIST Pl\u00E4ttchen und das D\u00E4monpl\u00E4ttchen. Zeige das DIESER SPIELER IST Pl\u00E4ttchen, zeige das Verr\u00FCcktpl\u00E4ttchen, zeige auf die Verr\u00FCckte."
+      },
+      {
+        "Rolename": "Summoner",
+        "NightInformation": "Zeige das DIESE CHARAKTERE SIND NICHT IM SPIEL Pl\u00E4ttchen. Zeige 3 nicht im Spiel befindliche gute Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "D\u00E4mon Info",
+        "NightInformation": "Falls 7 oder mehr Spieler mitspielen, wecke den D\u00E4mon: Zeige das DIES SIND DEINE SCHERGEN Pl\u00E4ttchen. Zeige auf alle Schergen. Zeige das DIESE CHARAKTERE SIND NICHT IM SPIEL Pl\u00E4ttchen. Zeige 3 nicht im Spiel befindliche gute Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "King",
+        "NightInformation": "Wecke den D\u00E4mon. Zeige das DIESER SPIELER IST Pl\u00E4ttchen und das King Charakterpl\u00E4ttchen, dann zeige auf den King."
+      },
+      {
+        "Rolename": "Segler",
+        "NightInformation": "Der Segler w\u00E4hlt einen lebendigen Spieler."
+      },
+      {
+        "Rolename": "Marionette",
+        "NightInformation": "Wecke den D\u00E4mon. Zeige an den Spieler, der mit IS THE MARIONETTE markiert ist. Zeige das DIESER SPIELER IST Pl\u00E4ttchen und das Marionette Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Engineer",
+        "NightInformation": "Der Engineer w\u00E4hlt m\u00F6glicherweise Schergen oder D\u00E4monen. Falls er das tut: Lasse den Engineer schlafen. Wecke ein Ziel, zeige ihm das DU BIST Pl\u00E4ttchen und sein Charakterpl\u00E4ttchen. Lasse ihn einschlafen. Wiederhole die Schritte f\u00FCr alle Spieler, die ihren Charakter gewechselt haben."
+      },
+      {
+        "Rolename": "Preacher",
+        "NightInformation": "Der Preacher w\u00E4hlt einen Spieler. Falls er einen Schergen gew\u00E4hlt hat: Lasse den Preacher einschlafen. Wecke das Ziel. Zeige das DIESER CHARAKTER HAT DICH GEW\u00C4HLT Pl\u00E4ttchen und das Preacher Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Lil\u0027 Monsta",
+        "NightInformation": "Wecke alle Minions. Erlaube ihnen, einen Babysitter zu w\u00E4hlen."
+      },
+      {
+        "Rolename": "Lleech",
+        "NightInformation": "Der Lleech w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Xaan",
+        "NightInformation": "Markiere den Xaan mit dem NACHT 1 Erinnerungspl\u00E4ttchen. Falls X 1 ist, markiere den Xaan mit dem X Erinnerungspl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Giftmischer",
+        "NightInformation": "Der Giftmischer w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Widow",
+        "NightInformation": "Zeige der Widow das Grimoire so lange, wie sie es braucht. Die Widow w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "H\u00F6fling",
+        "NightInformation": "Der H\u00F6fling w\u00E4hlt m\u00F6glicherweise einen Charakter."
+      },
+      {
+        "Rolename": "Wizard",
+        "NightInformation": "Handle falls notwendig die F\u00E4higkeit des Wizard ab."
+      },
+      {
+        "Rolename": "Schlangenbeschw\u00F6rer",
+        "NightInformation": "Der Schlangenbeschw\u00F6rer w\u00E4hlt einen Spieler. Falls er den D\u00E4mon gew\u00E4hlt hat: Zeige das DU BIST \u0026 das D\u00E4monpl\u00E4ttchen. Zeige einen Daumen nach unten. Vertausche das Schlangenbeschw\u00F6rer- \u0026 das D\u00E4monpl\u00E4ttchen im Grimooire. Lasse den vorherigen Schlangenbeschw\u00F6rer einschalfen. Wecke den vorherigen D\u00E4mon. Zeige das DU BIST und das Schlangenbeschw\u00F6rerpl\u00E4ttchen \u0026 zeige einen Daumen nach oben."
+      },
+      {
+        "Rolename": "Pate",
+        "NightInformation": "Zeige die Charakterpl\u00E4ttchen aller Au\u00DFenseiter, die im Spiel sind."
+      },
+      {
+        "Rolename": "Organ Grinder",
+        "NightInformation": "Der Organ Grinder nickt entweder um betrunken zu sein, oder sch\u00FCttelt den Kopf um n\u00FCchtern zu sein."
+      },
+      {
+        "Rolename": "Teufelsadvokat",
+        "NightInformation": "Der Teufelsadvokat w\u00E4hlt einen lebendigen Spieler."
+      },
+      {
+        "Rolename": "B\u00F6ser Zwilling",
+        "NightInformation": "Wecke beide Zwillinge. Stelle sicher, dass sie Augenkontakt miteinander herstllen. Zeige dem B\u00F6sen Zwilling das Charakterpl\u00E4ttchen des Guten Zwillings und umgekehrt."
+      },
+      {
+        "Rolename": "Hexe",
+        "NightInformation": "Die Hexe w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Cerenovus",
+        "NightInformation": "Der Cerenovus w\u00E4hlt einen Spieler \u0026 einen Charakter. Lasse den Cerenovus einschalfen. Wecke den gew\u00E4hlten Spieler. Zeige das DIESER CHARAKTER HAT DICH GEW\u00C4HLT Pl\u00E4ttchen, das Cerenovuspl\u00E4ttchen und ddann das Pl\u00E4ttchen des Charakter, den der Cerenovus gew\u00E4hlt hat."
+      },
+      {
+        "Rolename": "Fearmonger",
+        "NightInformation": "Der Fearmonger w\u00E4hlt einen Spieler. Verk\u00FCnde \u0022Der Fearmonger hat einen Spieler gew\u00E4hlt.\u0022"
+      },
+      {
+        "Rolename": "Harpy",
+        "NightInformation": "Die Harpy w\u00E4hlt zwei Spieler. Lasse die Harpy einschlafen. Wecke das erste Ziel. Zeige das DIESER CHARAKTER HAT DICH GEW\u00C4HLT Pl\u00E4ttchen und das Harpy Charakterpl\u00E4ttchen. Zeige auf das zweite Ziel."
+      },
+      {
+        "Rolename": "Mezepheles",
+        "NightInformation": "Zeige das aufgeschriebene Wort."
+      },
+      {
+        "Rolename": "Pukka",
+        "NightInformation": "Die Pukka w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Pixie",
+        "NightInformation": "Zeige das B\u00FCrger Charakterpl\u00E4ttchen das mit MAD markiert ist."
+      },
+      {
+        "Rolename": "Huntsman",
+        "NightInformation": "Der Huntsman w\u00E4hlt m\u00F6glicherweise einen Spieler. Wenn der Spieler die Damsel war: Lasse den Huntsman einschlafen. Wecke die Damsel und zeige ihr das DU BIST Pl\u00E4ttchen und ihr Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Damsel",
+        "NightInformation": "Wenn die Damsel vom Huntsman gew\u00E4hlt wurde, zeige ihr das DU BIST Pl\u00E4ttchen und ihr neues Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Amnesiac",
+        "NightInformation": "Handle falls notwendig die F\u00E4higkeit des Amnesiac ab."
+      },
+      {
+        "Rolename": "Waschweib",
+        "NightInformation": "Zeige das B\u00FCrger-Pl\u00E4ttchen. Zeige auf den B\u00FCrger und auf den B\u00DCRGER und auf den FALSCHen Spieler."
+      },
+      {
+        "Rolename": "Bibliothekar",
+        "NightInformation": "Zeige das Au\u00DFenseiter-Pl\u00E4ttchen. Zeige auf den AU\u00DFENSEITER und auf den FALSCHen Spieler."
+      },
+      {
+        "Rolename": "Detektiv",
+        "NightInformation": "Zeige das Scherge-Pl\u00E4ttchen. Zeige auf den SCHERGEn und auf den FALSCHen Spieler."
+      },
+      {
+        "Rolename": "Koch",
+        "NightInformation": "Gib ein Fingerzeichen."
+      },
+      {
+        "Rolename": "Empath",
+        "NightInformation": "Gib ein Fingerzeichen."
+      },
+      {
+        "Rolename": "Wahrsagerin",
+        "NightInformation": "Die Wahrsagerin w\u00E4hlt 2 Spieler. Nicke, falls einer davon der D\u00E4mon (oder die FALSCHE F\u00C4HRTE) ist."
+      },
+      {
+        "Rolename": "Butler",
+        "NightInformation": "Der Butler w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Gro\u00DFmutter",
+        "NightInformation": "Zeige auf den Spieler, der das Enkelking ist \u0026 zeige sein Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Uhrmacher",
+        "NightInformation": "Gib ein Fingerzeichen."
+      },
+      {
+        "Rolename": "Tr\u00E4umer",
+        "NightInformation": "Der Tr\u00E4umer w\u00E4hlt einen Spieler. Zeige 1 gutes \u0026 1 b\u00F6ses Charakterpl\u00E4ttchen, wovon 1 der Charakter des gew\u00E4hlten Spielers ist."
+      },
+      {
+        "Rolename": "Schneiderin",
+        "NightInformation": "Die Schneiderin w\u00E4hlt m\u00F6glicherweise 2 Spieler. Nicke oder sch\u00FCttele den Kopf."
+      },
+      {
+        "Rolename": "Steward",
+        "NightInformation": "Zeige auf den guten Spieler der mit KNOW markiert ist."
+      },
+      {
+        "Rolename": "Knight",
+        "NightInformation": "Zeige auf die zwei nicht-D\u00E4mon Spieler die mit KNOW markiert sind."
+      },
+      {
+        "Rolename": "Noble",
+        "NightInformation": "Zeige auf alle drei Spieler die mit KNOW markiert sind."
+      },
+      {
+        "Rolename": "Balloonist",
+        "NightInformation": "Zeige irgendeinen Spieler."
+      },
+      {
+        "Rolename": "Shugenja",
+        "NightInformation": "Zeige im Uhrzeigersinn oder gegen den Uhrzeigersinn im Kreis."
+      },
+      {
+        "Rolename": "Village Idiot",
+        "NightInformation": "W\u00E4hle einen Village Idiot der betrunken ist. Wecke die Village Idiots einen nach dem anderen. Sie w\u00E4hlen jeder einen Spieler. Zeige ihnen jeweils einen Daumen nach oben oder einen Daumen nach unten, entsprechend dem Team des gew\u00E4hlten Spielers."
+      },
+      {
+        "Rolename": "Bounty Hunter",
+        "NightInformation": "Zeige auf den KNOWN Spieler."
+      },
+      {
+        "Rolename": "Nightwatchman",
+        "NightInformation": "Der Nightwatchman w\u00E4hlt m\u00F6glicherweise einen Spieler. Lasse den Nightwatchman einschlafen. Wecke das Ziel und zeige ihm das DIESER SPIELER IST Pl\u00E4ttchen und das Nightwatchman Charakterpl\u00E4ttchen und zeige auf den Nightwatchman."
+      },
+      {
+        "Rolename": "Cult Leader",
+        "NightInformation": "Der Cult Leader wechselt m\u00F6glicherweise seine Teamzugeh\u00F6rigkeit. Falls es so ist, zeige ihm das DU BIST Pl\u00E4ttchen und einen Daumen nach oben oder Daumen nach unten entsprechend seinem neuen Team."
+      },
+      {
+        "Rolename": "Spion",
+        "NightInformation": "Zeige dem Spion das Grimorie so lange, wie er es braucht."
+      },
+      {
+        "Rolename": "Ogre",
+        "NightInformation": "Der Ogre zeigt auf einen Spieler."
+      },
+      {
+        "Rolename": "High Priestess",
+        "NightInformation": "Zeige auf einen Spieler."
+      },
+      {
+        "Rolename": "General",
+        "NightInformation": "Zeige ein Daumensignal."
+      },
+      {
+        "Rolename": "Kammerzofe",
+        "NightInformation": "Die Kammerzofe w\u00E4hlt 2 lebendige Spieler. Gib ein Fingerzeichen."
+      },
+      {
+        "Rolename": "Mathematiker",
+        "NightInformation": "Gib ein Fingerzeichen."
+      },
+      {
+        "Rolename": "Morgend\u00E4mmerung",
+        "NightInformation": "Warte ein paar Sekunden. Dann wecke alle Spieler."
+      },
+      {
+        "Rolename": "Leviathan",
+        "NightInformation": "Verk\u00FCnde \u0022Der Leviathan ist im Spiel.\u0022 Markiere den Leviathan mit dem DAY 1 Erinnerungspl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Vizier",
+        "NightInformation": "Verk\u00FCnde der Gruppe, welcher Spieler der Vizier ist."
+      }
+    ],
+    "OtherNights": [
+      {
+        "Rolename": "Abendd\u00E4mmerung",
+        "NightInformation": "Vergewissere dich, dass alle Augen geschlossen sind. Einige Reisende \u0026 Legenden handeln."
+      },
+      {
+        "Rolename": "Spielzeugmacher",
+        "NightInformation": "Wenn dies eine Nacht ist in der der D\u00E4monangriff das Spiel beenden k\u00F6nnte und der D\u00E4mon ist hat das \u0022Final night: No Attack\u0022 Pl\u00E4ttchen, dann greift der D\u00E4mon heute nicht an. Wecke Ihn nicht."
+      },
+      {
+        "Rolename": "Herzogin",
+        "NightInformation": "Gib jedem Besucher ein Fingerzeichen. Einer bekommt falsche Informationen"
+      },
+      {
+        "Rolename": "Barista",
+        "NightInformation": "Der Barista w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "B\u00FCrokrat",
+        "NightInformation": "Der B\u00FCrokrat w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Dieb",
+        "NightInformation": "Der Dieb w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Dirne",
+        "NightInformation": "Die Dirne w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Knochensammler",
+        "NightInformation": "Der Knochensammler w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Philosoph",
+        "NightInformation": "Der Philosoph w\u00E4hlt m\u00F6glicherweise einen Charakter. Falls n\u00F6tig, tausche sein Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Poppy Grower",
+        "NightInformation": "Falls der Poppy Grower heute oder heute Nacht gestorben ist, wecke die Schergen, zeige das DIES IST DER D\u00C4MON Pl\u00E4ttchen. Zeige auf den D\u00E4mon. Lasse sie einschlafen. Wecke den D\u00E4mon, zeige ihm das DIES SIND DEINE SCHERGEN Pl\u00E4ttchen. Zeige auf alle Schergen. Lasse den D\u00E4mon einschlafen."
+      },
+      {
+        "Rolename": "Segler",
+        "NightInformation": "Der Segler w\u00E4hlt einen lebendigen Spieler."
+      },
+      {
+        "Rolename": "Engineer",
+        "NightInformation": "Der Engineer w\u00E4hlt m\u00F6glicherweise Schergen oder D\u00E4monen. Falls er das tut: Lasse den Engineer schlafen. Wecke ein Ziel, zeige ihm das DU BIST Pl\u00E4ttchen und sein Charakterpl\u00E4ttchen. Lasse ihn einschlafen. Wiederhole die Schritte f\u00FCr alle Spieler, die ihren Charakter gewechselt haben."
+      },
+      {
+        "Rolename": "Preacher",
+        "NightInformation": "Der Preacher w\u00E4hlt einen Spieler. Falls er einen Schergen gew\u00E4hlt hat: Lasse den Preacher einschlafen. Wecke das Ziel. Zeige das DIESER CHARAKTER HAT DICH GEW\u00C4HLT Pl\u00E4ttchen und das Preacher Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Xaan",
+        "NightInformation": "\u00C4ndere das Xaan Erinnerungspl\u00E4ttchen auf das f\u00FCr die aktuelle Nacht relevante Pl\u00E4ttchen. Wenn es Nacht X ist, markiere den Xaan mit dem X Erinnerungspl\u00E4tchen."
+      },
+      {
+        "Rolename": "Giftmischer",
+        "NightInformation": "Der Giftmischer w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "H\u00F6fling",
+        "NightInformation": "Der H\u00F6fling w\u00E4hlt m\u00F6glicherweise einen Charakter."
+      },
+      {
+        "Rolename": "Gastwirt",
+        "NightInformation": "Der Gastwirt w\u00E4hlt 2 Spieler."
+      },
+      {
+        "Rolename": "Wizard",
+        "NightInformation": "Handle falls notwendig die F\u00E4higkeit des Wizard ab."
+      },
+      {
+        "Rolename": "Gl\u00FCcksspieler",
+        "NightInformation": "Der Gl\u00FCckspieler w\u00E4hlt einen Spieler \u0026 einen Charakter."
+      },
+      {
+        "Rolename": "Schlangenbeschw\u00F6rer",
+        "NightInformation": "Der Schlangenbeschw\u00F6rer w\u00E4hlt einen Spieler. Falls er den D\u00E4mon gew\u00E4hlt hat: Zeige das DU BIST \u0026 das D\u00E4monpl\u00E4ttchen. Zeige einen Daumen nach unten. Vertausche das Schlangenbeschw\u00F6rer- \u0026 das D\u00E4monpl\u00E4ttchen im Grimooire. Lasse den vorherigen Schlangenbeschw\u00F6rer einschalfen. Wecke den vorherigen D\u00E4mon. Zeige das DU BIST und das Schlangenbeschw\u00F6rerpl\u00E4ttchen \u0026 zeige einen Daumen nach oben."
+      },
+      {
+        "Rolename": "M\u00F6nch",
+        "NightInformation": "Der M\u00F6nch w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Organ Grinder",
+        "NightInformation": "Der Organ Grinder nickt entweder um betrunken zu sein, oder sch\u00FCttelt den Kopf um n\u00FCchtern zu sein."
+      },
+      {
+        "Rolename": "Teufelsadvokat",
+        "NightInformation": "Der Teufelsadvokat w\u00E4hlt einen lebendigen Spieler."
+      },
+      {
+        "Rolename": "Hexe",
+        "NightInformation": "Die Hexe w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Cerenovus",
+        "NightInformation": "Der Cerenovus w\u00E4hlt einen Spieler \u0026 einen Charakter. Lasse den Cerenovus einschalfen. Wecke den gew\u00E4hlten Spieler. Zeige das DIESER CHARAKTER HAT DICH GEW\u00C4HLT Pl\u00E4ttchen, das Cerenovuspl\u00E4ttchen und ddann das Pl\u00E4ttchen des Charakter, den der Cerenovus gew\u00E4hlt hat."
+      },
+      {
+        "Rolename": "Grubenweib",
+        "NightInformation": "Das Grubenweib w\u00E4hlt einen Spieler. Falls er ein Au\u00DFenseiter w\u00E4hlt (passiert maximal einmal): Ersetze das Au\u00DFenseiter-Pl\u00E4ttchen durch das zus\u00E4tzliche Fang Gu-Pl\u00E4ttchen. Lasse den Fang Gu einschalfen. Wecke das Ziel. Zeige das DU BIST und das Fang Gu-Pl\u00E4ttchen \u0026 zeige einen Daumen nach unten."
+      },
+      {
+        "Rolename": "Fearmonger",
+        "NightInformation": "Der Fearmonger w\u00E4hlt einen Spieler. Wenn der Spieler nicht bereits mit dem FEAR Erinnerungspl\u00E4ttchen markiert war, verk\u00FCnde \u0022Der Fearmonger hat einen Spieler gew\u00E4hlt.\u0022"
+      },
+      {
+        "Rolename": "Harpy",
+        "NightInformation": "Die Harpy w\u00E4hlt zwei Spieler. Lasse die Harpy einschlafen. Wecke das erste Ziel. Zeige das DIESER CHARAKTER HAT DICH GEW\u00C4HLT Pl\u00E4ttchen und das Harpy Charakterpl\u00E4ttchen. Zeige auf das zweite Ziel."
+      },
+      {
+        "Rolename": "Mezepheles",
+        "NightInformation": "Wenn ein Spieler mit dem TURNS EVIL Erinnerungspl\u00E4ttchen markiert ist, wecke ihn auf. Zeige ihm das DU BIST Pl\u00E4ttchen und einen Daumen nach unten. Der Mezepheles verliert seine F\u00E4higkeit."
+      },
+      {
+        "Rolename": "Scharlachrote Frau",
+        "NightInformation": "Falls die Scharlachrote Frau heute zum Imp wurde, zeige ihr das DU BIST Pl\u00E4ttchen, dann zeige das Imppl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Summoner",
+        "NightInformation": "\u00C4ndere das Summoner Erinnerungspl\u00E4tchen auf das f\u00FCr die aktuelle Nacht relevante Pl\u00E4ttchen. Falls es Nacht 3 ist, w\u00E4hlt der Summoner einen Spieler und einen D\u00E4mon. Lasse den Summoner einschlafen. Wecke den gew\u00E4hlten Spieler. Zeige ihm das DU BIST Pl\u00E4ttchen. Zeige einen Daumen nach unten. Zeige das gew\u00E4hlte D\u00E4mon Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Verr\u00FCckte",
+        "NightInformation": "Tue, was immer du tun musst, um das Handeln des D\u00E4mons zu simulieren. Lasse die Verr\u00FCckte einschalfen. Wecke den D\u00E4mon. Zeige das Verr\u00FCcktepl\u00E4ttchen \u0026 zeige das die Verr\u00FCckte, zeige dann auf ihr(e) Ziel(e)."
+      },
+      {
+        "Rolename": "Exorzist",
+        "NightInformation": "Der Exorizist w\u00E4hlt einen Spieler. Lasse den Exorzisten einschalfen. Falls der Exorzist den D\u00E4mon gew\u00E4hlt hat: Wecke den D\u00E4mon. Zeige das DIESER CHARAKTER HAT DICH GEW\u00C4HLT Pl\u00E4ttchen \u0026 das Exorzistpl\u00E4ttchen. Zeige auf den Exorzisten."
+      },
+      {
+        "Rolename": "Lycanthrope",
+        "NightInformation": "Der Lycanthrope w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Legion",
+        "NightInformation": "Ein Spieler stirbt m\u00F6glicherweise."
+      },
+      {
+        "Rolename": "Imp",
+        "NightInformation": "Der Imp w\u00E4hlt einen Spieler. Falls der Imp sich selbst w\u00E4hlt: Ersetze das Pl\u00E4ttchen eines lebendigen Schergen durch ein zus\u00E4tzliches Imppl\u00E4ttchen. Lasse de bisherigen Imp einschalfen. Wecke den neuen Imp. Zeige das DU BIST Pl\u00E4ttchen, dann zeige das Imppl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Zombuul",
+        "NightInformation": "Falls heute niemand gestorben ist, w\u00E4hlt der Zombuul einen Spieler."
+      },
+      {
+        "Rolename": "Pukka",
+        "NightInformation": "Die Pukka w\u00E4hlt einen Spieler. Der zuvor vergiftete Spieler stirbt und ist dann nicht mehr vergiftet."
+      },
+      {
+        "Rolename": "Shabaloth",
+        "NightInformation": "Ein zuvor gew\u00E4hlter Spieler k\u00F6nnte wieder auferstehen. Der Shabaloth w\u00E4hlt 2 Spieler."
+      },
+      {
+        "Rolename": "Poe",
+        "NightInformation": "Der Poe darf einen Spieler w\u00E4hlen ODER w\u00E4hlt 3 Spieler, falls er letzte Nacht niemanden gew\u00E4hlt hat."
+      },
+      {
+        "Rolename": "Fang Gu",
+        "NightInformation": "Der Fang Gu w\u00E4hlt einen Spieler. Falls er ein Au\u00DFenseiter w\u00E4hlt (passiert Maximal einmal): Ersetze das Au\u00DFenseiter-Pl\u00E4ttchen durch das zus\u00E4tzliche Fang Gu-Pl\u00E4ttchen. Lasse den Fang Gu einschalfen. Wecke das Ziel. Zeige das DU BIST und das Fang Gu-Pl\u00E4ttchen \u0026 zeige einen Daumen nach unten."
+      },
+      {
+        "Rolename": "No Dashii",
+        "NightInformation": "Die No Dashii w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Vortox",
+        "NightInformation": "Der Vortox w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Lord of Typhon",
+        "NightInformation": "Der Lord of Typhon w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Vigormortis",
+        "NightInformation": "Der Vigormortis w\u00E4hlt einen Spieler. Falls dieser Spieler ein Scherge ist, vergifte einen benachbarten B\u00FCrger."
+      },
+      {
+        "Rolename": "Ojo",
+        "NightInformation": "Der Ojo w\u00E4hlt einen Charakter."
+      },
+      {
+        "Rolename": "Al-Hadikhia",
+        "NightInformation": "Der Al-Hadikhia w\u00E4hlt drei Spieler. Wecke den mit 1 markierten Spieler und sage \u0022Der Al-Hadikhia hat (Spielername) gew\u00E4hlt. W\u00E4hlst du zu leben?\u0022 Der Spieler nickt oder sch\u00FCttelt den Kopf. Lass ihn einschlafen und f\u00FCge Schleier hinzu oder entferne sie entsprechend. Wiederhole dies f\u00FCr die mit 2 und 3 markierten Spieler. Wenn nun alle drei Spieler leben, f\u00FCge allen drei Spielern einen Schleier hinzu."
+      },
+      {
+        "Rolename": "Lleech",
+        "NightInformation": "Der Lleech w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Lil\u0027 Monsta",
+        "NightInformation": "Wecke alle Minions. Erlaube ihnen, einen Babysitter zu w\u00E4hlen. Ein Spieler stirbt m\u00F6glicherweise."
+      },
+      {
+        "Rolename": "Yaggababble",
+        "NightInformation": "F\u00FCr jedes Mal, dass der Yaggababble seinen Satz heute gesagt hat, kannst du einen Spieler w\u00E4hlen. Er stirbt."
+      },
+      {
+        "Rolename": "Kazali",
+        "NightInformation": "The Kazali chooses a player."
+      },
+      {
+        "Rolename": "Meuchelm\u00F6rder",
+        "NightInformation": "Der Meuchelm\u00F6rder w\u00E4hlt m\u00F6glicherweise einen Spieler."
+      },
+      {
+        "Rolename": "Pate",
+        "NightInformation": "Falls heute ein Au\u00DFenseiter gestorben ist, w\u00E4hlt der Pate einen Spieler."
+      },
+      {
+        "Rolename": "Schw\u00E4tzer",
+        "NightInformation": "Falls der Schw\u00E4tzer f\u00FCr den Tod eines Spieler sorgen sollte, stirbt nun ein Spieler."
+      },
+      {
+        "Rolename": "Liebchen",
+        "NightInformation": "Falls das Liebchen gestorben ist, wurde sofort ein Spieler betrunken. Falls du dies noch nicht gemacht hast, mache ese jetzt."
+      },
+      {
+        "Rolename": "Banshee",
+        "NightInformation": "Falls die Banshee heute Nacht vom D\u00E4mon get\u00F6tet wurde, verk\u00FCnde allen Spielern dass die Banshee gestorben ist."
+      },
+      {
+        "Rolename": "Professor",
+        "NightInformation": "Der Professor w\u00E4hlt m\u00F6glicherweise einen toten Spieler."
+      },
+      {
+        "Rolename": "Choir Boy",
+        "NightInformation": "Wenn der D\u00E4mon den K\u00F6nig get\u00F6tet hat, zeige auf den D\u00E4monen."
+      },
+      {
+        "Rolename": "Huntsman",
+        "NightInformation": "Der Huntsman w\u00E4hlt m\u00F6glicherweise einen Spieler. Wenn der Spieler die Damsel war: Lasse den Huntsman einschlafen. Wecke die Damsel und zeige ihr das DU BIST Pl\u00E4ttchen und ihr Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Damsel",
+        "NightInformation": "Wenn die Damsel vom Huntsman gew\u00E4hlt wurde, zeige ihr das DU BIST Pl\u00E4ttchen und ihr neues Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Gro\u00DFmutter",
+        "NightInformation": "Falls der D\u00E4mon das Enkelkind get\u00F6tet hat, stirbt nun auch die Gro\u00DFmutter."
+      },
+      {
+        "Rolename": "Rabenh\u00FCter",
+        "NightInformation": "Falls der Rabenh\u00FCter heute Nacht gestorben ist, w\u00E4hlt er einen Spieler. Zeige das Charackterpl\u00E4ttchen dieses Spielers."
+      },
+      {
+        "Rolename": "Empath",
+        "NightInformation": "Gib ein Fingerzeichen."
+      },
+      {
+        "Rolename": "Balloonist",
+        "NightInformation": "Zeige einen Spieler mit einem anderen Charaktertyp als in den vorherigen N\u00E4chten."
+      },
+      {
+        "Rolename": "King",
+        "NightInformation": "Wenn es gleich viele oder mehr tote Spieler als lebendige Spieler gibt, zeige das Charakterpl\u00E4ttchen eines lebenden Spielers."
+      },
+      {
+        "Rolename": "Bounty Hunter",
+        "NightInformation": "Wenn der KNOWN Spieler heute oder heute Nacht gestorben ist, zeige auf einen neuen KNOWN Spieler."
+      },
+      {
+        "Rolename": "Nightwatchman",
+        "NightInformation": "Der Nightwatchman w\u00E4hlt m\u00F6glicherweise einen Spieler. Lasse den Nightwatchman einschlafen. Wecke das Ziel und zeige ihm das DIESER SPIELER IST Pl\u00E4ttchen und das Nightwatchman Charakterpl\u00E4ttchen und zeige auf den Nightwatchman."
+      },
+      {
+        "Rolename": "Acrobat",
+        "NightInformation": "Der Acrobat w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Hatter",
+        "NightInformation": "Falls der Hatter heute oder heute Nacht gestorben ist, wecke Schergen und D\u00E4mon. Erlaube ihnen, neue Charaktere zu w\u00E4hlen."
+      },
+      {
+        "Rolename": "Barbier",
+        "NightInformation": "Falls der Barbier heute am Tag oder nachts gestorben ist, zeige dem D\u00E4mon das DIESER CHARAKTER HAT DICH GEW\u00C4HLT \u0026 das Barbierpl\u00E4ttchen . Falls der D\u00E4mon 2 Spieler gew\u00E4hlt hat, wecke sie einzeln. Zeige ihnen das DU BIST Pl\u00E4ttchen \u0026 ihr neues Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Weise",
+        "NightInformation": "Falls der D\u00E4mon die Weise get\u00F6tet hat, wecke die Weise und zeige auf 2 Spieler, wovon einer der D\u00E4mon ist."
+      },
+      {
+        "Rolename": "Amnesiac",
+        "NightInformation": "Handle falls notwendig die F\u00E4higkeit des Amnesiac ab."
+      },
+      {
+        "Rolename": "Farmer",
+        "NightInformation": "Falls der Farmer heute Nacht gestorben ist, w\u00E4hle einen lebenden guten Spieler. Zeige ihm das DU BIST Pl\u00E4ttchen und das Farmer Charakterpl\u00E4ttchen. Ersetze sein bisheriges Charakterpl\u00E4ttchen mit dem Farmer Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Bastler",
+        "NightInformation": "Der Bastler stirbt m\u00F6glicherweise."
+      },
+      {
+        "Rolename": "Mondkind",
+        "NightInformation": "Falls das Mondkind f\u00FCr den Tod eines guten Spielers sorgen sollte, stirbt dieser Spieler nun."
+      },
+      {
+        "Rolename": "Wahrsagerin",
+        "NightInformation": "Die Wahrsagerin w\u00E4hlt 2 Spieler. Nicke, falls einer davon der D\u00E4mon (oder die FALSCHE F\u00C4HRTE) ist."
+      },
+      {
+        "Rolename": "Totengr\u00E4ber",
+        "NightInformation": "Falls heute ein Spieler hingerichtet wurde, zeige dem Totengr\u00E4ber dessen Charakterpl\u00E4ttchen."
+      },
+      {
+        "Rolename": "Tr\u00E4umer",
+        "NightInformation": "Der Tr\u00E4umer w\u00E4hlt einen Spieler. Zeige 1 gutes \u0026 1 b\u00F6ses Charakterpl\u00E4ttchen, wovon 1 der Charakter des gew\u00E4hlten Spielers ist."
+      },
+      {
+        "Rolename": "Blumenm\u00E4dchen",
+        "NightInformation": "Entweder nicke oder sch\u00FCttle den Kopf."
+      },
+      {
+        "Rolename": "Marktschreier",
+        "NightInformation": "Entweder nicke oder sch\u00FCttle den Kopf."
+      },
+      {
+        "Rolename": "Orakel",
+        "NightInformation": "Gib ein Fingerzeichen."
+      },
+      {
+        "Rolename": "Schneiderin",
+        "NightInformation": "Die Schneiderin w\u00E4hlt m\u00F6glicherweise 2 Spieler. Nicke oder sch\u00FCttele den Kopf."
+      },
+      {
+        "Rolename": "Jongleur",
+        "NightInformation": "Gib ein Fingerzeichen"
+      },
+      {
+        "Rolename": "Village Idiot",
+        "NightInformation": "Wecke die Village Idiots einen nach dem anderen. Sie w\u00E4hlen jeder einen Spieler. Zeige ihnen jeweils einen Daumen nach oben oder einen Daumen nach unten, entsprechend dem Team des gew\u00E4hlten Spielers."
+      },
+      {
+        "Rolename": "Cult Leader",
+        "NightInformation": "Der Cult Leader wechselt m\u00F6glicherweise seine Teamzugeh\u00F6rigkeit. Falls es so ist, zeige ihm das DU BIST Pl\u00E4ttchen und einen Daumen nach oben oder Daumen nach unten entsprechend seinem neuen Team."
+      },
+      {
+        "Rolename": "Butler",
+        "NightInformation": "Der Butler w\u00E4hlt einen Spieler."
+      },
+      {
+        "Rolename": "Spion",
+        "NightInformation": "Zeige dem Spion das Grimorie so lange, wie er es braucht."
+      },
+      {
+        "Rolename": "High Priestess",
+        "NightInformation": "Zeige auf einen Spieler."
+      },
+      {
+        "Rolename": "General",
+        "NightInformation": "Zeige ein Daumensignal."
+      },
+      {
+        "Rolename": "Kammerzofe",
+        "NightInformation": "Die Kammerzofe w\u00E4hlt 2 lebendige Spieler. Gib ein Fingerzeichen."
+      },
+      {
+        "Rolename": "Mathematiker",
+        "NightInformation": "Gib ein Fingerzeichen."
+      },
+      {
+        "Rolename": "Morgend\u00E4mmerung",
+        "NightInformation": "Warte ein paar Sekunden. Dann wecke alle Spieler."
+      },
+      {
+        "Rolename": "Leviathan",
+        "NightInformation": "Du kannst optional verk\u00FCnden \u0022Der Leviathan ist im Spiel.\u0022 Ersetze das Erinnerungspl\u00E4ttchen."
+      }
+    ]
+  },
+  "ScriptName": "Everything Sorted",
+  "ScriptAuthor": "TPI"
+}

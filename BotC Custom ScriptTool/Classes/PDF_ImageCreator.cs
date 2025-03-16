@@ -511,13 +511,18 @@ namespace BotC_Custom_ScriptTool.Classes
 
         private static Image GetImageFromURL(string URL)
         {
-            using (WebClient webClient = new WebClient())
+            if (!string.IsNullOrWhiteSpace(URL))
             {
-                using (Stream stream = webClient.OpenRead(URL))
+                using (WebClient webClient = new WebClient())
                 {
-                    return Image.FromStream(stream);
+                    using (Stream stream = webClient.OpenRead(URL))
+                    {
+                        return Image.FromStream(stream);
+                    }
                 }
             }
+            else
+                return new Bitmap(10, 10);
         }
 
         private static void SaveAsPDF(string FileToSave)
